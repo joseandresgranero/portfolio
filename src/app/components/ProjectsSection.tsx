@@ -1,7 +1,5 @@
 "use client";
 
-import getConfig from "next/config";
-const { publicRuntimeConfig } = getConfig();
 import { useParallaxBg } from "@/hooks/useParallaxBg";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -34,7 +32,7 @@ export const ProjectsSection = () => {
           <ParallaxBanner
             layers={[
               {
-                image: `${publicRuntimeConfig.basePath}/projects/genesys-ui/images/linkedin-banner.jpg`,
+                image: "/projects/genesys-ui/images/linkedin-banner.jpg",
                 speed: -25,
               },
             ]}
