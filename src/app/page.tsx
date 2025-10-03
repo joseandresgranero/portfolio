@@ -1,103 +1,89 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+
+import HeroSection from "./components/HeroSection";
+import { ProjectsSection } from "./components/ProjectsSection";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <main className="min-h-screen bg-white text-gray-900">
+        {/* Hero Section */}
+        <HeroSection />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        {/* Projects Section */}
+        <ProjectsSection />
+
+        {/* Contact Section */}
+        <section
+          id="contact"
+          className="py-20 px-6 max-w-3xl mx-auto text-center"
+        >
+          <h2 className="text-3xl font-bold mb-6">Contacto</h2>
+          <p className="text-gray-700 mb-6">
+            ¿Quieres colaborar o tienes una idea en mente? ¡Hablemos!
+          </p>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:tuemail@correo.com"
+            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            Escríbeme
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
+
+// Nueva página dinámica para proyectos
+// Crea un archivo en /pages/projects/[slug].js con este contenido:
+
+/*
+import { useRouter } from "next/router";
+import Image from "next/image";
+import Link from "next/link";
+
+const projects = [
+  {
+    title: "Proyecto Uno",
+    description: "Descripción breve del proyecto uno.",
+    image: "/projects/proyecto1.jpg",
+    slug: "proyecto-uno",
+    content: "Este es un detalle más extenso sobre el proyecto uno, explicando tecnologías, retos y resultados obtenidos."
+  },
+  {
+    title: "Proyecto Dos",
+    description: "Descripción breve del proyecto dos.",
+    image: "/projects/proyecto2.jpg",
+    slug: "proyecto-dos",
+    content: "Detalles completos del proyecto dos, incluyendo funcionalidades clave y el impacto del trabajo realizado."
+  },
+];
+
+export default function ProjectPage() {
+  const router = useRouter();
+  const { slug } = router.query;
+
+  const project = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return <p className="p-6 text-center">Proyecto no encontrado</p>;
+  }
+
+  return (
+    <main className="min-h-screen bg-white text-gray-900 p-6 max-w-4xl mx-auto">
+      <Link href="/" className="text-blue-600 hover:underline">← Volver al inicio</Link>
+      <h1 className="text-4xl font-bold mt-4 mb-6">{project.title}</h1>
+      <Image
+        src={project.image}
+        alt={project.title}
+        width={800}
+        height={500}
+        className="object-cover w-full rounded-2xl mb-6"
+      />
+      <p className="text-gray-700 leading-relaxed mb-6">{project.content}</p>
+    </main>
+  );
+}
+*/
