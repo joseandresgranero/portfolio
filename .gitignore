@@ -1,0 +1,6 @@
+node_modules/
+.next
+!public/uploads
+node_modules
+.env
+out
