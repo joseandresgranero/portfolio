@@ -1,8 +1,7 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  output: 'export', 
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export', // Exporta el sitio como estático
+  // basePath: '/nombre-del-repo', // Descomenta si tu repo no es username.github.io
 };
 
-export default nextConfig;
+module.exports = nextConfig;

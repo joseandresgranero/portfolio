@@ -33,18 +33,18 @@ jobs:
       - name: Install dependencies 📦
         run: npm ci
 
-      # 4️⃣ Create env file
+      # 4️⃣ Create .env file
       - name: Create .env file 📝
         run: |
           touch .env
           echo TINA_TOKEN=${{ secrets.TINA_TOKEN }} >> .env
           echo NEXT_PUBLIC_TINA_CLIENT_ID=${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }} >> .env
 
-      # 5️⃣ Build and export Next.js site
-      - name: Build & Export Next.js 🏗️
-        run: npm run build:pages  # Debe estar en package.json: "build:pages": "next build && next export"
+      # 5️⃣ Build Next.js site
+      - name: Build Next.js 🏗️
+        run: npm run build
 
-      # 6️⃣ Setup GitHub Pages
+      # 6️⃣ Configure GitHub Pages
       - name: Setup Pages ⚙️
         uses: actions/configure-pages@v4
         with:
