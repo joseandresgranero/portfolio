@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { IoHome, IoMail, IoMailUnreadOutline, IoPerson } from "react-icons/io5";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -57,7 +56,7 @@ export const Header = () => {
                   className="text-white text-2xl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="My Linkedin profile"
+                  title="Got to my Linkedin profile (new tab)"
                 >
                   <IoLogoLinkedin />
                 </a>

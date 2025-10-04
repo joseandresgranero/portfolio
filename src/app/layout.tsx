@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
-import { Roboto, PT_Serif, Rubik } from "next/font/google";
+import { Roboto, PT_Serif, Rubik, Lato, Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
 // Fuente roboto para cuerpo de texto
-const roboto = Roboto({ subsets: ["latin"], variable: "--font-base" });
+const roboto = Roboto({
+  subsets: ["latin"],
+  variable: "--font-base",
+  weight: ["300", "400", "600", "700", "900"],
+});
+
+// Fuente roboto para cuerpo de texto
+const lato = Poppins({
+  subsets: ["latin"],
+  variable: "--font-heading-1",
+  weight: ["400", "600", "700", "900"],
+});
 
 // Fuente PT serif para títulos
 const ptSerif = PT_Serif({
@@ -22,8 +33,10 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: "Jose Andrés Granero - Portfolio",
-  description: "The portfolio of Jose Andrés Granero, UX/UI Architect",
+  title:
+    "Jose Andrés Granero - Product Designer — Specialized in UX/UI Architecture & Design Systems",
+  description:
+    "The portfolio of Jose Andrés Granero, Product Designer, with a focus on UX Architecture and Design Systems. Explore my projects, case studies, and professional journey in creating user-centered digital experiences.",
   icons: {
     icon: [
       { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
@@ -46,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ptSerif.variable} ${roboto.variable} ${rubik.variable} antialiased font-base`}
+        className={`${ptSerif.variable} ${roboto.variable} ${rubik.variable} ${lato.variable} antialiased font-base`}
       >
         <Header />
         {children}

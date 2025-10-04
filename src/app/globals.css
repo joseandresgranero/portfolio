@@ -10,6 +10,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-heading: var(--font-heading);
+  --font-heading-1: var(--font-heading-1);
   --font-featured: var(--font-featured);
   --font-base: var(--font-base);
   --font-mono: var(--font-roboto-mono);
