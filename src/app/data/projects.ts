@@ -7,6 +7,8 @@ export const projects: ProjectsCardProps[] = [
       "Genesys is a design system for products and digital ecosystems and home to the foundations, human interface guidelines, design tools, UI components and interaction patterns that we use to build great experiences.",
     image: "/projects/genesys-ui/images/thumb-design-system.png",
     imageAlt: "Genesys Design System Banner",
+    imageWidth: 800,
+    imageHeight: 450,
     slug: "genesys-design-system",
     storybookLink: "https://genesys-ui.github.io/design-system",
     githubLink: "https://github.com/genesys-ui/design-system",

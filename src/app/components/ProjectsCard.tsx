@@ -34,11 +34,11 @@ export const ProjectsCard: React.FC<ProjectsCardProps> = ({
   figmaLink,
 }) => {
   return (
-    <div className="flex flex-col justify-center border border-gray-100 bg-white shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+    <div className="flex flex-col border border-gray-100 bg-white shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
       <div className="overflow-hidden border-b border-gray-200 h-[280px]">
         <Image
-          width={imageWidth || 756}
-          height={imageHeight || 360}
+          width={imageWidth || 406}
+          height={imageHeight || 280}
           src={image}
           alt={imageAlt}
           className="object-cover"

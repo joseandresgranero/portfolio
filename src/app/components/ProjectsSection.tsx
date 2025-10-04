@@ -16,6 +16,8 @@ export const ProjectsSection = () => {
             storybookLink={project.storybookLink}
             image={project.image}
             imageAlt={project.imageAlt}
+            imageHeight={project.imageHeight}
+            imageWidth={project.imageWidth}
             detailLink={project.detailLink}
           />
         ))}
