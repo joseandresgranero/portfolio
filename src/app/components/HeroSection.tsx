@@ -4,16 +4,17 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col justify-center bg-[var(--hero-bg-color)] h-[var(--hero-height)] px-20 p-8">
+    <section className="flex flex-col justify-center bg-[var(--hero-bg-color)] h-[var(--hero-height)] px-20 p-8 bg-gradient-to-b from-[var(--primary-color)] to-[var(--primary-color-weak)]">
       <motion.h1
-        className="text-[1.8em] leading-[1.4] mb-4 text-[var(--hero-text-color)] max-w-[870px]"
+        className="text-[2.2rem] leading-[1.4] mb-4 text-[var(--hero-text-color)] max-w-[var(--max-width-text)]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
       >
-        Hi there! I'm a<strong> Product designer </strong>
-        with 15+ years of experience, specializing in scalable design systems,
-        accessibility, and reusable component development.
+        I'm a<strong> Product designer </strong>
+        with 15+ years of experience
+        <br /> crafting scalable design systems, accessible interfaces,
+        <br /> and reusable UI components.
       </motion.h1>
     </section>
   );

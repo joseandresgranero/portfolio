@@ -2,14 +2,38 @@
 
 import { ProjectsCard } from "./ProjectsCard";
 import { projects } from "../data/projects";
+import Link from "next/link";
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="bg-gray-50">
-      <div className="grid grid-cols-3 grid-container px-20 py-20 gap-16">
+    <section
+      id="projects"
+      className="bg-[var(--projects-bg-color)] px-20 py-25"
+    >
+      <div className="mb-16 max-w-[var(--max-width-text)]">
+        <div className="text-3xl font-extrabold mb-4 font-heading">
+          Genesys Design System
+        </div>
+        <div className="text-2xl text-gray-600">
+          Working for{" "}
+          <Link
+            href="https://devo.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 font-bold hover:underline"
+          >
+            Devo
+          </Link>{" "}
+          I co-created the design system along with its key foundations:
+          component library, documentation, styles, icon library, and design
+          tokens.
+        </div>
+      </div>
+      <div className="grid grid-cols-3 grid-container gap-16">
         {projects.map((project, idx) => (
           <ProjectsCard
-            key={idx}
+            key={`${project.slug}-${idx}`}
+            slug={project.slug}
             title={project.title}
             description={project.description}
             githubLink={project.githubLink}
@@ -18,7 +42,6 @@ export const ProjectsSection = () => {
             imageAlt={project.imageAlt}
             imageHeight={project.imageHeight}
             imageWidth={project.imageWidth}
-            detailLink={project.detailLink}
           />
         ))}
       </div>

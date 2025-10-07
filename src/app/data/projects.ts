@@ -1,10 +1,12 @@
-import { ProjectsCardProps } from "../components/ProjectsCard";
+import { IArticle } from "@/types/article";
+//import { DesignSystemContent } from "../components/ProjectContent/DesignSystem";
 
-export const projects: ProjectsCardProps[] = [
+export const projects: IArticle[] = [
   {
     title: "Genesys Design System",
+    role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
     description:
-      "Genesys is a design system for products and digital ecosystems and home to the foundations, human interface guidelines, design tools, UI components and interaction patterns that we use to build great experiences.",
+      "Creation from the scratch of the Devo app design system to improve radically the consistency, the scalability, and the speed for designing and developing.",
     image: "/projects/genesys-ui/images/thumb-design-system.png",
     imageAlt: "Genesys Design System Banner",
     imageWidth: 800,
@@ -12,17 +14,29 @@ export const projects: ProjectsCardProps[] = [
     slug: "genesys-design-system",
     storybookLink: "https://genesys-ui.github.io/design-system",
     githubLink: "https://github.com/genesys-ui/design-system",
-    detailLink: "genesys-design-system",
+    tags: ["Design System", "UX Architecture", "Figma", "Documentation"],
+    //content: () => DesignSystemContent,
   },
   {
     title: "Genesys UI",
+    role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
     description:
-      "React component library by Devo Inc. that provides accessible, consistent UI elements for enterprise apps, with interactive Storybook documentation for easy use.",
+      "React component library that provides accessible, consistent UI elements for enterprise apps, with interactive Storybook documentation for easy use.",
     image: "/projects/genesys-ui/images/thumb-genesys-ui.png",
     imageAlt: "Genesys UI Banner",
     slug: "genesys-ui",
     storybookLink: "https://devoinc.github.io/genesys-ui",
     githubLink: "https://github.com/genesys-ui/react",
-    detailLink: "genesys-ui",
+  },
+  {
+    title: "Genesys UI",
+    role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
+    description:
+      "React component library that provides accessible, consistent UI elements for enterprise apps, with interactive Storybook documentation for easy use.",
+    image: "/projects/genesys-ui/images/thumb-genesys-ui.png",
+    imageAlt: "Genesys UI Banner",
+    slug: "genesys-ui",
+    storybookLink: "https://devoinc.github.io/genesys-ui",
+    githubLink: "https://github.com/genesys-ui/react",
   },
 ];

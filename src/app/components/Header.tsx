@@ -2,7 +2,7 @@
 import { IoHome, IoMail, IoMailUnreadOutline, IoPerson } from "react-icons/io5";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useScrollThreshold } from "../../hooks/useScrollThreshold";
+
 import {
   IoIosCheckmarkCircleOutline,
   IoIosMail,
@@ -11,23 +11,16 @@ import {
 } from "react-icons/io";
 
 export const Header = () => {
-  const links = [{ href: "/pages/about", label: "About" }];
+  const links = [{ href: "/about", label: "About" }];
 
   const pathname = usePathname();
-  const scrolled = useScrollThreshold(40);
 
   return (
     <header
-      className={`flex items-center justify-between sticky inset-0 transition-[height] duration-300 ease-in-out px-20 h-[var(--header-height)] ${
-        scrolled ? "h-[var(--header-height-compact)]" : ""
-      } bg-black/80 text-[var(--header-text-color)] z-50`}
+      className={`flex items-center justify-between px-20 h-[var(--header-height)] bg-[var(--header-bg-color)] text-[var(--header-text-color)]`}
     >
-      <Link href="/">
-        <span
-          className={`font-featured font-medium text-2xl transition-[font-size] duration-300 ease-in-out ${
-            scrolled ? "text-xl" : ""
-          }`}
-        >
+      <Link href="/" className="flex items-center h-full pr-4 space-x-3">
+        <span className="font-featured font-medium text-2xl transition-[font-size] duration-300 ease-in-out">
           Jose Andrés Granero
         </span>
       </Link>

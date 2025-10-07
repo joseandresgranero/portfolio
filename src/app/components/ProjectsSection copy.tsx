@@ -57,7 +57,7 @@ export const ProjectsSectionCopy = () => {
                 />
               </div>
               <div className="px-8 py-6">
-                <h2 className="text-2xl font-bold font-heading-1 mb-4">
+                <h2 className="text-2xl font-bold font-heading mb-4">
                   Genesys UI
                 </h2>
                 <p className="text-base text-gray-600">

@@ -6,29 +6,16 @@ import { useParallaxBg } from "@/hooks/useParallaxBg";
 //import { ParallaxBanner } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { IoLinkOutline, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { ProjectCardProps } from "@/types/article";
 
-export interface ProjectsCardProps {
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-  imageHeight?: number;
-  imageWidth?: number;
-  detailLink: string;
-  githubLink?: string;
-  storybookLink?: string;
-  figmaLink?: string;
-  slug?: string;
-}
-
-export const ProjectsCard: React.FC<ProjectsCardProps> = ({
+export const ProjectsCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   image,
   imageHeight,
   imageWidth,
   imageAlt,
-  detailLink,
+  slug,
   githubLink,
   storybookLink,
   figmaLink,
@@ -45,11 +32,11 @@ export const ProjectsCard: React.FC<ProjectsCardProps> = ({
         />
       </div>
       <div className="px-8 py-6">
-        <h2 className="text-[22px] font-bold font-heading-1 mb-5">{title}</h2>
-        <p className="text-base text-gray-600">{description}</p>
+        <h2 className="text-[24px] font-bold font-heading mb-5">{title}</h2>
+        <p className="text-gray-600">{description}</p>
         <div className="flex items-center justify-between mt-6">
           <a
-            href={detailLink}
+            href={`/projects/${slug}`}
             className="px-4 py-3 bg-[var(--primary-color)] text-sm font-medium text-white rounded cursor-pointer hover:bg-blue-700 transition-colors duration-300 ease-in-out"
           >
             View Project

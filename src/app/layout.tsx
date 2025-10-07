@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
-import { Roboto, PT_Serif, Rubik, Lato, Poppins } from "next/font/google";
+import {
+  Roboto,
+  PT_Serif,
+  Rubik,
+  Lato,
+  Poppins,
+  Raleway,
+  Plus_Jakarta_Sans,
+  Fraunces,
+} from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -11,17 +20,24 @@ const roboto = Roboto({
   weight: ["300", "400", "600", "700", "900"],
 });
 
-// Fuente roboto para cuerpo de texto
-const lato = Poppins({
+// Fuente para headings
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-heading-1",
+  variable: "--font-heading",
   weight: ["400", "600", "700", "900"],
+});
+
+// Fuente para headings
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["400", "600", "700", "800"],
 });
 
 // Fuente PT serif para títulos
 const ptSerif = PT_Serif({
   subsets: ["latin"],
-  variable: "--font-heading",
+  variable: "--font-headin-alt",
   weight: ["400", "700"],
 });
 
@@ -59,7 +75,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ptSerif.variable} ${roboto.variable} ${rubik.variable} ${lato.variable} antialiased font-base`}
+        className={`${ptSerif.variable} ${roboto.variable} ${rubik.variable} ${jakarta.variable} antialiased font-base`}
       >
         <Header />
         {children}

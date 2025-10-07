@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #273469;
-  --foreground: #171717;
+  --background: ##fff;
+  --foreground: var(--color-gray-700);
 }
 
 @theme inline {
@@ -10,29 +10,42 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-heading: var(--font-heading);
-  --font-heading-1: var(--font-heading-1);
   --font-featured: var(--font-featured);
   --font-base: var(--font-base);
   --font-mono: var(--font-roboto-mono);
   --primary-color: #273469;
+  --primary-color-weak: #303f85;
+  --primary-color-strong: #090b16;
+  --primary-color-strong: #151a33;
   --secondary-color: #fafaff;
   --header-height: 98px;
   --header-height-compact: 64px;
   --header-text-color: #fff;
+  --header-bg-color: var(--primary-color-strong);
   --hero-bg-color: var(--primary-color);
   --hero-text-color: var(--secondary-color);
   --hero-height: 300px;
+  --projects-bg-color: var(--secondary-color);
+  --max-width-text: 870px;
+  --max-width-text-lg: 940px;
+  --heading-color: var(--primary-color-strong);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+@layer base {
+  body {
+    @apply text-xl;
+  }
 }
