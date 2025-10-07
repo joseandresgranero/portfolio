@@ -6,9 +6,9 @@ import { useParallaxBg } from "@/hooks/useParallaxBg";
 //import { ParallaxBanner } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { IoLinkOutline, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
-import { ProjectCardProps } from "@/types/article";
+import { ArticleCardProps } from "@/types/article";
 
-export const ProjectsCard: React.FC<ProjectCardProps> = ({
+export const ProjectsCard: React.FC<ArticleCardProps> = ({
   title,
   description,
   image,
