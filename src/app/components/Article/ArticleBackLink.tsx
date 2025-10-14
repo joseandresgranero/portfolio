@@ -9,7 +9,10 @@ export const ArticleBackLink = ({
   href?: string;
 }) => {
   return (
-    <Link href={href} className="text-blue-600 hover:underline mb-4 block">
+    <Link
+      href={href}
+      className="font-medium text-[var(--primary-color-weaker)] underline-offset-4 hover:underline mb-4 inline-block"
+    >
       {children}
     </Link>
   );

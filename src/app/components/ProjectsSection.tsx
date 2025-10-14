@@ -20,7 +20,7 @@ export const ProjectsSection = () => {
             href="https://devo.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 font-bold hover:underline"
+            className="text-[var(--primary-color-weaker)] font-bold underline underline-offset-4"
           >
             Devo
           </Link>{" "}

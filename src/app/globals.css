@@ -13,7 +13,9 @@
   --font-featured: var(--font-featured);
   --font-base: var(--font-base);
   --font-mono: var(--font-roboto-mono);
+  --primary-00: #e2e8ff;
   --primary-color: #273469;
+  --primary-color-weaker: #4154ac;
   --primary-color-weak: #303f85;
   --primary-color-strong: #151a33;
   --secondary-color: #fafaff;

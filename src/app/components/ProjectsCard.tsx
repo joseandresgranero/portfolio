@@ -21,23 +21,27 @@ export const ProjectsCard: React.FC<ArticleCardProps> = ({
   figmaLink,
 }) => {
   return (
-    <div className="flex flex-col border border-gray-100 bg-white shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
-      <div className="overflow-hidden border-b border-gray-200 h-[280px]">
+    <div className="card card--project flex flex-col">
+      <a
+        href={`/projects/${slug}`}
+        className="overflow-hidden border border-gray-200 h-[280px]"
+        title="View project"
+      >
         <Image
           width={imageWidth || 406}
           height={imageHeight || 280}
           src={image}
           alt={imageAlt}
-          className="object-cover"
+          className="object-cover transition-all duration-150 hover:scale-110 hover:saturate-150"
         />
-      </div>
-      <div className="px-8 py-6">
+      </a>
+      <div className="px-1 py-6">
         <h2 className="text-[24px] font-bold font-heading mb-5">{title}</h2>
-        <p className="text-gray-600">{description}</p>
+        <p className="text-gray-500">{description}</p>
         <div className="flex items-center justify-between mt-6">
           <a
             href={`/projects/${slug}`}
-            className="px-4 py-3 bg-[var(--primary-color)] text-sm font-medium text-white rounded cursor-pointer hover:bg-blue-700 transition-colors duration-300 ease-in-out"
+            className="px-4 py-3 bg-[var(--primary-color-weak)] text-sm font-medium text-white rounded cursor-pointer hover:bg-[var(--primary-color-weaker)] transition-colors duration-300 ease-in-out"
           >
             View Project
           </a>

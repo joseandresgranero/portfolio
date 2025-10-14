@@ -6,7 +6,7 @@ export const Footer = () => {
         <br /> Drop me a line at my{" "}
         <a
           href="mailto:joseandres.granero@gmail.com"
-          className="font-bold hover:border-b"
+          className="font-bold underline underline-offset-4 decoration-1"
           title="Send me an email"
         >
           email
@@ -14,10 +14,10 @@ export const Footer = () => {
         or connect on{" "}
         <a
           href="https://www.linkedin.com/in/josé-andrés-granero-encinas-539266153"
-          className="font-bold hover:border-b"
+          className="font-bold underline underline-offset-4 decoration-1"
           target="_blank"
           rel="noopener noreferrer"
-          title="Got to my Linkedin profile (new tab)"
+          title="Go to my Linkedin profile (new tab)"
         >
           LinkedIn
         </a>

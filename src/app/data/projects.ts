@@ -14,7 +14,7 @@ export const projects: IArticle[] = [
     slug: "genesys-design-system",
     storybookLink: "https://genesys-ui.github.io/design-system",
     githubLink: "https://github.com/genesys-ui/design-system",
-    tags: ["Design System", "UX Architecture", "Figma", "Documentation"],
+    tags: ["UX/UI Architecture", "Figma", "Documentation", "Storybook"],
     //content: () => DesignSystemContent,
   },
   {
