@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="py-8 flex bg-[var(--primary-color)] px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] text-[var(--secondary-color)] bg-gradient-to-b from-[var(--primary-color)] to-[var(--primary-color-strong)]">
+    <footer className="py-8 flex bg-[var(--primary-color-strong)] px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] text-[var(--secondary-color)]">
       <p>
         Let’s stay in touch!
         <br /> Drop me a line at my{" "}
