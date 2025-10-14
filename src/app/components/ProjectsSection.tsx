@@ -8,7 +8,7 @@ export const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="bg-[var(--projects-bg-color)] px-20 py-25"
+      className="bg-[var(--projects-bg-color)] px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] py-10  md:py-25"
     >
       <div className="mb-16 max-w-[var(--max-width-text)]">
         <div className="text-3xl font-extrabold mb-4 font-heading">
@@ -29,7 +29,7 @@ export const ProjectsSection = () => {
           tokens.
         </div>
       </div>
-      <div className="grid grid-cols-3 grid-container gap-16">
+      <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
         {projects.map((project, idx) => (
           <ProjectsCard
             key={`${project.slug}-${idx}`}

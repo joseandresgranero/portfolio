@@ -14,8 +14,8 @@ import {
 export default function About() {
   return (
     <>
-      <div className="flex items-center gap-30 h-[calc(100vh-var(--header-height))] max-h-[520px]">
-        <div className="px-20 py-25 flex-1">
+      <section className="flex flex-col-reverse items-stretch xl:gap-30 lg:items-center lg:flex-row lg:h-[calc(100vh-var(--header-height))] xl:max-h-[520px]">
+        <div className="p-[var(--padding-base)] md:p-[var(--padding-base-md)] xl:py-25 flex-[1_1_85%] xl:flex-1">
           <ArticleSection
             heading="About me"
             headingTag="h1"
@@ -36,20 +36,23 @@ export default function About() {
           </ArticleSection>
         </div>
         <div className="h-full relative">
-          <div className="h-full relative overflow-hidden flex-1 after:content-[''] after:absolute after:inset-0 after:bg-[#273469] after:mix-blend-exclusion">
+          <div className="relative overflow-hidden flex-1 sm:h-[320px] lg:h-full">
             <img
-              src="/assets/img/about.jpg"
+              src="/assets/img/about-me.jpg"
               alt="Profile about image"
-              className="object-cover object-center max-w-[none] h-full w-full"
-              style={{
-                filter: "grayscale(80%) brightness(1.1) contrast(1.3)",
-              }}
+              className="min-[540px]:object-[0_-100px] sm:object-[0_-180px] lg:object-cover lg:object-center max-w-[none] lg:h-full w-full"
             />
           </div>
-          <div className="text-sm mt-3">I’m the one underneath</div>
+          <div className="text-sm mt-2 pl-8 lg:pl-0">
+            I'm the one underneath.
+          </div>
         </div>
-      </div>
-      <Article hideBackLink>
+      </section>
+      <Article
+        hideBackLink
+        htmlTag="section"
+        className="bg-[var(--secondary-color-strong)] flex flex-col gap-10 xl:flex-row xl:items-center xl:justify-between xl:gap-20"
+      >
         <ArticleSection heading="Professional profile">
           <ArticleParagraph>
             Product designer experienced in complex digital products,
@@ -64,133 +67,146 @@ export default function About() {
             leading teams and setting design standards in Agile environments.
           </ArticleParagraph>
         </ArticleSection>
-        <ArticleSection heading="Work experience">
-          <ArticleSection
-            heading="Product Designer · UX/UI Architect"
-            headingTag="h3"
-            headingSize="h4"
-            append="Devo"
-            lead="From July 2018 to September 2025 / Madrid - remote"
-          >
+        <a
+          href="/assets/downloads/JAG-CV-comp.pdf"
+          target="_blank"
+          rel="noreferrer noopener"
+          title="Open the PDF in a new tab"
+          className="px-10 flex items-center flex-col py-3 rounded-full bg-gray-300/35 font-bold text-lg hover:bg-gray-300/80 transition ease-in-out duration-150 md:min-w-[400px]"
+        >
+          <span>Get my CV – Resume</span>
+          <span className="text-sm text-gray-500 font-normal">
+            PDF · Updated 2025
+          </span>
+        </a>
+      </Article>
+      <section className="flex flex-col xl:flex-row">
+        <Article hideBackLink className="pb-15 xl:pb-20">
+          <ArticleSection heading="Work experience">
+            <ArticleSection
+              heading="Product Designer · UX/UI Architect"
+              headingTag="h3"
+              headingSize="h4"
+              append="Devo"
+              lead="From July 2018 to September 2025 / Madrid - remote"
+            >
+              <ul className="text-lg list-outside pl-4 flex flex-col gap-2 list-disc text-gray-600">
+                <li>
+                  Design and development of the main interface for Devo’s data
+                  analytics platform.
+                </li>
+                <li>
+                  Co-creator of the Design System: React components library,
+                  system documentation using Storybook, style library based on
+                  SASS, custom icon library and design tokens system.
+                </li>
+                <li>
+                  Participation in UX processes: wireframing, prototyping, user
+                  validation... etc.
+                </li>
+                <li>
+                  Focus on accessibility, responsive design, and scalability.
+                </li>
+                <li>
+                  Tools: Figma, GitLab CI/CD, GitHub, Storybook, Jira and
+                  Confluence.
+                </li>
+              </ul>
+            </ArticleSection>
+            <ArticleSection
+              heading="Design Lead"
+              headingTag="h3"
+              headingSize="h4"
+              append="Saga Soluciones"
+              lead="From October 2012 to July 2018 / Seville"
+            >
+              <ul className="text-lg list-outside pl-4 flex flex-col gap-2 list-disc text-gray-600">
+                <li>
+                  Designed and developed 40+ portals with OpenCms, HTML/CSS,
+                  Bootstrap, JS.
+                </li>
+                <li>
+                  Delivered training and led accessibility (AA compliance)
+                  migrations.
+                </li>
+                <li>
+                  Clients: Acerinox, Aldi, universities, municipalities,
+                  provincial councils...
+                </li>
+              </ul>
+            </ArticleSection>
+            <ArticleSection
+              heading="Creative Director & Co-Founder"
+              headingTag="h3"
+              headingSize="h4"
+              append="Teléfono rojo publicidad"
+              lead="From November 2005 to October 2012 / Seville"
+            >
+              <ul className="text-lg list-outside pl-4 flex flex-col gap-2 list-disc text-gray-600">
+                <li>
+                  Directed campaigns, branding, and corporate websites for NGOs
+                  and institutions.
+                </li>
+                <li>
+                  Clients included Agencia Progreso y Salud, Solidaridad
+                  Internacional, ENRICH, Zemos98... etc.
+                </li>
+              </ul>
+            </ArticleSection>
+          </ArticleSection>
+        </Article>
+        <Article hideBackLink className="pt-0 xl:pt-25 xl:pl-[0]">
+          <ArticleSection heading="Education" headingSize="h3">
             <ul className="text-lg list-outside pl-4 flex flex-col gap-2 list-disc text-gray-600">
               <li>
-                Design and development of the main interface for Devo’s data
-                analytics platform.
+                <strong>Design Systems for Digital Products</strong>
+                <p className="text-lg text-gray-500 italic mb-4">
+                  2019 / Fictizia, Madrid
+                </p>
               </li>
               <li>
-                Co-creator of the Design System: React components library,
-                system documentation using Storybook, style library based on
-                SASS, custom icon library and design tokens system.
+                <strong>
+                  Bachelor's Degree in Market Research and Techniques
+                </strong>
+                <p className="text-lg text-gray-500 italic mb-4">
+                  2007-2011 / University of Seville
+                </p>
               </li>
               <li>
-                Participation in UX processes: wireframing, prototyping, user
-                validation... etc.
-              </li>
-              <li>
-                Focus on accessibility, responsive design, and scalability.
-              </li>
-              <li>
-                Tools: Figma, GitLab CI/CD, GitHub, Storybook, Jira and
-                Confluence.
+                <strong>
+                  Bachelor's Degree in n Advertising and Public Relations
+                </strong>
+                <p className="text-lg text-gray-500 italic mb-4">
+                  2001-2005 / University of Seville
+                </p>
               </li>
             </ul>
           </ArticleSection>
-          <ArticleParagraph>
-            Expert in prototyping with Figma, design systems, HTML5, CSS3/SASS,
-            design tokens, and responsive design. I lead projects end-to-end,
-            from UX research to front-end development, with a strong focus on
-            visual consistency, performance, and user experience. Experienced
-            leading teams and setting design standards in Agile environments.
-          </ArticleParagraph>
-        </ArticleSection>
-      </Article>
-      <main className="min-h-screen text-gray-700 bg-white px-20 py-10 max-w-4xl">
-        <section className="mb-12">
-          <h2 className="text-3xl font-heading font-bold mb-6">
-            Work experience
-          </h2>
-          <div className="mb-8">
-            <div className="flex flex-row space-x-4 mb-2">
-              <h3 className="text-xl font-bold">UX/UI Architect</h3>
-              <div className="text-lg text-gray-600">—</div>
-              <div className="text-lg text-gray-600">Devo</div>
-            </div>
-            <p className="text-md text-gray-400 mb-4">
-              From July 2018 to September 2025 / Madrid - remote
-            </p>
+          <ArticleSection heading="Skills" headingSize="h3">
             <ul className="text-lg list-outside pl-4 flex flex-col gap-2 list-disc text-gray-600">
               <li>
-                Design and development of the main interface for Devo’s data
-                analytics platform.
+                <strong>Design:</strong> UX/UI, Design Systems, Responsive
+                Design, Accessibility (WCAG).
               </li>
               <li>
-                Co-creator of the Design System: React components library,
-                system documentation using Storybook, style library based on
-                SASS, custom icon library and design tokens system.
+                <strong>Frontend:</strong> HTML5, CSS3/SASS, TypeScript, React,
+                Tailwind, Bootstrap, jQuery.
               </li>
               <li>
-                Participation in UX processes: wireframing, prototyping, user
-                validation... etc.
+                <strong>Tools:</strong> Figma, Lovable, Storybook,
+                GitHub/GitLab, Confluence.
               </li>
               <li>
-                Focus on accessibility, responsive design, and scalability.
+                <strong>CMS:</strong> OpenCms, WordPress, Magento.
               </li>
               <li>
-                Tools: Figma, GitLab CI/CD, GitHub, Storybook, Jira and
-                Confluence.
+                <strong>Graphic design:</strong> Photoshop, Illustrator,
+                InDesign.
               </li>
             </ul>
-          </div>
-          <div className="mb-8">
-            <div className="flex flex-row space-x-4 mb-2">
-              <h3 className="text-xl font-bold">Design Lead</h3>
-              <div className="text-lg text-gray-600">—</div>
-              <div className="text-lg text-gray-600">Saga Soluciones</div>
-            </div>
-            <p className="text-md text-gray-400 mb-4">
-              From October 2012 to July 2018 / Seville
-            </p>
-            <ul className="text-lg list-outside pl-4 flex flex-col gap-2 list-disc text-gray-600">
-              <li>
-                Designed and developed 40+ portals with OpenCms, HTML/CSS,
-                Bootstrap, JS.
-              </li>
-              <li>
-                Delivered training and led accessibility (AA compliance)
-                migrations.
-              </li>
-              <li>
-                Clients: Acerinox, Aldi, universities, municipalities,
-                provincial councils...
-              </li>
-            </ul>
-          </div>
-          <div className="mb-8">
-            <div className="flex flex-row space-x-4 mb-2">
-              <h3 className="text-xl font-bold">
-                Creative Director & Co-Founder
-              </h3>
-              <div className="text-lg text-gray-600">—</div>
-              <div className="text-lg text-gray-600">
-                Teléfono rojo publicidad
-              </div>
-            </div>
-            <p className="text-md text-gray-400 mb-4">
-              From November 2005 to October 2012 / Seville
-            </p>
-            <ul className="text-lg list-outside pl-4 flex flex-col gap-2 list-disc text-gray-600">
-              <li>
-                Directed campaigns, branding, and corporate websites for NGOs
-                and institutions.
-              </li>
-              <li>
-                Clients included Agencia Progreso y Salud, Solidaridad
-                Internacional, ENRICH, Zemos98... etc.
-              </li>
-            </ul>
-          </div>
-        </section>
-      </main>
+          </ArticleSection>
+        </Article>
+      </section>
     </>
   );
 }

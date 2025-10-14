@@ -15,9 +15,9 @@
   --font-mono: var(--font-roboto-mono);
   --primary-color: #273469;
   --primary-color-weak: #303f85;
-  --primary-color-strong: #090b16;
   --primary-color-strong: #151a33;
   --secondary-color: #fafaff;
+  --secondary-color-strong: #f1f1fc;
   --header-height: 98px;
   --header-height-compact: 64px;
   --header-text-color: #fff;
@@ -29,6 +29,12 @@
   --max-width-text: 870px;
   --max-width-text-lg: 940px;
   --heading-color: var(--primary-color-strong);
+  --padding-x-base: theme("spacing.10");
+  --padding-y-base: theme("spacing.14");
+  --padding-base: var(--padding-y-base) var(--padding-x-base);
+  --padding-x-base-md: theme("spacing.20");
+  --padding-y-base-md: theme("spacing.20");
+  --padding-base-md: var(--padding-y-base-md) var(--padding-x-base-md);
 }
 
 /* @media (prefers-color-scheme: dark) {

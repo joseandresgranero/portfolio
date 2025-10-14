@@ -1,10 +1,28 @@
-import Image from "next/image";
-import Link from "next/link";
-
 export const Footer = () => {
   return (
-    <footer className="py-8 text-center text-gray-500">
-      © {new Date().getFullYear()} Jose Andrés Granero. All rights reserved.
+    <footer className="py-8 flex bg-[var(--primary-color)] px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] text-[var(--secondary-color)] bg-gradient-to-b from-[var(--primary-color)] to-[var(--primary-color-strong)]">
+      <p>
+        Let’s stay in touch!
+        <br /> Drop me a line at my{" "}
+        <a
+          href="mailto:joseandres.granero@gmail.com"
+          className="font-bold hover:border-b"
+          title="Send me an email"
+        >
+          email
+        </a>{" "}
+        or connect on{" "}
+        <a
+          href="https://www.linkedin.com/in/josé-andrés-granero-encinas-539266153"
+          className="font-bold hover:border-b"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Got to my Linkedin profile (new tab)"
+        >
+          LinkedIn
+        </a>
+        .
+      </p>
     </footer>
   );
 };

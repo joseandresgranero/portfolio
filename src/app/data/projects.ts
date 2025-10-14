@@ -6,7 +6,7 @@ export const projects: IArticle[] = [
     title: "Genesys Design System",
     role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
     description:
-      "Creation from the scratch of the Devo app design system to improve radically the consistency, the scalability, and the speed for designing and developing.",
+      "Created the Devo design system from the ground up, radically enhancing consistency, scalability, and the overall speed of design and development.",
     image: "/projects/genesys-ui/images/thumb-design-system.png",
     imageAlt: "Genesys Design System Banner",
     imageWidth: 800,
