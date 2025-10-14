@@ -14,6 +14,8 @@ export const projects: IArticle[] = [
     slug: "genesys-design-system",
     storybookLink: "https://genesys-ui.github.io/design-system",
     githubLink: "https://github.com/genesys-ui/design-system",
+    figmaLink:
+      "https://www.figma.com/design/wKTuF8eVSqEJWjsQarKydC/GDS---UI-Kit----v2.0.0",
     tags: ["UX/UI Architecture", "Figma", "Documentation", "Storybook"],
     //content: () => DesignSystemContent,
   },

@@ -5,7 +5,12 @@ import Image from "next/image";
 import { useParallaxBg } from "@/hooks/useParallaxBg";
 //import { ParallaxBanner } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
-import { IoLinkOutline, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import {
+  IoLinkOutline,
+  IoLogoFigma,
+  IoLogoGithub,
+  IoLogoLinkedin,
+} from "react-icons/io5";
 import { ArticleCardProps } from "@/types/article";
 
 export const ProjectsCard: React.FC<ArticleCardProps> = ({
@@ -41,16 +46,27 @@ export const ProjectsCard: React.FC<ArticleCardProps> = ({
         <div className="flex items-center justify-between mt-6">
           <a
             href={`/projects/${slug}`}
-            className="px-4 py-3 bg-[var(--primary-color-weak)] text-sm font-medium text-white rounded cursor-pointer hover:bg-[var(--primary-color-weaker)] transition-colors duration-300 ease-in-out"
+            className="px-4 py-3 bg-[var(--primary-color-weak)] text-sm font-medium text-white rounded cursor-pointer hover:bg-[var(--primary-color-weaker)] transition-colors duration-150 ease-in-out"
           >
             View Project
           </a>
           {(githubLink || storybookLink || figmaLink) && (
-            <div className="ml-2 flex flex-0 space-x-3">
+            <div className="ml-2 flex items-center flex-0 space-x-3 text-gray-700">
+              {figmaLink && (
+                <a
+                  href={figmaLink}
+                  className="text-1xl transform transition-transform duration-100 ease-in hover:scale-120"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Go to the Figma design (new tab)"
+                >
+                  <IoLogoFigma />
+                </a>
+              )}
               {githubLink && (
                 <a
                   href={githubLink}
-                  className="text-2xl text-gray-700 transform transition-transform duration-100 ease-in hover:scale-120"
+                  className="text-2xl transform transition-transform duration-100 ease-in hover:scale-120"
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Got to the Github repository (new tab)"
@@ -61,7 +77,7 @@ export const ProjectsCard: React.FC<ArticleCardProps> = ({
               {storybookLink && (
                 <a
                   href={storybookLink}
-                  className="text-2xl text-gray-700 transform transition-transform duration-100 ease-in hover:scale-120"
+                  className="text-2xl transform transition-transform duration-100 ease-in hover:scale-120"
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Go to the Storybook docs (new tab)"

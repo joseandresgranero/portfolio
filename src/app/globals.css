@@ -28,8 +28,8 @@
   --hero-text-color: var(--secondary-color);
   --hero-height: 300px;
   --projects-bg-color: var(--secondary-color);
-  --max-width-text: 870px;
-  --max-width-text-lg: 940px;
+  --max-width-text: 65ch;
+  --max-width-text-sm: 45ch;
   --heading-color: var(--primary-color-strong);
   --padding-x-base: theme("spacing.10");
   --padding-y-base: theme("spacing.14");

@@ -36,6 +36,7 @@ export const ProjectsSection = () => {
             slug={project.slug}
             title={project.title}
             description={project.description}
+            figmaLink={project.figmaLink}
             githubLink={project.githubLink}
             storybookLink={project.storybookLink}
             image={project.image}

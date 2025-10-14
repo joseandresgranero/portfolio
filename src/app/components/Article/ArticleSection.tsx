@@ -28,7 +28,7 @@ export const ArticleSection: React.FC<ArticleSectionProps> = ({
   return (
     <div
       className={`leading-relaxed mb-15 last-of-type:mb-0 ${
-        unlimitedWidth ? "" : "max-w-[var(--max-width-text-lg)]"
+        unlimitedWidth ? "" : "max-w-[var(--max-width-text)]"
       } ${className}`}
     >
       {append ? (
