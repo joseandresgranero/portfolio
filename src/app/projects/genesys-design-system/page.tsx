@@ -1,10 +1,15 @@
 import { notFound } from "next/navigation";
 import { Tag } from "@/app/components";
-import { ArticleSection } from "@/app/components/Article";
+import {
+  ArticleList,
+  ArticleParagraph,
+  ArticleSection,
+} from "@/app/components/Article";
 import { ArticleHeader } from "@/app/components/Article";
 import { projects } from "@/app/data";
 import { IArticle } from "@/types/article";
 import { Article } from "@/app/components/Article/Article";
+import Image from "next/image";
 
 export default function GernesysDesignSystem() {
   const project: IArticle | undefined = projects.find(
@@ -23,18 +28,76 @@ export default function GernesysDesignSystem() {
       role={project.role}
     >
       <ArticleSection heading="The Problem">
-        What was happening before (visual inconsistencies, duplicated
-        components, lack of guidelines). Why this created friction for users,
-        designers, and engineers. The business or product impact of not having a
-        system. “Before Genesys UI, every team built UI components
-        independently. This caused inconsistent experiences, slow releases, and
-        higher maintenance costs.”
+        <ArticleParagraph>
+          Before the design system existed, the product ecosystem faced major
+          inconsistencies — not only visual, but also in how users interacted
+          with the platform. The same actions could be performed in multiple
+          ways, using different components depending on where the user was in
+          the product.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          Meanwhile, developers were building their own components and layouts
+          for every new feature or enhancement, which significantly increased
+          both development time and maintenance costs.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          To make things even more complex, the Professional Services team was
+          continuously creating new, tailor-made vertical applications for
+          specific clients.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          As a result, maintaining visual consistency, accessibility standards,
+          and scalability across products had become almost impossible.
+        </ArticleParagraph>{" "}
+        <ArticleParagraph>
+          That’s when we decided to create a unified design system — not just as
+          a visual framework, but as a strategic foundation to transform how
+          Devo designed and built its products.
+        </ArticleParagraph>
+      </ArticleSection>
+      <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
+        <div className="grid sm:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
+          <div>
+            <Image
+              src="/projects/genesys-ui/images/alerts-creation-old.jpg"
+              width={1200}
+              height={617}
+              alt="Before design system UI example"
+              className="border border-gray-200"
+            />
+            <div className="text-sm mt-2 pl-8 lg:pl-0">
+              <strong>BEFORE:</strong> this is the Alert Creation page before
+              the design system.
+            </div>
+          </div>
+          <div>
+            <Image
+              src="/projects/genesys-ui/images/alerts-creation.png"
+              width={1200}
+              height={617}
+              alt="After design system UI example"
+              className="border border-gray-200"
+            />
+            <div className="text-sm mt-2 pl-8 lg:pl-0">
+              <strong>AFTER:</strong> and this is the same section after the
+              design system.
+            </div>
+          </div>
+        </div>
       </ArticleSection>
       <ArticleSection heading="Goals & Success Metrics">
-        Define clear objectives. Establish a unified design language. Speed up
-        design and development workflows. Improve consistency and accessibility.
-        Strengthen collaboration between design and engineering. Define metrics
-        to measure success (adoption rate, time saved, bug reduction, etc.).
+        <ArticleList>
+          <li>
+            <strong>Radically improve consistency:</strong> Establish a unified
+            visual and interaction language to ensure coherence across all Devo
+            products and touchpoints.
+          </li>
+          <li>
+            <strong>Accelerate design and development workflows :</strong>{" "}
+            Reduce repetitive work by providing reusable, ready-to-implement
+            components and design tokens.
+          </li>
+        </ArticleList>
       </ArticleSection>
       <ArticleSection heading="Research & Audit">
         Show your analytical process before building. UI audit: review of all
