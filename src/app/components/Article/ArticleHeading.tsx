@@ -11,7 +11,7 @@ export const ArticleHeading: React.FC<ArticleHeadingProps> = ({
   children,
   htmlTag = "h2",
   size,
-  spacing = "mb-8",
+  spacing = "mb-5",
 }) => {
   const HtmlTag = htmlTag as React.ElementType;
   const SIZE_CLASSES = {

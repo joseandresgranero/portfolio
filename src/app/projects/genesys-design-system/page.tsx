@@ -59,26 +59,26 @@ export default function GernesysDesignSystem() {
         <div className="grid sm:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
           <div>
             <Image
-              src="/projects/genesys-ui/images/alerts-creation-old.jpg"
+              src="/projects/design-system/img/alerts-creation-old.jpg"
               width={1200}
               height={617}
               alt="Before design system UI example"
               className="border border-gray-200"
             />
-            <div className="text-sm mt-2 pl-8 lg:pl-0">
+            <div className="text-sm mt-2">
               <strong>BEFORE:</strong> this is the Alert Creation page before
               the design system.
             </div>
           </div>
           <div>
             <Image
-              src="/projects/genesys-ui/images/alerts-creation.png"
+              src="/projects/design-system/img/alerts-creation.png"
               width={1200}
               height={617}
               alt="After design system UI example"
               className="border border-gray-200"
             />
-            <div className="text-sm mt-2 pl-8 lg:pl-0">
+            <div className="text-sm mt-2">
               <strong>AFTER:</strong> and this is the same section after the
               design system.
             </div>
