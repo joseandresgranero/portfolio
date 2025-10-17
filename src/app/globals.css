@@ -32,7 +32,7 @@
   --max-width-text: 65ch;
   --max-width-text-sm: 45ch;
   --heading-color: var(--primary-color-strong);
-  --padding-x-base: theme("spacing.10");
+  --padding-x-base: theme("spacing.7");
   --padding-y-base: theme("spacing.14");
   --padding-base: var(--padding-y-base) var(--padding-x-base);
   --padding-x-base-md: theme("spacing.20");
