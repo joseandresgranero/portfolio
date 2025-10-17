@@ -1,10 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import * as React from "react";
 
 export default function HeroSection() {
+  React.useEffect(() => {
+    document.body.classList.add("home");
+    return () => document.body.classList.remove("home");
+  }, []);
+
   return (
-    <section className="flex flex-col justify-center bg-[var(--hero-bg-color)] lg:h-[var(--hero-height)] px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] py-10 bg-gradient-to-b from-[var(--primary-color)] to-[var(--primary-color-weak)]">
+    <section className="flex flex-col justify-center bg-[var(--hero-bg-color)] lg:h-[calc(var(--hero-height)+var(--header-height))] lg:pb-0 lg:pt-[var(--header-height)] px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] py-10 bg-gradient-to-r from-[var(--primary-color)] to-[var(--primary-color-weakest)] animate-gradient">
       <motion.h1
         className="text-[2.2rem] leading-[1.4] mb-4 text-[var(--hero-text-color)] max-w-[var(--max-width-text-sm)]"
         initial={{ opacity: 0, y: -20 }}

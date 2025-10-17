@@ -25,7 +25,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`flex items-center justify-between px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] h-[var(--header-height)] bg-[var(--header-bg-color)] text-[var(--header-text-color)]`}
+      className={`header flex items-center justify-between px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] h-[var(--header-height)] bg-[var(--header-bg-color)] text-[var(--header-text-color)]`}
     >
       <Link href="/" className="flex items-center h-full pr-4 space-x-3">
         <span className="font-featured font-medium text-2xl transition-[font-size] duration-300 ease-in-out">
@@ -62,7 +62,7 @@ export const Header = () => {
                 className={`${
                   pathname === link.href
                     ? "font-bold text-[var(--header-text-color)] border-b-4 pb-1 transition transition-border duration-300 ease-in-out"
-                    : "text-[var(--header-text-color)] border-transparent pb-1 transition transition-border duration-300 ease-in-out hover:border-b-4 hover:border-gray-500"
+                    : "text-[var(--header-text-color)] border-transparent pb-1 transition transition-border duration-300 ease-in-out hover:border-b-4 hover:border-white/20"
                 }`}
               >
                 {link.label}

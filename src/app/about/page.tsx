@@ -61,10 +61,11 @@ export default function About() {
           </ArticleParagraph>
           <ArticleParagraph>
             Expert in prototyping with Figma, design systems, HTML5, CSS3/SASS,
-            design tokens, and responsive design. I lead projects end-to-end,
-            from UX research to front-end development, with a strong focus on
-            visual consistency, performance, and user experience. Experienced
-            leading teams and setting design standards in Agile environments.
+            CSS in JS, PostCSS, design tokens, and responsive design. I lead
+            projects end-to-end, from UX research to front-end development, with
+            a strong focus on visual consistency, performance, and user
+            experience. Experienced leading teams and setting design standards
+            in Agile environments.
           </ArticleParagraph>
         </ArticleSection>
         <a
@@ -174,7 +175,7 @@ export default function About() {
               </li>
               <li>
                 <strong>
-                  Bachelor's Degree in n Advertising and Public Relations
+                  Bachelor's Degree in Advertising and Public Relations
                 </strong>
                 <p className="text-lg text-gray-500 italic mb-4">
                   2001-2005 / University of Seville

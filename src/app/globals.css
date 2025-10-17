@@ -15,6 +15,7 @@
   --font-mono: var(--font-roboto-mono);
   --primary-00: #e2e8ff;
   --primary-color: #273469;
+  --primary-color-weakest: #7b89c9;
   --primary-color-weaker: #4154ac;
   --primary-color-weak: #303f85;
   --primary-color-strong: #151a33;
@@ -23,7 +24,7 @@
   --header-height: 98px;
   --header-height-compact: 64px;
   --header-text-color: #fff;
-  --header-bg-color: var(--primary-color-strong);
+  --header-bg-color: var(--primary-color-weak);
   --hero-bg-color: var(--primary-color);
   --hero-text-color: var(--secondary-color);
   --hero-height: 300px;
@@ -55,5 +56,28 @@ body {
 @layer base {
   body {
     @apply text-xl;
+  }
+}
+
+@layer utilities {
+  @keyframes gradient-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 75% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 150% 150%;
+    animation: gradient-move 6s ease infinite;
+  }
+
+  .home .header {
+    @apply absolute w-full inset-0 bg-black/40;
   }
 }
