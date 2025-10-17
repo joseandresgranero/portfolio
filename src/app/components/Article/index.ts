@@ -1,4 +1,5 @@
 export * from "./ArticleTitle";
+export * from "./ArticleCaption";
 export * from "./ArticleIntro";
 export * from "./ArticleRole";
 export * from "./ArticleBackLink";

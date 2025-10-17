@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { Tag } from "@/app/components";
 import {
+  ArticleBackLink,
+  ArticleCaption,
   ArticleList,
   ArticleParagraph,
   ArticleSection,
@@ -56,32 +58,30 @@ export default function GernesysDesignSystem() {
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
-        <div className="grid sm:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
+        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
           <div>
             <Image
               src="/projects/design-system/img/alerts-creation-old.jpg"
-              width={1200}
-              height={617}
+              width={800}
+              height={411}
               alt="Before design system UI example"
               className="border border-gray-200"
             />
-            <div className="text-sm mt-2">
-              <strong>BEFORE:</strong> this is the Alert Creation page before
-              the design system.
-            </div>
+            <ArticleCaption title="Before">
+              This is the Alert Creation page before the design system...
+            </ArticleCaption>
           </div>
           <div>
             <Image
               src="/projects/design-system/img/alerts-creation.png"
-              width={1200}
-              height={617}
+              width={800}
+              height={411}
               alt="After design system UI example"
               className="border border-gray-200"
             />
-            <div className="text-sm mt-2">
-              <strong>AFTER:</strong> and this is the same section after the
-              design system.
-            </div>
+            <ArticleCaption title="After">
+              ...and this is the same section after the design system.
+            </ArticleCaption>
           </div>
         </div>
       </ArticleSection>
@@ -155,49 +155,187 @@ export default function GernesysDesignSystem() {
       </ArticleSection>
       <ArticleSection heading="Research & Audit">
         <ArticleParagraph>
-          Show your analytical process before building. UI audit: review of all
-          existing components and styles. Designer and developer interviews to
-          understand pain points. Benchmarking against other systems (Material,
-          Polaris, Carbon). Identify core inconsistencies or inefficiencies. 📸
-          Tip: Use screenshots or visual comparisons to show “before” states.
+          Once we started the creation process, we reviewed what other companies
+          and established design systems were doing—Carbon, Material, Spectrum,
+          etc.
         </ArticleParagraph>
         <ArticleParagraph>
-          Una vez iniciado el proceso de creación, decidimos revisar lo que
-          hacían otras compañías y grandes sistemas de diseño ya instaurados:
-          Carbon, Material, Spectrum... etc.
+          This benchmarking helped us refine the structure of our Storybook
+          documentation and Figma system, prioritize components, organize them
+          efficiently, and set best practices for accessibility and scalability.
         </ArticleParagraph>
         <ArticleParagraph>
-          En base a todo ese benchmarking pudimos afinar mejor la estrutura de
-          nuestra documentación en Storybook y nuestro sistema en Figma, elegir
-          qué components debíamos priorizar y cómo organizarlos, y definir
-          mejores prácticas para accesibilidad y escalabilidad.
+          We also kept close communication with developers to understand their
+          needs and technical constraints, and within the design team to align
+          on workflows and daily challenges. This ensured the system truly
+          served both teams, with a special focus on developers as the primary
+          users.
         </ArticleParagraph>
         <ArticleParagraph>
-          Por otro lado, mantuvimos estrecha conversación con los
-          desarrolladores para entender sus necesidades y limitaciones técnicas,
-          y entre nosotros mismos en el equipo de diseño para conocer los flujos
-          de trabajo y retos diarios. Esto nos permitió crear un sistema que
-          realmente respondiera a las necesidades de ambos equipos. Sobre todo,
-          nos enfocamos en als necesidades de los desarrolladores, ya que eran
-          los principales usuarios del sistema.
-        </ArticleParagraph>
-        <ArticleParagraph>
-          Del mismo modo, realizamos una auditoría exhaustiva de la UI existente
-          para identificar inconsistencias visuales y de interacción.
-          Básicamente, se hizo un inventario de los componentes que ya se usaban
-          en la aplicación, desechando duplicidades y detectando qué carencias
-          existína. Esto nos ayudó a priorizar qué componentes debíamos abordar
-          primero y a establecer una línea base clara para el diseño del
-          sistema.
+          Finally, we conducted a thorough audit of the existing UI to identify
+          visual and interaction inconsistencies. We inventoried existing
+          components, removed duplicates, and spotted gaps, which helped us
+          prioritize and establish a clear baseline for the design system.
         </ArticleParagraph>
       </ArticleSection>
+      <ArticleSection
+        unlimitedWidth
+        className="bg-[var(--projects-bg-color)] flex flex-col gap-16"
+      >
+        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
+          <div>
+            <Image
+              src="/projects/design-system/img/secondary-tabs-old.png"
+              width={1200}
+              height={617}
+              alt="Before design system vertical tabs UI example"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Before">
+              We inventoried the secondary vertical tabs, but found that their
+              layout took up too much space, so we maintained the component but
+              changing its structure.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/secondary-tabs.png"
+              width={800}
+              height={522}
+              alt="After design system UI horizontal tabs example"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="After">
+              We didn't just inventory the components — we also adapted and
+              refined them, removing those that were no longer needed. In this
+              case, changing to an horizontal layout helped us to save space and
+              improve usability.
+            </ArticleCaption>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
+          <div>
+            <Image
+              src="/projects/design-system/img/design-system-home.png"
+              width={800}
+              height={522}
+              alt="Design system Storybook docs home"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Documentation">
+              The design system documentation was built in Storybook, following
+              a structure inspired by other established systems — including
+              principles, foundations, components, and patterns.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/marketplace-home.png"
+              width={800}
+              height={522}
+              alt="Marketplace home"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Company oriented components">
+              Our design system needed to be flexible enough to meet the needs
+              of our teams, but not as open-ended as others — like Material or
+              Carbon, for instance.
+            </ArticleCaption>
+          </div>
+        </div>
+      </ArticleSection>
       <ArticleSection heading="Foundations">
-        Lay the groundwork of your system. Design tokens: color, typography,
-        spacing, grid, shadows, borders. Principles: accessibility, scalability,
-        visual identity. Naming conventions and variant structures.
-        Documentation: Figma styles, usage guidelines, component anatomy.
-        Include visual examples — e.g., your color palette, typography scale, or
-        spacing system.
+        <ArticleParagraph>
+          Every design system starts with a solid foundation. At its core are
+          the design tokens — colors, typography, spacing, grids, shadows, and
+          borders. These tokens act as a single source of truth, giving every
+          component a consistent look and feel. By defining them first, we make
+          sure the system is visually cohesive and easy to scale across
+          products.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          Equally important are the principles and rules that guide how the
+          system is used. We focus on accessibility, scalability, and
+          maintaining the brand's visual identity. We established clear
+          guidelines about:
+        </ArticleParagraph>
+        <ArticleList>
+          <li>Color.</li>
+          <li>Typography.</li>
+          <li>Layout.</li>
+          <li>Spatial system.</li>
+          <li>Iconography.</li>
+          <li>Elevation hierarchy.</li>
+          <li>Surface shape.</li>
+          <li>Content, voide, and tone.</li>
+        </ArticleList>
+      </ArticleSection>
+      <ArticleSection
+        unlimitedWidth
+        className="bg-[var(--projects-bg-color)] flex flex-col gap-16"
+      >
+        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
+          <div>
+            <Image
+              src="/projects/design-system/img/palette-detail.png"
+              width={800}
+              height={441}
+              alt="Example of color palette"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Color palettes">
+              A comprehensive color palette that balances brand identity with
+              accessibility. Each color was tested to ensure WCAG AA compliance,
+              providing sufficient contrast for readability and usability.
+              Additionally, the darkest colors in the palette meet AA standards
+              when used on the lighter half of the palette, and vice versa.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/use-of-color.png"
+              width={800}
+              height={522}
+              alt="Color usage by context table"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Color usage by context">
+              A table which helps to decide which color palettes to use in the
+              app, depending on the context of the element. Well-chosen colors
+              help users to identify statuses, actions, and interactions.
+            </ArticleCaption>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
+          <div>
+            <Image
+              src="/projects/design-system/img/typography-intro.png"
+              width={800}
+              height={522}
+              alt="Design system Storybook docs home"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Typography">
+              The design system documentation was built in Storybook, following
+              a structure inspired by other established systems — including
+              principles, foundations, components, and patterns.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/variant-example.png"
+              width={800}
+              height={522}
+              alt="Marketplace home"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Company oriented components">
+              Our design system needed to be flexible enough to meet the needs
+              of our teams, but not as open-ended as others — like Material or
+              Carbon, for instance.
+            </ArticleCaption>
+          </div>
+        </div>
       </ArticleSection>
       <ArticleSection heading="Components">
         Describe how you designed and standardized the key components. How you

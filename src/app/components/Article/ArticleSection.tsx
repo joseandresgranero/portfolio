@@ -33,7 +33,7 @@ export const ArticleSection: React.FC<ArticleSectionProps> = ({
           : "max-w-[var(--max-width-text)]"
       } ${className}`}
     >
-      {append ? (
+      {append && heading ? (
         <div className="flex flex-row items-center space-x-4 mb-2">
           <ArticleHeading
             htmlTag={headingTag}
@@ -45,7 +45,7 @@ export const ArticleSection: React.FC<ArticleSectionProps> = ({
           <div className="text-lg text-gray-600">—</div>
           <div className="text-lg text-gray-600">{append}</div>
         </div>
-      ) : (
+      ) : heading ? (
         <ArticleHeading
           htmlTag={headingTag}
           size={headingSize}
@@ -53,7 +53,7 @@ export const ArticleSection: React.FC<ArticleSectionProps> = ({
         >
           {heading}
         </ArticleHeading>
-      )}
+      ) : null}
       {lead && <p className="text-lg text-gray-500 italic mb-4">{lead}</p>}
       {children}
     </div>

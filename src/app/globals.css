@@ -74,7 +74,7 @@ body {
 
   .animate-gradient {
     background-size: 150% 150%;
-    animation: gradient-move 6s ease infinite;
+    animation: gradient-move 4s ease infinite;
   }
 
   .home .header {
