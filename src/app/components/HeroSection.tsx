@@ -10,7 +10,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="flex flex-col justify-center bg-[var(--hero-bg-color)] lg:h-[calc(var(--hero-height)+var(--header-height))] lg:pb-0 lg:pt-[var(--header-height)] px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] py-10 bg-gradient-to-r from-[var(--primary-color)] to-[var(--primary-color-weakest)] animate-gradient">
+    <section className="flex flex-col justify-center bg-[var(--hero-bg-color)] lg:h-[calc(var(--hero-height)+var(--header-height))] lg:pb-0 pt-[calc(var(--header-height)+40px)] lg:pt-[var(--header-height)] px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] py-10 bg-gradient-to-r from-[var(--primary-color)] to-[var(--primary-color-weakest)] animate-gradient">
       <motion.h1
         className="text-[2.2rem] leading-[1.4] mb-4 text-[var(--hero-text-color)] max-w-[var(--max-width-text-sm)]"
         initial={{ opacity: 0, y: -20 }}

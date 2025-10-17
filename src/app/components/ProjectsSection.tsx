@@ -34,7 +34,7 @@ export const ProjectsSection = () => {
           <ProjectsCard
             key={`${project.slug}-${idx}`}
             slug={project.slug}
-            title={project.title}
+            title={project.shortTitle || project.title}
             description={project.description}
             figmaLink={project.figmaLink}
             githubLink={project.githubLink}

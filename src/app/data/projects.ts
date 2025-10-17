@@ -4,6 +4,7 @@ import { IArticle } from "@/types/article";
 export const projects: IArticle[] = [
   {
     title: "Genesys Design System",
+    shortTitle: "Design System",
     role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
     description:
       "Created the Devo design system from the ground up, radically enhancing consistency, scalability, and the overall speed of design and development.",
@@ -20,7 +21,8 @@ export const projects: IArticle[] = [
     //content: () => DesignSystemContent,
   },
   {
-    title: "Genesys UI",
+    title: "Genesys UI React components library",
+    shortTitle: "UI Components Library",
     role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
     description:
       "React component library that provides accessible, consistent UI elements for enterprise apps, with interactive Storybook documentation for easy use.",
@@ -31,7 +33,8 @@ export const projects: IArticle[] = [
     githubLink: "https://github.com/genesys-ui/react",
   },
   {
-    title: "Genesys UI",
+    title: "Genesys Icons library",
+    shortTitle: "Icons library",
     role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
     description:
       "React component library that provides accessible, consistent UI elements for enterprise apps, with interactive Storybook documentation for easy use.",

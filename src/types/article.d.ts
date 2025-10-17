@@ -2,6 +2,7 @@ import * as React from "react";
 
 export interface IArticle {
   title: string;
+  shortTitle?: string;
   description: string;
   role: string;
   image: string;
