@@ -8,3 +8,4 @@ export * from "./ArticleList";
 export * from "./ArticleHeader";
 export * from "./ArticleParagraph";
 export * from "./ArticleSection";
+export * from "./ArticleLink";

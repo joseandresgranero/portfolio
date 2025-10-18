@@ -29,15 +29,15 @@ export const ProjectsCard: React.FC<ArticleCardProps> = ({
     <div className="card card--project flex flex-col">
       <a
         href={`/projects/${slug}`}
-        className="overflow-hidden border border-gray-200 h-[280px]"
-        title="View project"
+        className="overflow-hidden border border-gray-200"
+        title={`View project '${title}'`}
       >
         <Image
-          width={imageWidth || 406}
-          height={imageHeight || 280}
+          width={imageWidth || 800}
+          height={imageHeight || 600}
           src={image}
           alt={imageAlt}
-          className="object-cover transition-all duration-150 hover:scale-110 hover:saturate-150"
+          className="object-cover transition-all duration-200 hover:scale-110 hover:saturate-150"
         />
       </a>
       <div className="px-1 py-6">
@@ -46,6 +46,7 @@ export const ProjectsCard: React.FC<ArticleCardProps> = ({
         <div className="flex items-center justify-between mt-6">
           <a
             href={`/projects/${slug}`}
+            title={`View project '${title}'`}
             className="px-4 py-3 bg-[var(--primary-color-weak)] text-sm font-medium text-white rounded cursor-pointer hover:bg-[var(--primary-color-weaker)] transition-colors duration-150 ease-in-out"
           >
             View Project

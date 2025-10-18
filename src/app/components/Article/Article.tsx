@@ -7,6 +7,9 @@ export interface ArticleProps {
   className?: string;
   backLinkText?: string;
   backLinkHref?: string;
+  figmaLink?: IArticle["figmaLink"];
+  githubLink?: IArticle["githubLink"];
+  storybookLink?: IArticle["storybookLink"];
   title?: IArticle["title"];
   intro?: IArticle["description"];
   role?: IArticle["role"];
@@ -23,6 +26,9 @@ export const Article: React.FC<ArticleProps> = ({
   children,
   title,
   hideBackLink,
+  figmaLink,
+  githubLink,
+  storybookLink,
   htmlTag = "main",
   intro,
   role,
@@ -38,6 +44,9 @@ export const Article: React.FC<ArticleProps> = ({
           backLinkText={backLinkText}
           backLinkHref={backLinkHref}
           hideBackLink={hideBackLink}
+          figmaLink={figmaLink}
+          storybookLink={storybookLink}
+          githubLink={githubLink}
           title={title}
           tags={tags}
           intro={intro}

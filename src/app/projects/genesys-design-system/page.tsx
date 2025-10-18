@@ -3,6 +3,7 @@ import { Tag } from "@/app/components";
 import {
   ArticleBackLink,
   ArticleCaption,
+  ArticleHeading,
   ArticleList,
   ArticleParagraph,
   ArticleSection,
@@ -28,19 +29,23 @@ export default function GernesysDesignSystem() {
       intro={project.description}
       tags={project.tags}
       role={project.role}
+      figmaLink={project.figmaLink}
+      githubLink={project.githubLink}
+      storybookLink={project.storybookLink}
     >
+      {/* PROBLEM ----------------------------------------------------------------------------- */}
       <ArticleSection heading="The Problem">
         <ArticleParagraph>
-          Before the design system existed, the product ecosystem faced major
-          inconsistencies — not only visual, but also in how users interacted
-          with the platform. The same actions could be performed in multiple
-          ways, using different components depending on where the user was in
-          the product.
+          Before the design system existed, the product ecosystem faced{" "}
+          <strong>major inconsistencies</strong> — not only visual, but also in
+          how users interacted with the platform. The same actions could be
+          performed in multiple ways, using different components depending on
+          where the user was in the product.
         </ArticleParagraph>
         <ArticleParagraph>
           Meanwhile, developers were building their own components and layouts
           for every new feature or enhancement, which significantly increased
-          both development time and maintenance costs.
+          both development time and <strong>maintenance costs</strong>.
         </ArticleParagraph>
         <ArticleParagraph>
           To make things even more complex, the Professional Services team was
@@ -50,11 +55,11 @@ export default function GernesysDesignSystem() {
         <ArticleParagraph>
           As a result, maintaining visual consistency, accessibility standards,
           and scalability across products had become almost impossible.
-        </ArticleParagraph>{" "}
+        </ArticleParagraph>
         <ArticleParagraph>
-          That’s when we decided to create a unified design system — not just as
-          a visual framework, but as a strategic foundation to transform how
-          Devo designed and built its products.
+          That's when we decided to create a unified design system — not just as
+          a visual framework, but as a <strong>strategic foundation</strong> to
+          transform how Devo designed and built its products.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
@@ -85,6 +90,7 @@ export default function GernesysDesignSystem() {
           </div>
         </div>
       </ArticleSection>
+      {/* GOAL AND METRICS ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Goals & Success Metrics">
         <ArticleList noBullets>
           <li>
@@ -127,32 +133,42 @@ export default function GernesysDesignSystem() {
           <li>
             <strong>Strengthen Devo's brand identity</strong>
             <p>
-              Translate the brand’s visual language and values into a
+              Translate the brand's visual language and values into a
               consistent, systematized digital experience.
             </p>
           </li>
         </ArticleList>
         <ArticleParagraph>
           We defined some metrics, but due to the limited size of our design
-          team, we weren’t able to conduct extensive testing or research to
+          team, we weren't able to conduct extensive testing or research to
           audit them. These were our success metrics:
         </ArticleParagraph>
         <ArticleList>
-          <li>40% reduction in design & implementation time.</li>
-          <li>90% of engineering teams actively using the design system.</li>
           <li>
-            80% reduction in one-off or inconsistent UI components (excluding
-            vertical applications).
+            40% reduction in design & implementation <strong>time</strong>.
           </li>
           <li>
-            100% compliance with WCAG AA (excluding vertical applications).
+            90% of <strong>engineering teams</strong> actively using the design
+            system.
           </li>
           <li>
-            Designer–developer alignment satisfaction: {">"}8/10 (survey).
+            80% reduction in one-off or <strong>inconsistent</strong> UI
+            components (excluding vertical applications).
           </li>
-          <li>90% component documentation completeness.</li>
+          <li>
+            100% compliance with <strong>WCAG AA</strong> (excluding vertical
+            applications).
+          </li>
+          <li>
+            Designer-developer alignment <strong>satisfaction</strong>: {">"}
+            8/10 (survey).
+          </li>
+          <li>
+            90% component <strong>documentation</strong> completeness.
+          </li>
         </ArticleList>
       </ArticleSection>
+      {/* RESEARCH ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Research & Audit">
         <ArticleParagraph>
           Once we started the creation process, we reviewed what other companies
@@ -160,22 +176,25 @@ export default function GernesysDesignSystem() {
           etc.
         </ArticleParagraph>
         <ArticleParagraph>
-          This benchmarking helped us refine the structure of our Storybook
-          documentation and Figma system, prioritize components, organize them
-          efficiently, and set best practices for accessibility and scalability.
+          This <strong>benchmarking</strong> helped us refine the structure of
+          our Storybook documentation and Figma system, prioritize components,
+          organize them efficiently, and set best practices for accessibility
+          and scalability.
         </ArticleParagraph>
         <ArticleParagraph>
-          We also kept close communication with developers to understand their
-          needs and technical constraints, and within the design team to align
-          on workflows and daily challenges. This ensured the system truly
-          served both teams, with a special focus on developers as the primary
-          users.
+          We also kept <strong>close communication with developers</strong> to
+          understand their needs and technical constraints, and within the
+          design team to align on workflows and daily challenges. This ensured
+          the system truly served both teams, with a special focus on developers
+          as the primary users.
         </ArticleParagraph>
         <ArticleParagraph>
-          Finally, we conducted a thorough audit of the existing UI to identify
-          visual and interaction inconsistencies. We inventoried existing
-          components, removed duplicates, and spotted gaps, which helped us
-          prioritize and establish a clear baseline for the design system.
+          Finally,{" "}
+          <strong>I conducted a thorough audit of the existing UI</strong> to
+          identify visual and interaction inconsistencies. We inventoried
+          existing components, removed duplicates, and spotted gaps, which
+          helped us prioritize and establish a clear baseline for the design
+          system.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection
@@ -244,14 +263,15 @@ export default function GernesysDesignSystem() {
           </div>
         </div>
       </ArticleSection>
+      {/* FOUNDATIONS ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Foundations">
         <ArticleParagraph>
-          Every design system starts with a solid foundation. At its core are
-          the design tokens — colors, typography, spacing, grids, shadows, and
-          borders. These tokens act as a single source of truth, giving every
-          component a consistent look and feel. By defining them first, we make
-          sure the system is visually cohesive and easy to scale across
-          products.
+          Every design system starts with a solid foundation.{" "}
+          <strong>At its core are the design tokens</strong> — colors,
+          typography, spacing, grids, shadows, and borders. These tokens act as
+          a single source of truth, giving every component a consistent look and
+          feel. By defining them first, we make sure the system is visually
+          cohesive and easy to scale across products.
         </ArticleParagraph>
         <ArticleParagraph>
           Equally important are the principles and rules that guide how the
@@ -266,9 +286,268 @@ export default function GernesysDesignSystem() {
           <li>Spatial system.</li>
           <li>Iconography.</li>
           <li>Elevation hierarchy.</li>
-          <li>Surface shape.</li>
-          <li>Content, voide, and tone.</li>
+          <li>Shape and Radius.</li>
+          <li>Content, voice, and tone.</li>
         </ArticleList>
+      </ArticleSection>
+      <ArticleSection
+        unlimitedWidth
+        className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
+      >
+        <div>
+          <Image
+            src="/projects/design-system/img/design-tokens.png"
+            width={800}
+            height={441}
+            alt="Example of design tokens"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Design tokens">
+            Integrated directly into Figma through variables, allowing designers
+            to apply them seamlessly within the design environment.
+            Additionally, the tokens are exported in multiple formats —
+            including CSS, SASS, JavaScript, and JSON — making them easily
+            accessible for developers.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/palette-detail.png"
+            width={800}
+            height={441}
+            alt="Example of color palette"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Color palettes">
+            I built a comprehensive color palette that balances brand identity
+            with accessibility. Each color was tested to ensure WCAG AA
+            compliance, providing sufficient contrast for readability and
+            usability. Additionally, the darkest colors in the palette meet AA
+            standards when used on the lighter half of the palette, and vice
+            versa.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/use-of-color.png"
+            width={800}
+            height={441}
+            alt="Color usage by context table"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Color usage by context">
+            I defined a table to guide the selection of color palettes based on
+            context. Thoughtful color choices help users quickly recognize
+            statuses, actions, and interactions
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/typography-intro.png"
+            width={800}
+            height={453}
+            alt="Design system Storybook docs home"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Typography">
+            It helps us to correctly establish the visual hierarchy of a page,
+            in addition to organizing information and serving as a guide for
+            users while browsing the platform. Its correct use also generates a
+            more powerful brand presence.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/variant-example.png"
+            width={800}
+            height={453}
+            alt="Marketplace home"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Typographic variants">
+            We use typo design tokens and themes to manage our typography. We
+            have specific groups of typo tokens (font-size, font-weight,
+            line-height, letter-spacing... etc.) to define our different
+            typographic styles: headings, heros, caps, body... etc.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/layout.png"
+            width={800}
+            height={542}
+            alt="Layout example"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Layout">
+            The layout is composed of distinct regions that define our
+            information architecture. Each region serves a specific purpose and
+            contains key interactions — such as navigation, quick access to
+            settings, datasets, or content.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/layout-variants.png"
+            width={800}
+            height={542}
+            alt="Layout variants"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Main region layouts">
+            The main region hosts each section's primary content. Built with the
+            “Fluid” component and a twelve-column grid, it's the most dynamic
+            area of the layout, while other regions remain consistent throughout
+            the user journey.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/spatial-scales.png"
+            width={800}
+            height={633}
+            alt="Spatial system scales"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Spatial system scales">
+            I created a unified spatial system keeps our designs consistent and
+            our communication clear. It simplifies decision-making and creates a
+            predictable visual rhythm that feels balanced and intentional.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/sizing-typo.png"
+            width={800}
+            height={633}
+            alt="Typography sizing scale"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Typography sizing scale">
+            I defined a based on a 4pt baseline grid, line heights scale in 4pt
+            increments. This system aligns component and layout scales with
+            typography, creating a cohesive vertical rhythm.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/sizing-components.png"
+            width={800}
+            height={633}
+            alt="Component sizing scale"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Component sizing scale">
+            The main region hosts each section's primary content. Built with the
+            “Fluid” component and a twelve-column grid, it's the most dynamic
+            area of the layout, while other regions remain consistent throughout
+            the user journey.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/icons-example.png"
+            width={800}
+            height={600}
+            alt="Icons example"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Iconography">
+            We built our icon set on top of Ionicons. Whenever we couldn't find
+            a suitable icon, we designed a new one derived from the library to
+            keep proportions and visual harmony consistent.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/elevation-hierarchy.png"
+            width={800}
+            height={500}
+            alt="Elevation hierarchy"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Elevation hierarchy">
+            Elevation marks the distance of elements from the background and
+            arranges them along the z-axis. To do this, each elevation level is
+            defined by a specific shadow that simulates the way in which natural
+            light is projected on objects depending on the distance to them.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/elevation-levels.png"
+            width={800}
+            height={600}
+            alt="Icons example"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Elevation levels">
+            The different elevation levels available correspond to the different
+            levels of importance with which we want to organize the components
+            throughout the UI.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/radius.png"
+            width={800}
+            height={500}
+            alt="Shape and radius"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Shape and radius">
+            Rounded corners are used throughout the platform to differentiate
+            the different families of UI components based on their anatomy,
+            level of interaction... etc.
+          </ArticleCaption>
+        </div>
+        <div>
+          <Image
+            src="/projects/design-system/img/voice-and-tone.png"
+            width={800}
+            height={500}
+            alt="Voice and tone"
+            className="border border-gray-200"
+          />
+          <ArticleCaption title="Voice and tone">
+            Our voice defines how we communicate with users. While our voice
+            stays consistent across all content, its tone adapts to each context
+            and audience. Our voice is clear, informative, and relaxed. We use
+            an informal style to write content that is both simple and
+            instructive.
+          </ArticleCaption>
+        </div>
+      </ArticleSection>
+      {/* COMPONENTS ----------------------------------------------------------------------------- */}
+      <ArticleSection heading="Components">
+        <ArticleParagraph>
+          We started by identifying the most common patterns in our product —
+          the building blocks users interact with every day. I had to{" "}
+          <strong>
+            inventarize every way of doing things, every component
+          </strong>{" "}
+          created in the app. I also deleted or transformed not consistent or
+          ineffective components and patterns. We defined a consistent set of
+          components that could be reused and scaled across the platform.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          Each component went through <strong>several design iterations</strong>{" "}
+          and feedback rounds with designers and developers. We refined
+          behaviors, variants, and states to make them more intuitive and
+          accessible. This process helped us simplify the system and make it
+          feel cohesive at every level.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          To ensure consistency, we aligned Figma components with their coded
+          counterparts.{" "}
+          <strong>
+            I took charge of bringing our Figma components to life in React
+          </strong>{" "}
+          for our components library, ensuring consistency between design and
+          code across the library. Shared naming conventions and structure
+          allowed both teams to work in sync, reducing friction and guaranteeing
+          that what we designed matched exactly what users experienced.
+        </ArticleParagraph>
       </ArticleSection>
       <ArticleSection
         unlimitedWidth
@@ -277,80 +556,108 @@ export default function GernesysDesignSystem() {
         <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
           <div>
             <Image
-              src="/projects/design-system/img/palette-detail.png"
+              src="/projects/design-system/img/components-overview.png"
               width={800}
-              height={441}
-              alt="Example of color palette"
+              height={500}
+              alt="UI components overview"
               className="border border-gray-200"
             />
-            <ArticleCaption title="Color palettes">
-              A comprehensive color palette that balances brand identity with
-              accessibility. Each color was tested to ensure WCAG AA compliance,
-              providing sufficient contrast for readability and usability.
-              Additionally, the darkest colors in the palette meet AA standards
-              when used on the lighter half of the palette, and vice versa.
+            <ArticleCaption title="Figma and Storybook library">
+              Overview of the component library showing buttons, badges,
+              banners, progress bars... etc. Each component is implemented in
+              React and TypeScript, with detailed documentation available in
+              Storybook and Figma for designers and developers.
             </ArticleCaption>
           </div>
           <div>
             <Image
-              src="/projects/design-system/img/use-of-color.png"
+              src="/projects/design-system/img/anatomy.png"
               width={800}
-              height={522}
-              alt="Color usage by context table"
+              height={500}
+              alt="Component anatomy example"
               className="border border-gray-200"
             />
-            <ArticleCaption title="Color usage by context">
-              A table which helps to decide which color palettes to use in the
-              app, depending on the context of the element. Well-chosen colors
-              help users to identify statuses, actions, and interactions.
+            <ArticleCaption title="Component anatomy">
+              Breakdown of a single component, highlighting its structure,
+              spacing, and interactive elements. This ensures clarity and
+              consistency when components are implemented across the system.
             </ArticleCaption>
           </div>
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
           <div>
             <Image
-              src="/projects/design-system/img/typography-intro.png"
+              src="/projects/design-system/img/states-and-variants.png"
               width={800}
-              height={522}
-              alt="Design system Storybook docs home"
+              height={500}
+              alt="States and variants example"
               className="border border-gray-200"
             />
-            <ArticleCaption title="Typography">
-              The design system documentation was built in Storybook, following
-              a structure inspired by other established systems — including
-              principles, foundations, components, and patterns.
+            <ArticleCaption title="States and variants">
+              Illustration of the different states and variants of a component,
+              showing how it should behave in different contexts. This helps
+              maintain visual consistency and predictable user interactions.
             </ArticleCaption>
           </div>
           <div>
             <Image
-              src="/projects/design-system/img/variant-example.png"
+              src="/projects/design-system/img/code-alignment.png"
               width={800}
-              height={522}
-              alt="Marketplace home"
+              height={500}
+              alt="Code alignment example"
               className="border border-gray-200"
             />
-            <ArticleCaption title="Company oriented components">
-              Our design system needed to be flexible enough to meet the needs
-              of our teams, but not as open-ended as others — like Material or
-              Carbon, for instance.
+            <ArticleCaption title="Figma - Code Alignment">
+              Highlights the connection between design and development. I
+              translated Figma components into code, making sure the final
+              product reflects the designers' intent and delivers a seamless
+              experience to users.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/design-tokens-component.png"
+              width={800}
+              height={500}
+              alt="Component design tokens example"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Design tokens in action">
+              Example of how design tokens are applied to a button component,
+              with different types — color background, color text, shape,
+              spacing, sizing... etc.
             </ArticleCaption>
           </div>
         </div>
       </ArticleSection>
-      <ArticleSection heading="Components">
-        Describe how you designed and standardized the key components. How you
-        identified reusable patterns. Design iterations and feedback cycles.
-        Handling states, variants, and responsive behavior. Ensuring alignment
-        between Figma and code. 📸 Add visuals of components (buttons, inputs,
-        modals) with annotations.
-      </ArticleSection>
+      {/* IMPLEMENTATION ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Implementation & Collaboration">
-        Highlight how design and code came together. Stack: React + TypeScript +
-        Storybook. Design–dev sync process: tokens, naming, pull requests,
-        review workflow. Version control, npm publishing, or CI/CD setup.
-        Example: components/ ├─ Button/ ├─ Input/ ├─ Modal/ └─ Theme/ Show a
-        Storybook screenshot or documentation snippet — recruiters love this.
-      </ArticleSection>{" "}
+        <ArticleParagraph>
+          We focused on bringing design and code together seamlessly, ensuring
+          that the components created in Figma were faithfully implemented in
+          the product. Our stack included React and TypeScript for component
+          development, while Storybook served as the central documentation hub.
+          By integrating Storybook into our workflow, both designers and
+          developers could visualize components, explore interaction states, and
+          understand usage guidelines in a single, shared environment.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          To maintain consistency and alignment between design and development,
+          we relied on design tokens, standardized naming conventions, and a
+          structured review workflow. Every component went through pull
+          requests, code reviews, and cross-checks with Figma designs, which
+          helped catch inconsistencies early.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          Collaboration was central to the success of our design system.
+          Designers and developers worked closely throughout the process,
+          sharing feedback at every stage. I facilitated collaboration between
+          design and development, making sure both teams understood each other's
+          requirements. With the support of a frontend developer, I implemented
+          the components, producing a library perfectly aligned with the design
+          system.
+        </ArticleParagraph>
+      </ArticleSection>
       <ArticleSection heading="Adoption & Rollout">
         Explain how the system was introduced across teams. Internal
         communication and demos. Migration of existing products. Training
