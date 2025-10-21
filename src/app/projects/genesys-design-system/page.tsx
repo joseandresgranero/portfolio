@@ -827,72 +827,110 @@ export default function GernesysDesignSystem() {
               alt="Delivery methods after design system"
               className="border border-gray-200"
             />
-            <ArticleCaption title="Props Table">
-              A clear and structured list of the component's properties, such as
-              size, variant, or onClick. Each prop is documented with its type,
-              default value, and description, allowing developers to implement
-              the component correctly without guesswork.
+            <ArticleCaption title="After">
+              This is the same section after the implementation of the design
+              system. The layout was restructured for clarity, with consistent
+              spacing, a unified icon set, and a color palette that reflects the
+              brand. Accessibility improvements and a clear hierarchy enhance
+              readability and user navigation.
             </ArticleCaption>
           </div>
           <div>
             <Image
-              src="/projects/design-system/img/button-hierarchy.png"
+              src="/projects/design-system/img/home-old.png"
               width={800}
-              height={605}
-              alt="Button usage guidelines"
+              height={460}
+              alt="Home before design system"
               className="border border-gray-200"
             />
-            <ArticleCaption title="Usage Guidelines">
-              Notes describing when and how to use the component within the
-              interface. These guidelines cover spacing, alignment,
-              accessibility, and tone of interaction, ensuring a consistent user
-              experience across the product.
+            <ArticleCaption title="Before">
+              This is the Home page before the design system was applied.
             </ArticleCaption>
           </div>
           <div>
             <Image
-              src="/projects/design-system/img/anatomy-2.png"
+              src="/projects/design-system/img/home.png"
               width={800}
-              height={500}
-              alt="Figma docs example"
+              height={459}
+              alt="Home after design system"
               className="border border-gray-200"
             />
-            <ArticleCaption title="Figma - Code Alignment">
-              A visual reference from Figma that complements the coded
-              documentation. It shows the component's anatomy, tokens applied,
-              and interaction patterns, helping bridge the gap between design
-              intent and technical implementation.
+            <ArticleCaption title="After">
+              This is the Home page after the design system was applied: better
+              space rithym, better color contrast, usage of brand, more
+              comfortable palettes... etc.
             </ArticleCaption>
           </div>
-          <div className="flex-[0_1_800px]">
+          <div>
             <Image
-              src="/projects/design-system/img/button-tokens-table.png"
+              src="/projects/design-system/img/loxcope-old.png"
               width={800}
-              height={500}
-              alt="Component design tokens documentation example"
+              height={519}
+              alt="Data search before the design system"
               className="border border-gray-200"
             />
-            <ArticleCaption title="Design tokens in docs">
-              Every component documents the design tokens applied to it, making
-              it easy for both designers and developers to understand how the
-              visual style is constructed and how to maintain consistency when
-              using or modifying the component.
+            <ArticleCaption title="Before">
+              This is the 'Data search' page before the design system was
+              applied.
             </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/loxcope.png"
+              width={800}
+              height={569}
+              alt="Data search after the design system"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="After">
+              This is the 'Data search' page after the design system was
+              applied: better use of typography, cleaner renderization of the
+              table data, improved hierarchy... etc.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/dark-theme-loxcope.png"
+              width={800}
+              height={569}
+              alt="Dark theme after the design system"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Dark theme">
+              One of the most impactful changes enabled by the design system and
+              design tokens was the introduction of a dark theme. It enhances
+              usability in low-light environments and reduces eye strain for
+              users who prefer darker interfaces.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/dark-theme-delivery.png"
+              width={800}
+              height={569}
+              alt="Dark theme after the design system"
+              className="border border-gray-200"
+            />
           </div>
         </div>
       </ArticleSection>
       <ArticleSection heading="Learnings and Next Steps">
-        Demonstrate real value and outcomes. Time saved in design/dev handoffs.
-        Reduction in inconsistencies or visual bugs. Increased team satisfaction
-        or adoption metrics. Business impact if measurable. 📈 Example:
-        “Implementation time per component decreased by 40%. Over 120 screens
-        unified under a single design language.”
-      </ArticleSection>
-      <ArticleSection heading="Presentation tips">
-        Use large visuals and minimal text. Include before/after comparisons.
-        Show process + outcome, not just final screens. Clarify your specific
-        contribution if it was a team effort. End with a clean “Impact” summary
-        — recruiters love measurable results.
+        <ArticleParagraph>
+          Building the Genesys Design System was a transformative experience
+          that reinforced the importance of collaboration between design and
+          development. One key learning was the value of{" "}
+          <strong>early and continuous feedback</strong> from both teams, which
+          helped us refine components and ensure they met real-world needs.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          This is an <strong>ongoing journey</strong>. The next steps involve
+          covering more components documentation, edge cases, and patterns — the
+          Storybook{" "}
+          <strong>documentation needs to be more complete and detailed</strong>,
+          because I estimate we only covers the 40% of the components at this
+          point. We also need a more attactive home and overview pages, to make
+          it easier for users to navigate and find the information they need.
+        </ArticleParagraph>
       </ArticleSection>
     </Article>
   );
