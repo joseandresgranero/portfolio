@@ -13,6 +13,7 @@ import { projects } from "@/app/data";
 import { IArticle } from "@/types/article";
 import { Article } from "@/app/components/Article/Article";
 import Image from "next/image";
+import ProcessTimeline from "@/app/components/ProcessTimeLine";
 
 export default function GernesysDesignSystem() {
   const project: IArticle | undefined = projects.find(
@@ -78,9 +79,9 @@ export default function GernesysDesignSystem() {
           </div>
           <div>
             <Image
-              src="/projects/design-system/img/alerts-creation.png"
-              width={800}
-              height={411}
+              src="/projects/design-system/img/alert-rules.png"
+              width={1200}
+              height={625}
               alt="After design system UI example"
               className="border border-gray-200"
             />
@@ -205,8 +206,8 @@ export default function GernesysDesignSystem() {
           <div>
             <Image
               src="/projects/design-system/img/secondary-tabs-old.png"
-              width={1200}
-              height={617}
+              width={800}
+              height={621}
               alt="Before design system vertical tabs UI example"
               className="border border-gray-200"
             />
@@ -636,42 +637,250 @@ export default function GernesysDesignSystem() {
           We focused on bringing design and code together seamlessly, ensuring
           that the components created in Figma were faithfully implemented in
           the product. Our stack included React and TypeScript for component
-          development, while Storybook served as the central documentation hub.
-          By integrating Storybook into our workflow, both designers and
-          developers could visualize components, explore interaction states, and
-          understand usage guidelines in a single, shared environment.
+          development, while{" "}
+          <strong>Storybook served as the central documentation hub</strong>. By
+          integrating Storybook into our workflow, both designers and developers
+          could visualize components, explore interaction states, and understand
+          usage guidelines in a single, shared environment.
         </ArticleParagraph>
         <ArticleParagraph>
           To maintain consistency and alignment between design and development,
-          we relied on design tokens, standardized naming conventions, and a
-          structured review workflow. Every component went through pull
-          requests, code reviews, and cross-checks with Figma designs, which
-          helped catch inconsistencies early.
+          we relied on{" "}
+          <strong>
+            design tokens, standardized naming conventions, and a structured
+            review workflow
+          </strong>
+          . Every component went through pull requests, code reviews, and
+          cross-checks with Figma designs, which helped catch inconsistencies
+          early.
         </ArticleParagraph>
         <ArticleParagraph>
           Collaboration was central to the success of our design system.
           Designers and developers worked closely throughout the process,
           sharing feedback at every stage. I facilitated collaboration between
           design and development, making sure both teams understood each other's
-          requirements. With the support of a frontend developer, I implemented
-          the components, producing a library perfectly aligned with the design
-          system.
+          requirements. With the support of a frontend developer,{" "}
+          <strong>I implemented the components</strong>, producing a library
+          perfectly aligned with the design system.
         </ArticleParagraph>
       </ArticleSection>
+      <ArticleSection
+        unlimitedWidth
+        className="bg-[var(--projects-bg-color)] flex flex-col gap-16"
+      >
+        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
+          <div>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              width="100%"
+              className="border border-gray-200"
+            >
+              <source
+                src="/projects/design-system/video/sb-ds-button-detail.webm"
+                type="video/webm"
+              />
+              Tu navegador no soporta video HTML5 or webm.
+            </video>
+            <ArticleCaption title="Design system component Overview">
+              A Storybook example of Button component page, showing some general
+              use information, different states and variants. This documentation
+              helps designers and developers quickly understand how the
+              component behaves, and how each variant fits within the design
+              system.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/button-props-table.png"
+              width={800}
+              height={500}
+              alt="Component Props Table"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Props Table">
+              A clear and structured list of the component's properties, such as
+              size, variant, or onClick. Each prop is documented with its type,
+              default value, and description, allowing developers to implement
+              the component correctly without guesswork.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/button-hierarchy.png"
+              width={800}
+              height={605}
+              alt="Button usage guidelines"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Usage Guidelines">
+              Notes describing when and how to use the component within the
+              interface. These guidelines cover spacing, alignment,
+              accessibility, and tone of interaction, ensuring a consistent user
+              experience across the product.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/anatomy-2.png"
+              width={800}
+              height={500}
+              alt="Figma docs example"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Figma - Code Alignment">
+              A visual reference from Figma that complements the coded
+              documentation. It shows the component's anatomy, tokens applied,
+              and interaction patterns, helping bridge the gap between design
+              intent and technical implementation.
+            </ArticleCaption>
+          </div>
+          <div className="flex-[0_1_800px]">
+            <Image
+              src="/projects/design-system/img/button-tokens-table.png"
+              width={800}
+              height={500}
+              alt="Component design tokens documentation example"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Design tokens in docs">
+              Every component documents the design tokens applied to it, making
+              it easy for both designers and developers to understand how the
+              visual style is constructed and how to maintain consistency when
+              using or modifying the component.
+            </ArticleCaption>
+          </div>
+        </div>
+      </ArticleSection>
       <ArticleSection heading="Adoption & Rollout">
-        Explain how the system was introduced across teams. Internal
-        communication and demos. Migration of existing products. Training
-        sessions or documentation updates. Feedback loops and improvement
-        cycles. “We onboarded 4 teams in the first quarter, with continuous
-        feedback from designers and engineers.”
+        <ArticleParagraph>
+          I led the rollout of the design system across teams through{" "}
+          <strong>
+            internal demos, documentation updates, and onboarding sessions
+          </strong>
+          . I collaborated closely with product and engineering leads to ensure
+          a smooth integration into existing workflows.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          Continuous <strong>feedback from designers and developers</strong>{" "}
+          guided each iteration, helping us refine the system based on real
+          product needs. It was not easy, but one year after the design system
+          was launched, we successfully onboarded all the main frontend teams on
+          the company.
+        </ArticleParagraph>
       </ArticleSection>
       <ArticleSection heading="Impact">
-        Demonstrate real value and outcomes. Time saved in design/dev handoffs.
-        Reduction in inconsistencies or visual bugs. Increased team satisfaction
-        or adoption metrics. Business impact if measurable. 📈 Example:
-        “Implementation time per component decreased by 40%. Over 120 screens
-        unified under a single design language.”
-      </ArticleSection>{" "}
+        <ArticleParagraph>
+          The design system delivered measurable improvements across design and
+          development workflows. By standardizing components, tokens, and
+          interaction patterns, we significantly{" "}
+          <strong>reduced inconsistencies</strong> and visual bugs across
+          products. Designers and developers spent less time aligning details
+          during handoffs, which streamlined collaboration and{" "}
+          <strong>accelerated delivery</strong>. Implementation time per
+          component decreased by nearly 40%, allowing teams to focus on solving
+          real product challenges instead of re-creating UI elements.
+        </ArticleParagraph>
+      </ArticleSection>
+      <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
+        <ProcessTimeline />
+      </ArticleSection>
+      <ArticleSection>
+        <ArticleParagraph>
+          Beyond efficiency, the system brought coherence and clarity to the
+          product experience. Over <strong>100 screens were unified</strong>{" "}
+          under a single design language, and team satisfaction increased as the
+          process became more predictable and scalable. Continuous feedback
+          confirmed that the system not only improved quality but also
+          strengthened collaboration between design and engineering — becoming a
+          core asset for the company's long-term growth.
+        </ArticleParagraph>
+      </ArticleSection>
+      <ArticleSection
+        unlimitedWidth
+        className="bg-[var(--projects-bg-color)] flex flex-col gap-16"
+      >
+        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
+          <div>
+            <Image
+              src="/projects/design-system/img/alerts-delivery-methods-old.png"
+              width={800}
+              height={426}
+              alt="Delivery methods before design system"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Before">
+              Before the design system, the Delivery Methods page suffered from
+              visual inconsistency — excessive icons, uneven spacing,
+              unstructured data layout, and colors that didn't align with the
+              brand. Accessibility issues and weak hierarchy made the interface
+              hard to read and navigate.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/alerts-delivery-methods.png"
+              width={800}
+              height={506}
+              alt="Delivery methods after design system"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Props Table">
+              A clear and structured list of the component's properties, such as
+              size, variant, or onClick. Each prop is documented with its type,
+              default value, and description, allowing developers to implement
+              the component correctly without guesswork.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/button-hierarchy.png"
+              width={800}
+              height={605}
+              alt="Button usage guidelines"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Usage Guidelines">
+              Notes describing when and how to use the component within the
+              interface. These guidelines cover spacing, alignment,
+              accessibility, and tone of interaction, ensuring a consistent user
+              experience across the product.
+            </ArticleCaption>
+          </div>
+          <div>
+            <Image
+              src="/projects/design-system/img/anatomy-2.png"
+              width={800}
+              height={500}
+              alt="Figma docs example"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Figma - Code Alignment">
+              A visual reference from Figma that complements the coded
+              documentation. It shows the component's anatomy, tokens applied,
+              and interaction patterns, helping bridge the gap between design
+              intent and technical implementation.
+            </ArticleCaption>
+          </div>
+          <div className="flex-[0_1_800px]">
+            <Image
+              src="/projects/design-system/img/button-tokens-table.png"
+              width={800}
+              height={500}
+              alt="Component design tokens documentation example"
+              className="border border-gray-200"
+            />
+            <ArticleCaption title="Design tokens in docs">
+              Every component documents the design tokens applied to it, making
+              it easy for both designers and developers to understand how the
+              visual style is constructed and how to maintain consistency when
+              using or modifying the component.
+            </ArticleCaption>
+          </div>
+        </div>
+      </ArticleSection>
       <ArticleSection heading="Learnings and Next Steps">
         Demonstrate real value and outcomes. Time saved in design/dev handoffs.
         Reduction in inconsistencies or visual bugs. Increased team satisfaction
