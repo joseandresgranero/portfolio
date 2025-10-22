@@ -20,7 +20,8 @@
   --primary-color-weak: #303f85;
   --primary-color-strong: #151a33;
   --secondary-color: #fafaff;
-  --secondary-color-medium: #fbfbff;
+  --secondary-color-weak: #fbfbff;
+  --secondary-color-medium: #f7f7f8;
   --secondary-color-strong: #f1f1fc;
   --header-height: 98px;
   --header-height-compact: 64px;
@@ -29,7 +30,7 @@
   --hero-bg-color: var(--primary-color);
   --hero-text-color: var(--secondary-color);
   --hero-height: 300px;
-  --projects-bg-color: var(--secondary-color-medium);
+  --projects-bg-color: var(--secondary-color-strong);
   --max-width-text: 65ch;
   --max-width-text-sm: 45ch;
   --heading-color: var(--primary-color-strong);

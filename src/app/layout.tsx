@@ -65,6 +65,21 @@ export const metadata: Metadata = {
     title: "Jose Andres Granero - Portfolio",
   },
   manifest: "/site.webmanifest",
+  openGraph: {
+    title: "Jose Andrés Granero - Product Designer — UX/UI & Design Systems",
+    description:
+      "Portfolio of Jose Andrés Granero, Product Designer, showcasing UX Architecture and Design Systems projects.",
+    url: "https://joseandresgranero.com",
+    siteName: "Jose Andrés Granero - Portfolio",
+    images: [
+      {
+        url: "/assets/img/social-preview.png",
+        width: 330,
+        height: 330,
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({

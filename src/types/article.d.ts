@@ -2,8 +2,9 @@ import * as React from "react";
 
 export interface IArticle {
   title: string;
+  cat: string[];
   shortTitle?: string;
-  description: string;
+  description: React.ReactNode;
   role: string;
   image: string;
   imageAlt: string;
@@ -19,7 +20,8 @@ export interface IArticle {
 
 export interface ArticleCardProps {
   title: string;
-  description: string;
+  featured?: boolean;
+  description: React.ReactNode;
   image: string;
   imageAlt: string;
   imageHeight?: number;

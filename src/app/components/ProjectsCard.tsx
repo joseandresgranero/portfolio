@@ -16,6 +16,7 @@ import { ArticleCardProps } from "@/types/article";
 export const ProjectsCard: React.FC<ArticleCardProps> = ({
   title,
   description,
+  featured,
   image,
   imageHeight,
   imageWidth,
@@ -26,10 +27,16 @@ export const ProjectsCard: React.FC<ArticleCardProps> = ({
   figmaLink,
 }) => {
   return (
-    <div className="card card--project flex flex-col">
+    <div
+      className={`card card--project flex ${
+        featured ? "flex-row gap-15 items-center" : "flex-col"
+      }`}
+    >
       <a
         href={`/projects/${slug}`}
-        className="overflow-hidden border border-gray-200"
+        className={`${
+          featured ? "flex-[0_0_45%] max-w-[920px]" : "flex-[0 0 auto]"
+        } overflow-hidden border border-gray-200`}
         title={`View project '${title}'`}
       >
         <Image
@@ -40,14 +47,28 @@ export const ProjectsCard: React.FC<ArticleCardProps> = ({
           className="object-cover transition-all duration-200 hover:scale-110 hover:saturate-150"
         />
       </a>
-      <div className="px-1 py-6">
-        <h2 className="text-[24px] font-bold font-heading mb-5">{title}</h2>
-        <p className="text-gray-500">{description}</p>
+      <div className="px-1 py-6 max-w-[var(--max-width-text)]">
+        <h2
+          className={`${
+            featured ? "text-3xl font-extrabold" : "text-[24px] font-bold"
+          } font-heading mb-5`}
+        >
+          {title}
+        </h2>
+        <p
+          className={`${featured ? "text-2xl text-gray-600" : "text-gray-500"}`}
+        >
+          {description}
+        </p>
         <div className="flex items-center justify-between mt-6">
           <a
             href={`/projects/${slug}`}
             title={`View project '${title}'`}
-            className="px-4 py-3 bg-[var(--primary-color-weak)] text-sm font-medium text-white rounded cursor-pointer hover:bg-[var(--primary-color-weaker)] transition-colors duration-150 ease-in-out"
+            className={`${
+              featured
+                ? "px-8 py-4 min-w-[200px] text-lg text-center"
+                : "px-4 py-3 text-sm"
+            } bg-[var(--primary-color-weak)] font-medium text-white rounded cursor-pointer hover:bg-[var(--primary-color-weaker)] transition-colors duration-150 ease-in-out`}
           >
             View Project
           </a>

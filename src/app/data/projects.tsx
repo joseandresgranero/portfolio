@@ -1,9 +1,9 @@
 import { IArticle } from "@/types/article";
-//import { DesignSystemContent } from "../components/ProjectContent/DesignSystem";
 
 export const projects: IArticle[] = [
   {
     title: "Genesys Design System",
+    cat: ["design-system", "featured"],
     shortTitle: "Design System",
     role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
     description:
@@ -18,22 +18,25 @@ export const projects: IArticle[] = [
     figmaLink:
       "https://www.figma.com/design/wKTuF8eVSqEJWjsQarKydC/GDS---UI-Kit----v2.0.0",
     tags: ["UX/UI Architecture", "Figma", "Documentation", "Storybook"],
-    //content: () => DesignSystemContent,
   },
   {
     title: "Genesys UI React components library",
     shortTitle: "UI Components Library",
+    cat: ["design-system"],
     role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
     description:
       "React component library that provides accessible, consistent UI elements for enterprise apps, with interactive Storybook documentation for easy use.",
-    image: "/projects/genesys-ui/img/thumb-genesys-ui.png",
+    image: "/projects/genesys-ui/img/thumb-genesys-ui-landscape.png",
     imageAlt: "Genesys UI Banner",
+    imageWidth: 800,
+    imageHeight: 529,
     slug: "genesys-ui",
     storybookLink: "https://devoinc.github.io/genesys-ui",
     githubLink: "https://github.com/genesys-ui/react",
   },
   {
     title: "Genesys Icons library",
+    cat: ["design-system"],
     shortTitle: "Icons library",
     role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
     description:
