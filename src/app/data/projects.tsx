@@ -8,6 +8,8 @@ export const projects: IArticle[] = [
     role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
     description:
       "Created the Devo design system from the ground up, radically enhancing consistency, scalability, and the overall speed of design and development.",
+    shortDescription:
+      "The design system definition: design principles, foundations, components and patterns, as well as a detailed documentation in Storybook and Figma.",
     image: "/projects/design-system/img/design-system-thumb.png",
     imageAlt: "Genesys Design System Banner",
     imageWidth: 800,

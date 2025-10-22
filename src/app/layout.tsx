@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     siteName: "Jose Andrés Granero - Portfolio",
     images: [
       {
-        url: "/assets/img/social-preview.png",
+        url: "/social-preview.png",
         width: 330,
         height: 330,
       },
