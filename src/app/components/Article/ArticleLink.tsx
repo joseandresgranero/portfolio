@@ -20,7 +20,7 @@ export const ArticleLink: React.FC<ArticleLinkProps> = ({
   return (
     <a
       href={href}
-      className="flex items-center rounded-2xl hover:bg-gray-200 px-3 py-1 gap-2 text-sm transition-colors duration-150 ease-in-out"
+      className="flex items-center rounded-2xl hover:bg-gray-200 px-3 py-1 gap-2 text-base transition-colors duration-150 ease-in-out"
       target={target}
       rel={target === "_blank" ? "noopener noreferrer" : rel}
       title={title}

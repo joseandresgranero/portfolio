@@ -27,16 +27,10 @@ export const ProjectsCard: React.FC<ArticleCardProps> = ({
   figmaLink,
 }) => {
   return (
-    <div
-      className={`card card--project flex ${
-        featured ? "flex-row gap-15 items-center" : "flex-col"
-      }`}
-    >
+    <div className="card card--project flex flex-col">
       <a
         href={`/projects/${slug}`}
-        className={`${
-          featured ? "flex-[0_0_45%] max-w-[920px]" : "flex-[0 0 auto]"
-        } overflow-hidden border border-gray-200`}
+        className="max-w-[920px] overflow-hidden border border-gray-200"
         title={`View project '${title}'`}
       >
         <Image

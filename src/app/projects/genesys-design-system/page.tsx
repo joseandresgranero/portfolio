@@ -1,21 +1,18 @@
 import { notFound } from "next/navigation";
-import { Tag } from "@/app/components";
+
+import type { IArticle } from "@/types/article";
+import { projects } from "@/app/data";
+import ProcessTimeline from "@/app/components/ProcessTimeLine";
 import {
-  ArticleBackLink,
-  ArticleCaption,
-  ArticleHeading,
+  Article,
+  ArticleImageBlock,
   ArticleList,
   ArticleParagraph,
   ArticleSection,
+  ArticleVideoBlock,
 } from "@/app/components/Article";
-import { ArticleHeader } from "@/app/components/Article";
-import { projects } from "@/app/data";
-import { IArticle } from "@/types/article";
-import { Article } from "@/app/components/Article/Article";
-import Image from "next/image";
-import ProcessTimeline from "@/app/components/ProcessTimeLine";
 
-export default function GernesysDesignSystem() {
+export default function GenesysDesignSystem() {
   const project: IArticle | undefined = projects.find(
     (p: IArticle) => p.slug === "genesys-design-system"
   );
@@ -35,7 +32,7 @@ export default function GernesysDesignSystem() {
       storybookLink={project.storybookLink}
     >
       {/* PROBLEM ----------------------------------------------------------------------------- */}
-      <ArticleSection heading="The Problem">
+      <ArticleSection heading="The Challenge">
         <ArticleParagraph>
           Before the design system existed, the product ecosystem faced{" "}
           <strong>major inconsistencies</strong> — not only visual, but also in
@@ -65,30 +62,22 @@ export default function GernesysDesignSystem() {
       </ArticleSection>
       <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
         <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
-          <div>
-            <Image
-              src="/projects/design-system/img/alerts-creation-old.jpg"
-              width={800}
-              height={411}
-              alt="Before design system UI example"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Before">
-              This is the Alert Creation page before the design system...
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/alert-rules.png"
-              width={1200}
-              height={625}
-              alt="After design system UI example"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="After">
-              ...and this is the same section after the design system.
-            </ArticleCaption>
-          </div>
+          <ArticleImageBlock
+            src="/projects/design-system/img/alerts-creation-old.jpg"
+            width={800}
+            height={411}
+            alt="Before design system UI example"
+            title="Before"
+            description="An example of an alerts creation section before the design system."
+          />
+          <ArticleImageBlock
+            src="/projects/design-system/img/alert-rules.png"
+            width={1200}
+            height={625}
+            alt="After design system UI example"
+            title="After"
+            description="...and this is the same section after the design system."
+          />
         </div>
       </ArticleSection>
       {/* GOAL AND METRICS ----------------------------------------------------------------------------- */}
@@ -200,69 +189,45 @@ export default function GernesysDesignSystem() {
       </ArticleSection>
       <ArticleSection
         unlimitedWidth
-        className="bg-[var(--projects-bg-color)] flex flex-col gap-16"
+        className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
       >
-        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
-          <div>
-            <Image
-              src="/projects/design-system/img/secondary-tabs-old.png"
-              width={800}
-              height={621}
-              alt="Before design system vertical tabs UI example"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Before">
-              We inventoried the secondary vertical tabs, but found that their
+        <ArticleImageBlock
+          src="/projects/design-system/img/secondary-tabs-old.png"
+          height={621}
+          alt="Before design system vertical tabs UI example"
+          title="Before"
+          description="We inventoried the secondary vertical tabs, but found that their
               layout took up too much space, so we maintained the component but
-              changing its structure.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/secondary-tabs.png"
-              width={800}
-              height={522}
-              alt="After design system UI horizontal tabs example"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="After">
-              We didn't just inventory the components — we also adapted and
+              changing its structure."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/secondary-tabs.png"
+          height={522}
+          alt="After design system UI horizontal tabs example"
+          title="After"
+          description="We didn't just inventory the components — we also adapted and
               refined them, removing those that were no longer needed. In this
               case, changing to an horizontal layout helped us to save space and
-              improve usability.
-            </ArticleCaption>
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
-          <div>
-            <Image
-              src="/projects/design-system/img/design-system-home.png"
-              width={800}
-              height={522}
-              alt="Design system Storybook docs home"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Documentation">
-              The design system documentation was built in Storybook, following
+              improve usability."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/design-system-home.png"
+          height={522}
+          alt="Design system Storybook docs home"
+          title="Documentation"
+          description="The design system documentation was built in Storybook, following
               a structure inspired by other established systems — including
-              principles, foundations, components, and patterns.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/marketplace-home.png"
-              width={800}
-              height={522}
-              alt="Marketplace home"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Company oriented components">
-              Our design system needed to be flexible enough to meet the needs
+              principles, foundations, components, and patterns."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/marketplace-home.png"
+          height={522}
+          alt="Marketplace home"
+          title="Company oriented components"
+          description="Our design system needed to be flexible enough to meet the needs
               of our teams, but not as open-ended as others — like Material or
-              Carbon, for instance.
-            </ArticleCaption>
-          </div>
-        </div>
+              Carbon, for instance."
+        />
       </ArticleSection>
       {/* FOUNDATIONS ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Foundations">
@@ -295,229 +260,152 @@ export default function GernesysDesignSystem() {
         unlimitedWidth
         className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
       >
-        <div>
-          <Image
-            src="/projects/design-system/img/design-tokens.png"
-            width={800}
-            height={441}
-            alt="Example of design tokens"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Design tokens">
-            Integrated directly into Figma through variables, allowing designers
+        <ArticleImageBlock
+          src="/projects/design-system/img/design-tokens.png"
+          height={441}
+          alt="Example of design tokens"
+          title="Design tokens"
+          description="Integrated directly into Figma through variables, allowing designers
             to apply them seamlessly within the design environment.
             Additionally, the tokens are exported in multiple formats —
             including CSS, SASS, JavaScript, and JSON — making them easily
-            accessible for developers.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/palette-detail.png"
-            width={800}
-            height={441}
-            alt="Example of color palette"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Color palettes">
-            I built a comprehensive color palette that balances brand identity
+            accessible for developers."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/palette-detail.png"
+          height={441}
+          alt="Example of color palette"
+          title="Color palettes"
+          description="I built a comprehensive color palette that balances brand identity
             with accessibility. Each color was tested to ensure WCAG AA
             compliance, providing sufficient contrast for readability and
             usability. Additionally, the darkest colors in the palette meet AA
             standards when used on the lighter half of the palette, and vice
-            versa.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/use-of-color.png"
-            width={800}
-            height={441}
-            alt="Color usage by context table"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Color usage by context">
-            I defined a table to guide the selection of color palettes based on
+            versa."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/use-of-color.png"
+          height={441}
+          alt="Color usage by context table"
+          title="Color usage by context"
+          description="I defined a table to guide the selection of color palettes based on
             context. Thoughtful color choices help users quickly recognize
-            statuses, actions, and interactions
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/typography-intro.png"
-            width={800}
-            height={453}
-            alt="Design system Storybook docs home"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Typography">
-            It helps us to correctly establish the visual hierarchy of a page,
+            statuses, actions, and interactions"
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/typography-intro.png"
+          height={453}
+          alt="Design system Storybook docs home"
+          title="Typography"
+          description="It helps us to correctly establish the visual hierarchy of a page,
             in addition to organizing information and serving as a guide for
             users while browsing the platform. Its correct use also generates a
-            more powerful brand presence.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/variant-example.png"
-            width={800}
-            height={453}
-            alt="Marketplace home"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Typographic variants">
-            We use typo design tokens and themes to manage our typography. We
+            more powerful brand presence."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/variant-example.png"
+          width={800}
+          height={453}
+          alt="Typographic variants example"
+          title="Typographic variants"
+          description="We use typo design tokens and themes to manage our typography. We
             have specific groups of typo tokens (font-size, font-weight,
             line-height, letter-spacing... etc.) to define our different
-            typographic styles: headings, heros, caps, body... etc.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/layout.png"
-            width={800}
-            height={542}
-            alt="Layout example"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Layout">
-            The layout is composed of distinct regions that define our
+            typographic styles: headings, heros, caps, body... etc."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/layout.png"
+          height={542}
+          alt="Layout example"
+          title="Layout"
+          description="The layout is composed of distinct regions that define our
             information architecture. Each region serves a specific purpose and
             contains key interactions — such as navigation, quick access to
-            settings, datasets, or content.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/layout-variants.png"
-            width={800}
-            height={542}
-            alt="Layout variants"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Main region layouts">
-            The main region hosts each section's primary content. Built with the
+            settings, datasets, or content."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/layout-variants.png"
+          height={542}
+          alt="Layout variants"
+          title="Main region layouts"
+          description="The main region hosts each section's primary content. Built with the
             “Fluid” component and a twelve-column grid, it's the most dynamic
             area of the layout, while other regions remain consistent throughout
-            the user journey.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/spatial-scales.png"
-            width={800}
-            height={633}
-            alt="Spatial system scales"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Spatial system scales">
-            I created a unified spatial system keeps our designs consistent and
+            the user journey."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/spatial-scales.png"
+          height={633}
+          alt="Spatial system scales"
+          title="Spatial system scales"
+          description="I created a unified spatial system keeps our designs consistent and
             our communication clear. It simplifies decision-making and creates a
-            predictable visual rhythm that feels balanced and intentional.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/sizing-typo.png"
-            width={800}
-            height={633}
-            alt="Typography sizing scale"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Typography sizing scale">
-            I defined a based on a 4pt baseline grid, line heights scale in 4pt
+            predictable visual rhythm that feels balanced and intentional."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/sizing-typo.png"
+          height={633}
+          alt="Typography sizing scale"
+          title="Typography sizing scale"
+          description="I defined a based on a 4pt baseline grid, line heights scale in 4pt
             increments. This system aligns component and layout scales with
-            typography, creating a cohesive vertical rhythm.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/sizing-components.png"
-            width={800}
-            height={633}
-            alt="Component sizing scale"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Component sizing scale">
-            The main region hosts each section's primary content. Built with the
-            “Fluid” component and a twelve-column grid, it's the most dynamic
-            area of the layout, while other regions remain consistent throughout
-            the user journey.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/icons-example.png"
-            width={800}
-            height={600}
-            alt="Icons example"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Iconography">
-            We built our icon set on top of Ionicons. Whenever we couldn't find
+            typography, creating a cohesive vertical rhythm."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/sizing-components.png"
+          height={633}
+          alt="Component sizing scale"
+          title="Component sizing scale"
+          description="Based on multiples of 4pt, our component sizing scale ensures consistent spacing rhythm and alignment across the UI."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/icons-example.png"
+          height={600}
+          alt="Icons example"
+          title="Iconography"
+          description="We built our icon set on top of Ionicons. Whenever we couldn't find
             a suitable icon, we designed a new one derived from the library to
-            keep proportions and visual harmony consistent.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/elevation-hierarchy.png"
-            width={800}
-            height={500}
-            alt="Elevation hierarchy"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Elevation hierarchy">
-            Elevation marks the distance of elements from the background and
+            keep proportions and visual harmony consistent."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/elevation-hierarchy.png"
+          height={500}
+          alt="Elevation hierarchy"
+          title="Elevation hierarchy"
+          description="Elevation marks the distance of elements from the background and
             arranges them along the z-axis. To do this, each elevation level is
             defined by a specific shadow that simulates the way in which natural
-            light is projected on objects depending on the distance to them.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/elevation-levels.png"
-            width={800}
-            height={600}
-            alt="Icons example"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Elevation levels">
-            The different elevation levels available correspond to the different
+            light is projected on objects depending on the distance to them."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/elevation-levels.png"
+          height={600}
+          alt="Elevation levels example"
+          title="Elevation levels"
+          description="The different elevation levels available correspond to the different
             levels of importance with which we want to organize the components
-            throughout the UI.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/radius.png"
-            width={800}
-            height={500}
-            alt="Shape and radius"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Shape and radius">
-            Rounded corners are used throughout the platform to differentiate
+            throughout the UI."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/radius.png"
+          height={500}
+          alt="Shape and radius"
+          title="Shape and radius"
+          description="Rounded corners are used throughout the platform to differentiate
             the different families of UI components based on their anatomy,
-            level of interaction... etc.
-          </ArticleCaption>
-        </div>
-        <div>
-          <Image
-            src="/projects/design-system/img/voice-and-tone.png"
-            width={800}
-            height={500}
-            alt="Voice and tone"
-            className="border border-gray-200"
-          />
-          <ArticleCaption title="Voice and tone">
-            Our voice defines how we communicate with users. While our voice
+            level of interaction... etc."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/voice-and-tone.png"
+          height={500}
+          alt="Voice and tone"
+          title="Voice and tone"
+          description="Our voice defines how we communicate with users. While our voice
             stays consistent across all content, its tone adapts to each context
             and audience. Our voice is clear, informative, and relaxed. We use
             an informal style to write content that is both simple and
-            instructive.
-          </ArticleCaption>
-        </div>
+            instructive."
+        />
       </ArticleSection>
       {/* COMPONENTS ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Components">
@@ -552,84 +440,55 @@ export default function GernesysDesignSystem() {
       </ArticleSection>
       <ArticleSection
         unlimitedWidth
-        className="bg-[var(--projects-bg-color)] flex flex-col gap-16"
+        className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
       >
-        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
-          <div>
-            <Image
-              src="/projects/design-system/img/components-overview.png"
-              width={800}
-              height={500}
-              alt="UI components overview"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Figma and Storybook library">
-              Overview of the component library showing buttons, badges,
-              banners, progress bars... etc. Each component is implemented in
-              React and TypeScript, with detailed documentation available in
-              Storybook and Figma for designers and developers.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/anatomy.png"
-              width={800}
-              height={500}
-              alt="Component anatomy example"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Component anatomy">
-              Breakdown of a single component, highlighting its structure,
-              spacing, and interactive elements. This ensures clarity and
-              consistency when components are implemented across the system.
-            </ArticleCaption>
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
-          <div>
-            <Image
-              src="/projects/design-system/img/states-and-variants.png"
-              width={800}
-              height={500}
-              alt="States and variants example"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="States and variants">
-              Illustration of the different states and variants of a component,
-              showing how it should behave in different contexts. This helps
-              maintain visual consistency and predictable user interactions.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/code-alignment.png"
-              width={800}
-              height={500}
-              alt="Code alignment example"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Figma - Code Alignment">
-              Highlights the connection between design and development. I
-              translated Figma components into code, making sure the final
-              product reflects the designers' intent and delivers a seamless
-              experience to users.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/design-tokens-component.png"
-              width={800}
-              height={500}
-              alt="Component design tokens example"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Design tokens in action">
-              Example of how design tokens are applied to a button component,
-              with different types — color background, color text, shape,
-              spacing, sizing... etc.
-            </ArticleCaption>
-          </div>
-        </div>
+        <ArticleImageBlock
+          src="/projects/design-system/img/components-overview.png"
+          height={500}
+          alt="UI components overview"
+          title="Figma and Storybook library"
+          description="Overview of the component library showing buttons, badges, banners,
+            progress bars... etc. Each component is implemented in React and
+            TypeScript, with detailed documentation available in Storybook and
+            Figma for designers and developers."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/anatomy.png"
+          height={500}
+          alt="Component anatomy example"
+          title="Component anatomy"
+          description="Breakdown of a single component, highlighting its structure,
+            spacing, and interactive elements. This ensures clarity and
+            consistency when components are implemented across the system."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/states-and-variants.png"
+          height={500}
+          alt="States and variants example"
+          title="States and variants"
+          description="Illustration of the different states and variants of a component,
+            showing how it should behave in different contexts. This helps
+            maintain visual consistency and predictable user interactions."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/code-alignment.png"
+          height={500}
+          alt="Code alignment example"
+          title="Figma - Code Alignment"
+          description="Highlights the connection between design and development. I
+            translated Figma components into code, making sure the final product
+            reflects the designers' intent and delivers a seamless experience to
+            users."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/design-tokens-component.png"
+          height={500}
+          alt="Component design tokens example"
+          title="Design tokens in action"
+          description="Example of how design tokens are applied to a button component, with
+            different types — color background, color text, shape, spacing,
+            sizing... etc."
+        />
       </ArticleSection>
       {/* IMPLEMENTATION ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Implementation & Collaboration">
@@ -666,93 +525,57 @@ export default function GernesysDesignSystem() {
       </ArticleSection>
       <ArticleSection
         unlimitedWidth
-        className="bg-[var(--projects-bg-color)] flex flex-col gap-16"
+        className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
       >
-        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
-          <div>
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              width="100%"
-              className="border border-gray-200"
-            >
-              <source
-                src="/projects/design-system/video/sb-ds-button-detail.webm"
-                type="video/webm"
-              />
-              Tu navegador no soporta video HTML5 or webm.
-            </video>
-            <ArticleCaption title="Design system component Overview">
-              A Storybook example of Button component page, showing some general
-              use information, different states and variants. This documentation
-              helps designers and developers quickly understand how the
-              component behaves, and how each variant fits within the design
-              system.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/button-props-table.png"
-              width={800}
-              height={500}
-              alt="Component Props Table"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Props Table">
-              A clear and structured list of the component's properties, such as
-              size, variant, or onClick. Each prop is documented with its type,
-              default value, and description, allowing developers to implement
-              the component correctly without guesswork.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/button-hierarchy.png"
-              width={800}
-              height={605}
-              alt="Button usage guidelines"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Usage Guidelines">
-              Notes describing when and how to use the component within the
-              interface. These guidelines cover spacing, alignment,
-              accessibility, and tone of interaction, ensuring a consistent user
-              experience across the product.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/anatomy-2.png"
-              width={800}
-              height={500}
-              alt="Figma docs example"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Figma - Code Alignment">
-              A visual reference from Figma that complements the coded
-              documentation. It shows the component's anatomy, tokens applied,
-              and interaction patterns, helping bridge the gap between design
-              intent and technical implementation.
-            </ArticleCaption>
-          </div>
-          <div className="flex-[0_1_800px]">
-            <Image
-              src="/projects/design-system/img/button-tokens-table.png"
-              width={800}
-              height={500}
-              alt="Component design tokens documentation example"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Design tokens in docs">
-              Every component documents the design tokens applied to it, making
-              it easy for both designers and developers to understand how the
-              visual style is constructed and how to maintain consistency when
-              using or modifying the component.
-            </ArticleCaption>
-          </div>
-        </div>
+        <ArticleVideoBlock
+          ariaLabel="Design system component Overview video"
+          source="/projects/design-system/video/sb-ds-button-detail.webm"
+          title="Design system component Overview"
+          description="A Storybook example of Button component page, showing some general
+            use information, different states and variants. This documentation
+            helps designers and developers quickly understand how the component
+            behaves, and how each variant fits within the design system."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/button-props-table.png"
+          height={500}
+          alt="Component Props Table"
+          title="Props Table"
+          description="A clear and structured list of the component's properties, such as
+            size, variant, or onClick. Each prop is documented with its type,
+            default value, and description, allowing developers to implement the
+            component correctly without guesswork."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/button-hierarchy.png"
+          height={605}
+          alt="Button usage guidelines"
+          title="Usage guidelines"
+          description="Notes describing when and how to use the component within the
+            interface. These guidelines cover spacing, alignment, accessibility,
+            and tone of interaction, ensuring a consistent user experience
+            across the product."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/anatomy-2.png"
+          height={500}
+          alt="Figma docs example"
+          title="Figma documentation"
+          description="A visual reference from Figma that complements the coded
+            documentation. It shows the component's anatomy, tokens applied, and
+            interaction patterns, helping bridge the gap between design intent
+            and technical implementation."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/button-tokens-table.png"
+          height={500}
+          alt="Component design tokens documentation example"
+          title="Design tokens in docs"
+          description="Every component documents the design tokens applied to it, making it
+            easy for both designers and developers to understand how the visual
+            style is constructed and how to maintain consistency when using or
+            modifying the component."
+        />
       </ArticleSection>
       <ArticleSection heading="Adoption & Rollout">
         <ArticleParagraph>
@@ -800,119 +623,76 @@ export default function GernesysDesignSystem() {
       </ArticleSection>
       <ArticleSection
         unlimitedWidth
-        className="bg-[var(--projects-bg-color)] flex flex-col gap-16"
+        className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
       >
-        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
-          <div>
-            <Image
-              src="/projects/design-system/img/alerts-delivery-methods-old.png"
-              width={800}
-              height={426}
-              alt="Delivery methods before design system"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Before">
-              Before the design system, the Delivery Methods page suffered from
+        <ArticleImageBlock
+          src="/projects/design-system/img/alerts-delivery-methods-old.png"
+          height={426}
+          alt="Delivery methods before design system"
+          title="Before"
+          description="Before the design system, the Delivery Methods page suffered from
               visual inconsistency — excessive icons, uneven spacing,
               unstructured data layout, and colors that didn't align with the
               brand. Accessibility issues and weak hierarchy made the interface
-              hard to read and navigate.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/alerts-delivery-methods.png"
-              width={800}
-              height={506}
-              alt="Delivery methods after design system"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="After">
-              This is the same section after the implementation of the design
-              system. The layout was restructured for clarity, with consistent
-              spacing, a unified icon set, and a color palette that reflects the
-              brand. Accessibility improvements and a clear hierarchy enhance
-              readability and user navigation.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/home-old.png"
-              width={800}
-              height={460}
-              alt="Home before design system"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Before">
-              This is the Home page before the design system was applied.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/home.png"
-              width={800}
-              height={459}
-              alt="Home after design system"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="After">
-              This is the Home page after the design system was applied: better
-              space rithym, better color contrast, usage of brand, more
-              comfortable palettes... etc.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/loxcope-old.png"
-              width={800}
-              height={519}
-              alt="Data search before the design system"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Before">
-              This is the 'Data search' page before the design system was
-              applied.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/loxcope.png"
-              width={800}
-              height={569}
-              alt="Data search after the design system"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="After">
-              This is the 'Data search' page after the design system was
-              applied: better use of typography, cleaner renderization of the
-              table data, improved hierarchy... etc.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/dark-theme-loxcope.png"
-              width={800}
-              height={569}
-              alt="Dark theme after the design system"
-              className="border border-gray-200"
-            />
-            <ArticleCaption title="Dark theme">
-              One of the most impactful changes enabled by the design system and
-              design tokens was the introduction of a dark theme. It enhances
-              usability in low-light environments and reduces eye strain for
-              users who prefer darker interfaces.
-            </ArticleCaption>
-          </div>
-          <div>
-            <Image
-              src="/projects/design-system/img/dark-theme-delivery.png"
-              width={800}
-              height={569}
-              alt="Dark theme after the design system"
-              className="border border-gray-200"
-            />
-          </div>
-        </div>
+              hard to read and navigate."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/alerts-delivery-methods.png"
+          height={506}
+          alt="Delivery methods after design system"
+          title="After"
+          description="This is the same section after the implementation of the design
+            system. The layout was restructured for clarity, with consistent
+            spacing, a unified icon set, and a color palette that reflects the
+            brand. Accessibility improvements and a clear hierarchy enhance
+            readability and user navigation."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/home-old.png"
+          alt="Home before design system"
+          title="Before"
+          description="This is the Home page before the design system was applied."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/home.png"
+          height={459}
+          alt="Home after design system"
+          title="After"
+          description="This is the Home page after the design system was applied: better
+            space rithym, better color contrast, usage of brand, more
+            comfortable palettes... etc."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/loxcope-old.png"
+          height={519}
+          alt="Data search before the design system"
+          title="Before"
+          description="This is the 'Data search' page before the design system was applied."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/loxcope.png"
+          height={569}
+          alt="Data search after the design system"
+          title="After"
+          description="This is the 'Data search' page after the design system was applied:
+            better use of typography, cleaner renderization of the table data,
+            improved hierarchy... etc."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/dark-theme-loxcope.png"
+          height={569}
+          alt="Dark theme after the design system"
+          title="Dark theme"
+          description="One of the most impactful changes enabled by the design system and
+            design tokens was the introduction of a dark theme. It enhances
+            usability in low-light environments and reduces eye strain for users
+            who prefer darker interfaces."
+        />
+        <ArticleImageBlock
+          src="/projects/design-system/img/dark-theme-delivery.png"
+          height={569}
+          alt="Dark theme after the design system"
+        />
       </ArticleSection>
       <ArticleSection heading="Learnings and Next Steps">
         <ArticleParagraph>

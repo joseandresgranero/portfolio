@@ -10,10 +10,10 @@ export const projects: IArticle[] = [
       "Created the Devo design system from the ground up, radically enhancing consistency, scalability, and the overall speed of design and development.",
     shortDescription:
       "The design system definition: design principles, foundations, components and patterns, as well as a detailed documentation in Storybook and Figma.",
-    image: "/projects/design-system/img/design-system-thumb.png",
+    image: "/projects/design-system/img/design-system-thumb-landscape.png",
     imageAlt: "Genesys Design System Banner",
-    imageWidth: 800,
-    imageHeight: 450,
+    imageWidth: 400,
+    imageHeight: 259,
     slug: "genesys-design-system",
     storybookLink: "https://genesys-ui.github.io/design-system",
     githubLink: "https://github.com/genesys-ui/design-system",
@@ -25,7 +25,7 @@ export const projects: IArticle[] = [
     title: "Genesys UI React components library",
     shortTitle: "UI Components Library",
     cat: ["design-system"],
-    role: "I led the creation of the design system, collaborating closely with frontend developers and my design team colleagues to ensure a cohesive and efficient design language across the platform.",
+    role: "I co-created a React-based component library built with TypeScript and Styled Components to unify Devo’s design system across products. My goal was to ensure design–code consistency and improve the developer experience.",
     description:
       "React component library that provides accessible, consistent UI elements for enterprise apps, with interactive Storybook documentation for easy use.",
     image: "/projects/genesys-ui/img/thumb-genesys-ui-landscape.png",
@@ -35,6 +35,7 @@ export const projects: IArticle[] = [
     slug: "genesys-ui",
     storybookLink: "https://devoinc.github.io/genesys-ui",
     githubLink: "https://github.com/genesys-ui/react",
+    tags: ["React", "Styled components", "TypeScript", "Storybook"],
   },
   {
     title: "Genesys Icons library",
