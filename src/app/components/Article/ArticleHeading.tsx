@@ -2,14 +2,18 @@ import * as React from "react";
 
 export interface ArticleHeadingProps {
   children: React.ReactNode;
+  className?: React.HTMLAttributes<HTMLAnchorElement>["className"];
   htmlTag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   size?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   spacing?: string;
+  inverted?: boolean;
 }
 
 export const ArticleHeading: React.FC<ArticleHeadingProps> = ({
   children,
+  className,
   htmlTag = "h2",
+  inverted,
   size,
   spacing = "mb-5",
 }) => {
@@ -26,7 +30,11 @@ export const ArticleHeading: React.FC<ArticleHeadingProps> = ({
     <HtmlTag
       className={`block font-bold font-heading ${
         SIZE_CLASSES[size || htmlTag]
-      } ${spacing} text-[var(--heading-color)]`}
+      } ${spacing} ${className} ${
+        inverted
+          ? "text-[var(--heading-color-inverted)]"
+          : "text-[var(--heading-color)]"
+      }`}
     >
       {children}
     </HtmlTag>

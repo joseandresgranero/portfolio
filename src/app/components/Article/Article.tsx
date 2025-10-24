@@ -29,7 +29,7 @@ export const Article: React.FC<ArticleProps> = ({
   figmaLink,
   githubLink,
   storybookLink,
-  htmlTag = "main",
+  htmlTag = "article",
   intro,
   role,
   tags,

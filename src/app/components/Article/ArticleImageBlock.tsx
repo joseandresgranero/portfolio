@@ -9,6 +9,7 @@ export interface ArticleImageBlockProps {
   alt: string;
   width?: number;
   height?: number;
+  inverted?: boolean;
 }
 
 export const ArticleImageBlock: React.FC<ArticleImageBlockProps> = ({
@@ -18,6 +19,7 @@ export const ArticleImageBlock: React.FC<ArticleImageBlockProps> = ({
   alt,
   title,
   description,
+  inverted,
 }) => {
   return (
     <div className="mb-10 md:mb-0">
@@ -29,7 +31,9 @@ export const ArticleImageBlock: React.FC<ArticleImageBlockProps> = ({
         className="border border-gray-200"
       />
       {(title || description) && (
-        <ArticleCaption title={title}>{description}</ArticleCaption>
+        <ArticleCaption inverted={inverted} title={title}>
+          {description}
+        </ArticleCaption>
       )}
     </div>
   );

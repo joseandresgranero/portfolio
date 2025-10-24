@@ -5,6 +5,10 @@ import { projects } from "@/app/data";
 
 import {
   Article,
+  ArticleFeaturedWrapper,
+  ArticleFeaturedWrapperItem,
+  ArticleGrid,
+  ArticleHeading,
   ArticleImageBlock,
   ArticleParagraph,
   ArticleSection,
@@ -189,7 +193,7 @@ export default function GenesysDesignSystem() {
           language.
         </ArticleParagraph>
         <ArticleParagraph>
-          This is the main structure of the oproject:
+          This is the main structure of the project:
         </ArticleParagraph>
         <ArticleParagraph>
           <pre className="bg-gray-100 p-4 rounded overflow-x-auto text-sm">
@@ -299,70 +303,70 @@ export default function GenesysDesignSystem() {
         </ArticleParagraph>
       </ArticleSection>
       {/* IMPACT & OUTCOMES ----------------------------------------------------------------------------- */}
-      <ArticleSection heading="Impact & Outcomes">
-        <ArticleParagraph>
-          The new system had a measurable impact. It reduced design-development
-          handoff time and <strong>unified more than 100 screens</strong> under
-          a single visual language base on the same UI components. In addition,
-          we get <strong>AA level in accessibility</strong> for all the
-          components in the library.
-        </ArticleParagraph>
-        <ArticleParagraph>
-          Beyond metrics, the system strengthened collaboration. Engineers
-          appreciated the{" "}
-          <strong>reliability and flexibility of ready-to-use</strong>
-          components, while designers gained confidence that their work would be
-          implemented faithfully. Specially, because I was implementing and
-          creating the documentation of the library. It also improved onboarding
-          for new team members, who could now build with clarity and consistency
-          from day one.
-        </ArticleParagraph>
-        <ArticleParagraph>
-          Moreover, the modularity of the components themselves has allowed
-          developers to create{" "}
-          <strong>
-            new variants and adaptations without having to modify the base code
-          </strong>
-          , fostering innovation within a coherent framework.
-        </ArticleParagraph>
-      </ArticleSection>
-      <ArticleSection
-        unlimitedWidth
-        className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
-      >
-        <ArticleImageBlock
-          src="/projects/genesys-ui/img/button-component-page-1.png"
-          height={432}
-          alt="Storybook documentation for components"
-          title="Storybook documentation for components"
-          description="Two examples of the Storybook documentation for one of the system components (Button), 
+      <ArticleFeaturedWrapper heading="Impact & Outcomes">
+        <ArticleGrid columns={3}>
+          <ArticleFeaturedWrapperItem heading="Consistency and accessibility">
+            The new system had a measurable impact. It reduced
+            design-development handoff time and{" "}
+            <strong>unified more than 100 screens</strong> under a single visual
+            language base on the same UI components. In addition, we get{" "}
+            <strong>AA level in accessibility</strong> for all the components in
+            the library.
+          </ArticleFeaturedWrapperItem>
+          <ArticleFeaturedWrapperItem heading="Ready-to-use">
+            Beyond metrics, the system strengthened collaboration. Engineers
+            appreciated the{" "}
+            <strong>reliability and flexibility of ready-to-use</strong>{" "}
+            components, while designers gained confidence that their work would
+            be implemented faithfully. Specially, because I was implementing and
+            creating the documentation of the library. It also improved
+            onboarding for new team members, who could now build with clarity
+            and consistency from day one.
+          </ArticleFeaturedWrapperItem>
+          <ArticleFeaturedWrapperItem heading="Consistency and accessibility">
+            The new system had a measurable impact. It reduced
+            design-development handoff time and{" "}
+            <strong>unified more than 100 screens</strong> under a single visual
+            language base on the same UI components. In addition, we get{" "}
+            <strong>AA level in accessibility</strong> for all the components in
+            the library.
+          </ArticleFeaturedWrapperItem>
+        </ArticleGrid>
+        <ArticleGrid>
+          <ArticleImageBlock
+            src="/projects/genesys-ui/img/button-component-page-1.png"
+            height={432}
+            alt="Storybook documentation for components"
+            title="Storybook documentation for components"
+            description="Two examples of the Storybook documentation for one of the system components (Button), 
           showing the different properties and states the component can have, as well as usage examples.
           The component page is usually structured in these sections: how to import, basic usage, variants
           and states, usage tips, internal and related components as well as its props table."
-        />
-        <ArticleImageBlock
-          src="/projects/genesys-ui/img/button-component-page-2.png"
-          height={443}
-          alt="Storybook documentation for components"
-        />
-        <ArticleImageBlock
-          src="/projects/genesys-ui/img/button-component-playground.png"
-          width={800}
-          height={526}
-          alt="Playground for components in Storybook"
-          title="Playground for components in Storybook"
-          description="This is a detailed view of the props playground in Storybook — in this case, the Button component.
+          />
+          <ArticleImageBlock
+            src="/projects/genesys-ui/img/button-component-page-2.png"
+            height={443}
+            alt="Storybook documentation for components"
+          />
+          <ArticleImageBlock
+            src="/projects/genesys-ui/img/button-component-playground.png"
+            width={800}
+            height={526}
+            alt="Playground for components in Storybook"
+            title="Playground for components in Storybook"
+            description="This is a detailed view of the props playground in Storybook — in this case, the Button component.
           It represents one of the core sections of every component in the library, where designers and developers
           can interactively test different properties and instantly see the results. They can also copy the
           corresponding code snippet for any selected configuration."
-        />
-        <ArticleImageBlock
-          src="/projects/genesys-ui/img/datetime-component.png"
-          width={800}
-          height={526}
-          alt="Playground for components in Storybook"
-        />
-      </ArticleSection>
+          />
+          <ArticleImageBlock
+            src="/projects/genesys-ui/img/datetime-component.png"
+            width={800}
+            height={526}
+            alt="Playground for components in Storybook"
+          />
+        </ArticleGrid>
+      </ArticleFeaturedWrapper>
       {/* LEARNINGS & NEXT STEPS  ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Learnings & Next Steps">
         <ArticleParagraph>

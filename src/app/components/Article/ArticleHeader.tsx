@@ -31,7 +31,7 @@ export const ArticleHeader: React.FC<ArticleHeaderProps> = ({
   tags,
 }) => {
   return (
-    <div className="mb-22">
+    <header className="mb-22">
       <div className="max-w-[var(--max-width-text)]">
         {!hideBackLink && (
           <ArticleBackLink children={backLinkText} href={backLinkHref} />
@@ -77,6 +77,6 @@ export const ArticleHeader: React.FC<ArticleHeaderProps> = ({
           )}
         </div>
       )}
-    </div>
+    </header>
   );
 };
