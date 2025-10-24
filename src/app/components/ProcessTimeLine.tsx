@@ -45,7 +45,7 @@ const steps = [
   },
 ];
 
-export default function ProcessTimeline() {
+export const ProcessTimeline = () => {
   return (
     <section className="bg-[var(--projects-bg-color)]">
       <h2 className="text-2xl font-heading text-center font-bold text-[var(--primary-color-weak)] mb-15">
@@ -77,4 +77,4 @@ export default function ProcessTimeline() {
       </div>
     </section>
   );
-}
+};

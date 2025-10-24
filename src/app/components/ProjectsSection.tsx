@@ -95,7 +95,7 @@ export const ProjectsSection = () => {
             UI Refactor
           </div>
           <div className="text-[28px] text-gray-700">
-            Working for{" "}
+            Also at{" "}
             <Link
               href="https://devo.com"
               target="_blank"
@@ -104,57 +104,69 @@ export const ProjectsSection = () => {
             >
               Devo
             </Link>{" "}
-            I co-created the whole design system along with its key foundations:
-            documentation in SB and Figma, React components library, styles,
-            icon library, and design tokens.
+            I was part of one of the company's largest UI initiatives: a full
+            app redesign and refactor grounded in the new design system and
+            design patterns.
           </div>
         </div>
-        <div className="mb-20">
-          {projects
-            .filter(
-              (project) =>
-                project.cat.includes("design-system") &&
-                project.cat.includes("featured")
-            )
-            .map((project, idx) => (
-              <ProjectsCard
-                featured
-                key={`${project.slug}-${idx}`}
-                slug={project.slug}
-                title={project.shortTitle || project.title}
-                description={project.description}
-                figmaLink={project.figmaLink}
-                githubLink={project.githubLink}
-                storybookLink={project.storybookLink}
-                image={project.image}
-                imageAlt={project.imageAlt}
-                imageHeight={project.imageHeight}
-                imageWidth={project.imageWidth}
-              />
-            ))}
-        </div>
-        <div className="grid sm:grid-cols-2 xl:grid-cols-3 grid-cols-1 grid-container gap-8 md:gap-16">
-          {projects
-            .filter(
-              (project) =>
-                project.cat.includes("design-system") &&
-                !project.cat.includes("featured")
-            )
-            .map((project, idx) => (
-              <ProjectsCard
-                key={`${project.slug}-${idx}`}
-                slug={project.slug}
-                title={project.shortTitle || project.title}
-                description={project.description}
-                figmaLink={project.figmaLink}
-                githubLink={project.githubLink}
-                storybookLink={project.storybookLink}
-                image={project.image}
-                imageAlt={project.imageAlt}
-                imageHeight={project.imageHeight}
-                imageWidth={project.imageWidth}
-              />
-            ))}
+        <div>
+          <div className="mb-10">
+            {projects
+              .filter(
+                (project) =>
+                  project.cat.includes("ui-refactor") &&
+                  project.cat.includes("featured")
+              )
+              .map((project, idx) => (
+                <ProjectsCard
+                  featured
+                  key={`${project.slug}-${idx}`}
+                  slug={project.slug}
+                  title={project.shortTitle || project.title}
+                  description={project.shortDescription || project.description}
+                  figmaLink={project.figmaLink}
+                  githubLink={project.githubLink}
+                  storybookLink={project.storybookLink}
+                  image={project.image}
+                  imageAlt={project.imageAlt}
+                  imageHeight={project.imageHeight}
+                  imageWidth={project.imageWidth}
+                />
+              ))}
+          </div>
+          <div>
+            <div className="relative flex flex-row items-center mb-12">
+              <div className="text-lg uppercase tracking-widest font-heading">
+                Related Projects
+              </div>
+              <mark className="w-[calc(100%-220px)] h-[1px] bg-black/15 absolute top-[50%] translate-[0,-50%] ml-[220px]" />
+            </div>
+            <div className="grid sm:grid-cols-2 xl:grid-cols-3 grid-cols-1 grid-container gap-8 md:gap-16">
+              {projects
+                .filter(
+                  (project) =>
+                    project.cat.includes("ui-refactor") &&
+                    !project.cat.includes("featured")
+                )
+                .map((project, idx) => (
+                  <ProjectsCard
+                    key={`${project.slug}-${idx}`}
+                    slug={project.slug}
+                    title={project.shortTitle || project.title}
+                    description={
+                      project.shortDescription || project.description
+                    }
+                    figmaLink={project.figmaLink}
+                    githubLink={project.githubLink}
+                    storybookLink={project.storybookLink}
+                    image={project.image}
+                    imageAlt={project.imageAlt}
+                    imageHeight={project.imageHeight}
+                    imageWidth={project.imageWidth}
+                  />
+                ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

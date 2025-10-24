@@ -5,4 +5,5 @@ export * from "./Link";
 export * from "./HeroSection";
 export * from "./ProjectsCard";
 export * from "./ProjectsSection";
+export * from "./ProcessTimeLine";
 export * from "./Tag";

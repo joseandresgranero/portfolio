@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 
 import type { IArticle } from "@/types/article";
 import { projects } from "@/app/data";
-import ProcessTimeline from "@/app/components/ProcessTimeLine";
 import {
   Article,
   ArticleImageBlock,
@@ -10,7 +9,8 @@ import {
   ArticleParagraph,
   ArticleSection,
   ArticleVideoBlock,
-} from "@/app/components/Article";
+  ProcessTimeline,
+} from "@/app/components";
 
 export default function GenesysDesignSystem() {
   const project: IArticle | undefined = projects.find(
