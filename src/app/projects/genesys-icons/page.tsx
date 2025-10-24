@@ -39,7 +39,8 @@ export default function GenesysDesignSystem() {
         <ArticleParagraph>
           The library was created to streamline and standardize iconography
           across product and engineering teams, providing a unified, reusable
-          set of SVG icons and React components built in TypeScript.
+          set of SVG and font-based icons as well as React components built in
+          TypeScript.
         </ArticleParagraph>
         <ArticleParagraph>
           This initiative was part of a broader effort to strengthen the design
@@ -71,35 +72,33 @@ export default function GenesysDesignSystem() {
         className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
       >
         <ArticleImageBlock
-          src="/projects/genesys-ui/img/alerts-creation-old.jpg"
-          height={411}
-          alt="Before Genesys UI example of section"
-          title="Before"
-          description="Two examples of sections before the creation of Genesys UI,
-          so there are different ways of define the same components — different 
-          font sizes for the tabs and page title, different help block at the right 
-          of the title, not the same filters above the table... etc."
+          src="/projects/genesys-icons/img/icons-abuse-1.png"
+          height={508}
+          alt="Before Genesys Icons example of section"
+          title="Before: Overuse of icons"
+          description="Two examples of sections before the creation of Genesys Icons,
+          so there is a excessive use of icons, As a result, the usefulness of the icons
+          is lost, because they are representing actions so complex that the icons no longer
+          clarify their meaning — instead, they add visual noise."
         />
         <ArticleImageBlock
-          src="/projects/genesys-ui/img/user-manage.png"
-          width={1200}
-          height={625}
-          alt="Before Genesys UI example of section"
+          src="/projects/genesys-icons/img/icons-abuse-2.png"
+          height={457}
+          alt="Before Genesys Icons example of section"
         />
         <ArticleImageBlock
-          src="/projects/genesys-ui/img/retention-time-manager.png"
-          height={411}
-          alt="After Genesys UI example of section"
-          title="After"
-          description="Two examples of sections after the creation of Genesys UI,
-          so we're usng the same components across the product — the consistency
-          is radically improved."
+          src="/projects/genesys-icons/img/icons-better-use-1.png"
+          height={500}
+          alt="After Genesys Icons example of section"
+          title="After: use becomes more balanced"
+          description="Two examples of sections created after Genesys Icons,
+          where we can see a more intentional use of icons — only when they
+          truly reinforce the action."
         />
         <ArticleImageBlock
-          src="/projects/genesys-ui/img/alerts-sending-policies.png"
-          width={1200}
-          height={625}
-          alt="After Genesys UI example of section"
+          src="/projects/genesys-icons/img/icons-better-use-2.png"
+          height={667}
+          alt="After Genesys Icons example of section"
         />
       </ArticleSection>
       {/* PROCESS ----------------------------------------------------------------------------- */}
@@ -204,39 +203,29 @@ export default function GenesysDesignSystem() {
         <ArticleGrid>
           <ArticleImageBlock
             inverted
-            src="/projects/genesys-ui/img/button-component-page-1.png"
+            src="/projects/genesys-icons/img/icons-gallery.png"
             height={432}
-            alt="Storybook documentation for components"
-            title="Storybook documentation for components"
-            description="Two examples of the Storybook documentation for one of the system components (Button), 
-          showing the different properties and states the component can have, as well as usage examples.
-          The component page is usually structured in these sections: how to import, basic usage, variants
-          and states, usage tips, internal and related components as well as its props table."
+            alt="Storybook gallery for icons"
+            title="Storybook documentation for icons"
+            description="The Storybook documentation is built around a gallery
+            that lets designers and developers search icons by name or related tags.
+            It also provides live previews, the option to copy the icon name for font usage,
+            download the asset, copy its React component definition, or directly download the SVG."
           />
           <ArticleImageBlock
             inverted
-            src="/projects/genesys-ui/img/button-component-page-2.png"
-            height={443}
-            alt="Storybook documentation for components"
+            src="/projects/genesys-icons/img/icons-gallery-preview.png"
+            height={432}
+            alt="Storybook gallery for icons"
           />
           <ArticleImageBlock
             inverted
-            src="/projects/genesys-ui/img/button-component-playground.png"
-            width={800}
-            height={526}
-            alt="Playground for components in Storybook"
-            title="Playground for components in Storybook"
-            description="This is a detailed view of the props playground in Storybook — in this case, the Button component.
-          It represents one of the core sections of every component in the library, where designers and developers
-          can interactively test different properties and instantly see the results. They can also copy the
-          corresponding code snippet for any selected configuration."
-          />
-          <ArticleImageBlock
-            inverted
-            src="/projects/genesys-ui/img/datetime-component.png"
-            width={800}
-            height={526}
-            alt="Playground for components in Storybook"
+            src="/projects/genesys-icons/img/icons-react-playground.png"
+            height={543}
+            alt="Storybook gallery for icons"
+            title="React version playground"
+            description="The Icon React component playground on Storybook — Designers and developers
+            can tweak component props, preview changes in real time, and easily copy the resulting code"
           />
         </ArticleGrid>
       </ArticleFeaturedWrapper>
@@ -250,10 +239,8 @@ export default function GenesysDesignSystem() {
         </ArticleParagraph>
         <ArticleParagraph>
           Looking forward, the next steps include expanding the library with new
-          icon sets, improving accessibility through semantic naming, and
-          integrating the icons even more tightly with design tokens. These
-          improvements will help the system remain flexible, scalable, and ready
-          for future design evolutions.
+          icon sets, and above all, improving the SB gallery search, through
+          semantic naming, and adding accurate and descriptive tags.
         </ArticleParagraph>
       </ArticleSection>
     </Article>

@@ -43,7 +43,7 @@ export const projects: IArticle[] = [
     shortTitle: "Icons library",
     role: "I co-created a React and TypeScript-based icon library that streamlined how teams use and manage icons consistently. Focused on defining the icon set, the architecture, integrating it into the design system, designing and coding the documentation in SB, and establishing the workflow for designers and developers alike.",
     description:
-      "A React and SVG icon library built on top of Ionicons, providing an easy and consistent way to use iconography throughout the product.",
+      "A React, font-based and SVG icon library built on top of Ionicons, providing an easy and consistent way to use iconography throughout the product.",
     image: "/projects/genesys-icons/img/icons-thumb.png",
     imageAlt: "Genesys Icons Banner",
     imageWidth: 800,
