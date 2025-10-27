@@ -8,7 +8,7 @@ export const ProjectsSection = () => {
   return (
     <section id="projects" className="scroll-mt-10 md:scroll-mt-25">
       <div className="bg-[var(--projects-bg-color)] px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] py-10  md:py-25">
-        <div className="mb-16 max-w-[var(--max-width-text-md)]">
+        <div className="mb-16 max-w-[var(--max-width-text-lg)]">
           <div className="text-5xl font-extrabold mb-10 font-heading">
             Genesys
           </div>
@@ -90,9 +90,9 @@ export const ProjectsSection = () => {
         </div>
       </div>
       <div className="bg-white px-[var(--padding-x-base)] md:px-[var(--padding-x-base-md)] py-10  md:py-25">
-        <div className="mb-16 max-w-[var(--max-width-text-md)]">
+        <div className="mb-16 max-w-[var(--max-width-text-lg)]">
           <div className="text-5xl font-extrabold mb-10 font-heading">
-            UI Refactor
+            Devo UI Refactor
           </div>
           <div className="text-[28px] text-gray-700">
             Also at{" "}
@@ -134,39 +134,45 @@ export const ProjectsSection = () => {
                 />
               ))}
           </div>
-          <div>
-            <div className="relative flex flex-row items-center mb-12">
-              <div className="text-lg uppercase tracking-widest font-heading">
-                Related Projects
+          {projects.filter(
+            (project) =>
+              project.cat.includes("ui-refactor") &&
+              !project.cat.includes("featured")
+          ).length > 0 && (
+            <div>
+              <div className="relative flex flex-row items-center mb-12">
+                <div className="text-lg uppercase tracking-widest font-heading">
+                  Related Projects
+                </div>
+                <mark className="w-[calc(100%-220px)] h-[1px] bg-black/15 absolute top-[50%] translate-[0,-50%] ml-[220px]" />
               </div>
-              <mark className="w-[calc(100%-220px)] h-[1px] bg-black/15 absolute top-[50%] translate-[0,-50%] ml-[220px]" />
+              <div className="grid sm:grid-cols-2 xl:grid-cols-3 grid-cols-1 grid-container gap-8 md:gap-16">
+                {projects
+                  .filter(
+                    (project) =>
+                      project.cat.includes("ui-refactor") &&
+                      !project.cat.includes("featured")
+                  )
+                  .map((project, idx) => (
+                    <ProjectsCard
+                      key={`${project.slug}-${idx}`}
+                      slug={project.slug}
+                      title={project.shortTitle || project.title}
+                      description={
+                        project.shortDescription || project.description
+                      }
+                      figmaLink={project.figmaLink}
+                      githubLink={project.githubLink}
+                      storybookLink={project.storybookLink}
+                      image={project.image}
+                      imageAlt={project.imageAlt}
+                      imageHeight={project.imageHeight}
+                      imageWidth={project.imageWidth}
+                    />
+                  ))}
+              </div>
             </div>
-            <div className="grid sm:grid-cols-2 xl:grid-cols-3 grid-cols-1 grid-container gap-8 md:gap-16">
-              {projects
-                .filter(
-                  (project) =>
-                    project.cat.includes("ui-refactor") &&
-                    !project.cat.includes("featured")
-                )
-                .map((project, idx) => (
-                  <ProjectsCard
-                    key={`${project.slug}-${idx}`}
-                    slug={project.slug}
-                    title={project.shortTitle || project.title}
-                    description={
-                      project.shortDescription || project.description
-                    }
-                    figmaLink={project.figmaLink}
-                    githubLink={project.githubLink}
-                    storybookLink={project.storybookLink}
-                    image={project.image}
-                    imageAlt={project.imageAlt}
-                    imageHeight={project.imageHeight}
-                    imageWidth={project.imageWidth}
-                  />
-                ))}
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

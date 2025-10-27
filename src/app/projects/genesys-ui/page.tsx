@@ -8,7 +8,6 @@ import {
   ArticleFeaturedWrapper,
   ArticleFeaturedWrapperItem,
   ArticleGrid,
-  ArticleHeading,
   ArticleImageBlock,
   ArticleParagraph,
   ArticleSection,
@@ -64,41 +63,46 @@ export default function GenesysDesignSystem() {
           cohesion across multiple products became increasingly difficult.
         </ArticleParagraph>
       </ArticleSection>
-      <ArticleSection
-        unlimitedWidth
-        className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
-      >
-        <ArticleImageBlock
-          src="/projects/genesys-ui/img/alerts-creation-old.jpg"
-          height={411}
-          alt="Before Genesys UI example of section"
-          title="Before"
-          description="Two examples of sections before the creation of Genesys UI,
+      <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
+        <ArticleGrid>
+          <ArticleImageBlock
+            src="/projects/genesys-ui/img/alerts-creation-old.png"
+            width={1122}
+            height={682}
+            alt="Before Genesys UI example of section"
+            className="order-2 lg:order-1"
+            title="Before"
+            description="Two examples of sections before the creation of Genesys UI,
           so there are different ways of define the same components — different 
           font sizes for the tabs and page title, different help block at the right 
           of the title, not the same filters above the table... etc."
-        />
-        <ArticleImageBlock
-          src="/projects/genesys-ui/img/user-manage.png"
-          width={1200}
-          height={625}
-          alt="Before Genesys UI example of section"
-        />
-        <ArticleImageBlock
-          src="/projects/genesys-ui/img/retention-time-manager.png"
-          height={411}
-          alt="After Genesys UI example of section"
-          title="After"
-          description="Two examples of sections after the creation of Genesys UI,
+          />
+          <ArticleImageBlock
+            src="/projects/genesys-ui/img/user-manage.png"
+            width={1238}
+            height={700}
+            alt="Before Genesys UI example of section"
+            className="order-1 lg:order-2"
+          />
+          <ArticleImageBlock
+            src="/projects/genesys-ui/img/retention-time-manager.png"
+            width={1280}
+            height={808}
+            alt="After Genesys UI example of section"
+            className="order-4 lg:order-3"
+            title="After"
+            description="Two examples of sections after the creation of Genesys UI,
           so we're usng the same components across the product — the consistency
           is radically improved."
-        />
-        <ArticleImageBlock
-          src="/projects/genesys-ui/img/alerts-sending-policies.png"
-          width={1200}
-          height={625}
-          alt="After Genesys UI example of section"
-        />
+          />
+          <ArticleImageBlock
+            src="/projects/genesys-ui/img/alerts-sending-policies.png"
+            width={1280}
+            height={810}
+            alt="After Genesys UI example of section"
+            className="order-3 lg:order-4"
+          />
+        </ArticleGrid>
       </ArticleSection>
       {/* PROCESS ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Process & Collaboration">
@@ -140,41 +144,41 @@ export default function GenesysDesignSystem() {
           , ensuring 100% design-to-code consistency.
         </ArticleParagraph>
       </ArticleSection>
-      <ArticleSection
-        unlimitedWidth
-        className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
-      >
-        <ArticleImageBlock
-          src="/projects/genesys-ui/img/design-tokens-docs.png"
-          width={800}
-          height={419}
-          alt="Design tokens documentation in Storybook"
-          title="Design tokens documentation"
-          description={
-            <>
-              <Link
-                href="https://genesys-ui.github.io/theme-devo"
-                title="Sotorybook documentation for Genesys design tokens (new tab)"
-              >
-                Design tokens documentation
-              </Link>{" "}
-              created in Storybook, so both designers and developers can check
-              the available tokens for colors, typography, spacing, sizing, etc.
-              We have an advanced search system to find tokens easily — for
-              example, filtering by text, regex, schema (dark/light), format
-              (JS, JSON, CSS...) and by the naming category."
-            </>
-          }
-        />
-        <ArticleImageBlock
-          src="/projects/genesys-ui/img/figma-aligned-tokens.png"
-          height={419}
-          alt="Design tokens in Figma"
-          title="Single source of truth for Design tokens"
-          description="This a detail of the Figma library showing the design tokens
+      <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
+        <ArticleGrid>
+          <ArticleImageBlock
+            src="/projects/genesys-ui/img/design-tokens-docs.png"
+            width={800}
+            height={419}
+            alt="Design tokens documentation in Storybook"
+            title="Design tokens documentation"
+            description={
+              <>
+                <Link
+                  href="https://genesys-ui.github.io/theme-devo"
+                  title="Sotorybook documentation for Genesys design tokens (new tab)"
+                >
+                  Design tokens documentation
+                </Link>{" "}
+                created in Storybook, so both designers and developers can check
+                the available tokens for colors, typography, spacing, sizing,
+                etc. We have an advanced search system to find tokens easily —
+                for example, filtering by text, regex, schema (dark/light),
+                format (JS, JSON, CSS...) and by the naming category."
+              </>
+            }
+          />
+          <ArticleImageBlock
+            src="/projects/genesys-ui/img/figma-aligned-tokens.png"
+            width={1279}
+            height={881}
+            alt="Design tokens in Figma"
+            title="Single source of truth for Design tokens"
+            description="This a detail of the Figma library showing the design tokens
           integrated as Figma variables. This way, designers can use the same tokens
           defined in code, ensuring 100% consistency between design and development."
-        />
+          />
+        </ArticleGrid>
       </ArticleSection>
       {/* DEVELOPMENT APPROACH ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Development Approach">
@@ -334,9 +338,11 @@ export default function GenesysDesignSystem() {
         </ArticleGrid>
         <ArticleGrid>
           <ArticleImageBlock
+            inverted
             src="/projects/genesys-ui/img/button-component-page-1.png"
             height={432}
             alt="Storybook documentation for components"
+            className="order-2 lg:order-1"
             title="Storybook documentation for components"
             description="Two examples of the Storybook documentation for one of the system components (Button), 
           showing the different properties and states the component can have, as well as usage examples.
@@ -344,15 +350,19 @@ export default function GenesysDesignSystem() {
           and states, usage tips, internal and related components as well as its props table."
           />
           <ArticleImageBlock
+            inverted
             src="/projects/genesys-ui/img/button-component-page-2.png"
             height={443}
             alt="Storybook documentation for components"
+            className="order-1 lg:order-2"
           />
           <ArticleImageBlock
+            inverted
             src="/projects/genesys-ui/img/button-component-playground.png"
             width={800}
             height={526}
             alt="Playground for components in Storybook"
+            className="order-4 lg:order-3"
             title="Playground for components in Storybook"
             description="This is a detailed view of the props playground in Storybook — in this case, the Button component.
           It represents one of the core sections of every component in the library, where designers and developers
@@ -360,10 +370,17 @@ export default function GenesysDesignSystem() {
           corresponding code snippet for any selected configuration."
           />
           <ArticleImageBlock
+            inverted
             src="/projects/genesys-ui/img/datetime-component.png"
+            className="order-3 lg:order-4"
             width={800}
             height={526}
-            alt="Playground for components in Storybook"
+            alt="Complex components"
+            title="Complex components"
+            description="The library doesn't just include foundational components like Button,
+            Badge, Tag, or Input — it also supports complex, composite ones. The example above 
+            shows a date-time range floating picker, a good demonstration of how these advanced 
+            components are built from smaller, foundational pieces within the same atomic ecosystem."
           />
         </ArticleGrid>
       </ArticleFeaturedWrapper>

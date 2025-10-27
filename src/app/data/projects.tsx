@@ -1,4 +1,5 @@
 import { IArticle } from "@/types/article";
+import { ArticleParagraph } from "../components";
 
 export const projects: IArticle[] = [
   {
@@ -10,10 +11,10 @@ export const projects: IArticle[] = [
       "Created the Devo design system from the ground up, radically enhancing consistency, scalability, and the overall speed of design and development.",
     shortDescription:
       "The design system definition: design principles, foundations, components and patterns, as well as a detailed documentation in Storybook and Figma.",
-    image: "/projects/design-system/img/design-system-thumb-landscape.png",
+    image: "/projects/design-system/img/design-system-thumb.png",
     imageAlt: "Genesys Design System Banner",
-    imageWidth: 400,
-    imageHeight: 259,
+    imageWidth: 1263,
+    imageHeight: 958,
     slug: "genesys-design-system",
     storybookLink: "https://genesys-ui.github.io/design-system",
     githubLink: "https://github.com/genesys-ui/design-system",
@@ -68,5 +69,44 @@ export const projects: IArticle[] = [
     storybookLink: "https://genesys-ui.github.io/theme-devo",
     githubLink: "https://github.com/genesys-ui/theme-devo",
     tags: ["Theme", "Style Dictionary", "CSS", "SASS", "JS", "JSON"],
+  },
+  {
+    title: "Devo app UI refactor",
+    cat: ["ui-refactor", "featured"],
+    shortTitle: "UI Refactor",
+    role: (
+      <>
+        <ArticleParagraph>
+          I was involved not only in project{" "}
+          <strong>
+            planning and prototyping all application screens, but also in
+            implementing the required changes directly in code
+          </strong>
+          . This has been a huge project, so many times we needed to do the
+          changes from the design department.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          My responsibilities also included defining the new design system
+          architecture, and{" "}
+          <strong>ensuring visual and functional consistency</strong> across a
+          vast library of data visualization components.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          In addition,I collaborated closely with data engineers, product
+          managers, and front-end developers, providing{" "}
+          <strong>ongoing guidance and support</strong> throughout the process.
+        </ArticleParagraph>
+      </>
+    ),
+    description:
+      "Refactor and adaptation of Devo's data analysis application to the new design system — implementing the new component library, design tokens, icons, and design patterns.",
+    image: "/projects/ui-refactor/img/ui-refactor-thumb.png",
+    imageAlt: "Devo app refactor detail",
+    imageWidth: 1024,
+    imageHeight: 682,
+    slug: "ui-refactor",
+    storybookLink: "https://genesys-ui.github.io/theme-devo",
+    githubLink: "https://github.com/genesys-ui/theme-devo",
+    tags: ["Devo", "Refactor", "Data-analysis", "App", "Design system"],
   },
 ];

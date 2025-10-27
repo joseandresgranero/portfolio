@@ -1,8 +1,9 @@
 import * as React from "react";
-import Image from "next/image";
 import { ArticleCaption, ArticleCaptionProps } from "./ArticleCaption";
+import { LightBoxClient } from "../LightBoxClient";
 
 export interface ArticleImageBlockProps {
+  className?: React.HTMLAttributes<HTMLAnchorElement>["className"];
   title?: ArticleCaptionProps["title"];
   description?: ArticleCaptionProps["children"];
   src: string;
@@ -13,6 +14,7 @@ export interface ArticleImageBlockProps {
 }
 
 export const ArticleImageBlock: React.FC<ArticleImageBlockProps> = ({
+  className,
   src,
   height = 460,
   width = 800,
@@ -22,13 +24,13 @@ export const ArticleImageBlock: React.FC<ArticleImageBlockProps> = ({
   inverted,
 }) => {
   return (
-    <div className="mb-10 md:mb-0">
-      <Image
-        src={src}
-        width={width}
-        height={height}
+    <div className={`mb-10 md:mb-0 ${className}`}>
+      <LightBoxClient
+        inverted={inverted}
         alt={alt}
-        className="border border-gray-200"
+        height={height}
+        width={width}
+        src={src}
       />
       {(title || description) && (
         <ArticleCaption inverted={inverted} title={title}>

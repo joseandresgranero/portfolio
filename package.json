@@ -14,7 +14,8 @@
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
     "react-scroll-parallax": "^3.4.5",
-    "simple-parallax-js": "^6.3.3"
+    "simple-parallax-js": "^6.3.3",
+    "yet-another-react-lightbox": "^3.25.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -30,7 +30,7 @@ export const ProjectsCard: React.FC<ArticleCardProps> = ({
     <div className="card card--project flex flex-col">
       <a
         href={`/projects/${slug}`}
-        className="max-w-[920px] overflow-hidden border border-gray-200"
+        className="max-w-[1078px] overflow-hidden border border-gray-200"
         title={`View project '${title}'`}
       >
         <Image

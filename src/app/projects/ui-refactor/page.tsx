@@ -17,7 +17,7 @@ import {
 
 export default function GenesysDesignSystem() {
   const project: IArticle | undefined = projects.find(
-    (p: IArticle) => p.slug === "genesys-design-system"
+    (p: IArticle) => p.slug === "ui-refactor"
   );
 
   if (!project) {
@@ -37,30 +37,22 @@ export default function GenesysDesignSystem() {
       {/* PROBLEM ----------------------------------------------------------------------------- */}
       <ArticleSection heading="The Challenge">
         <ArticleParagraph>
-          Before the design system existed, the product ecosystem faced{" "}
-          <strong>major inconsistencies</strong> — not only visual, but also in
-          how users interacted with the platform. The same actions could be
-          performed in multiple ways, using different components depending on
-          where the user was in the product.
+          The original platform had evolved through years of incremental
+          development, resulting in a fragmented experience. Data tables,
+          dashboards, and charts were built inconsistently by different teams,
+          using separate codebases and styling approaches. This led to visual
+          clutter, reduced usability, and high maintenance costs.
         </ArticleParagraph>
         <ArticleParagraph>
-          Meanwhile, developers were building their own components and layouts
-          for every new feature or enhancement, which significantly increased
-          both development time and <strong>maintenance costs</strong>.
+          The main challenge was to unify this ecosystem under a single,
+          scalable design system that would preserve analytical power while
+          improving clarity and performance.
         </ArticleParagraph>
         <ArticleParagraph>
-          To make things even more complex, the Professional Services team was
-          continuously creating new, tailor-made vertical applications for
-          specific clients.
-        </ArticleParagraph>
-        <ArticleParagraph>
-          As a result, maintaining visual consistency, accessibility standards,
-          and scalability across products had become almost impossible.
-        </ArticleParagraph>
-        <ArticleParagraph>
-          That's when we decided to create a unified design system — not just as
-          a visual framework, but as a <strong>strategic foundation</strong> to
-          transform how Devo designed and built its products.
+          The redesign also needed to support new use cases, such as more
+          customizable dashboards, new data tables based in components library,
+          new navigation architecture and main menu, advanced data filtering...
+          etc. without adding cognitive overload.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">

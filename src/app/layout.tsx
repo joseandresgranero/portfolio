@@ -12,6 +12,8 @@ import {
 import "./globals.css";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://joseandresgranero.com";
 
 // Fuente roboto para cuerpo de texto
 const roboto = Roboto({
@@ -73,7 +75,7 @@ export const metadata: Metadata = {
     siteName: "Jose Andrés Granero - Portfolio",
     images: [
       {
-        url: "/social-preview.png",
+        url: `${baseUrl}/social-preview.png`,
         width: 330,
         height: 330,
       },

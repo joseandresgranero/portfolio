@@ -6,7 +6,7 @@ export interface IArticle {
   shortTitle?: string;
   description: React.ReactNode;
   shortDescription?: React.ReactNode;
-  role: string;
+  role: React.ReactNode;
   image: string;
   imageAlt: string;
   imageHeight?: number;

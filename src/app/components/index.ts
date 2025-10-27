@@ -3,6 +3,7 @@ export * from "./Footer";
 export * from "./Header";
 export * from "./Link";
 export * from "./HeroSection";
+export * from "./LightBoxClient";
 export * from "./ProjectsCard";
 export * from "./ProjectsSection";
 export * from "./ProcessTimeLine";

@@ -233,22 +233,25 @@ export default function GenesysDesignSystem() {
         <ArticleGrid columns={3}>
           <ArticleFeaturedWrapperItem heading="Single source of truth">
             The impact was immediate. Design and development finally spoke the
-            same language. A single change in the token file would update web
-            styles, React components, and Figma variables all at once.
+            same language. A single change in the token file would update{" "}
+            <strong>
+              web styles, React components, and Figma variables all at once
+            </strong>
+            .
           </ArticleFeaturedWrapperItem>
           <ArticleFeaturedWrapperItem heading="Cohesion">
             Beyond efficiency, the library created a stronger sense of cohesion
-            across our products. Our interfaces felt unified.
+            across our products. <strong>Our interface feels unified</strong>.
           </ArticleFeaturedWrapperItem>
           <ArticleFeaturedWrapperItem heading="Scalability">
-            It is easier than ever to scale the design system as new features
-            and platforms were added.
+            It is easier than ever to <strong>scale the design system</strong>{" "}
+            as new features and platforms were added.
           </ArticleFeaturedWrapperItem>
         </ArticleGrid>
         <ArticleGrid>
           <ArticleImageBlock
             inverted
-            src="/projects/genesys-design-tokens/img/tokens-docs-search.png"
+            src="/projects/genesys-design-tokens/img/tokens-sb-doc-search.png"
             height={432}
             alt="Storybook documentation for tokens"
             title="Storybook documentation for tokens"
@@ -259,7 +262,7 @@ export default function GenesysDesignSystem() {
           />
           <ArticleImageBlock
             inverted
-            src="/projects/genesys-design-tokens/img/tokens-output-example.png"
+            src="/projects/genesys-design-tokens/img/token-outputs.png"
             height={432}
             alt="Tokens output example"
             title="Different outputs for tokens"
