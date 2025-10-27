@@ -1,15 +1,11 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-
-import HeroSection from "../components/HeroSection";
-import { ProjectsSection } from "../components/ProjectsSection";
+import type { Metadata } from "next";
 import { Article } from "../components/Article/Article";
-import {
-  ArticleHeader,
-  ArticleParagraph,
-  ArticleSection,
-} from "../components/Article";
+import { ArticleParagraph, ArticleSection } from "../components/Article";
+
+export const metadata: Metadata = {
+  title:
+    "About me - Jose Andrés Granero - Product Designer — Specialized in UX/UI Architecture & Design Systems",
+};
 
 export default function About() {
   return (

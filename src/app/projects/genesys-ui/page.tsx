@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
 import type { IArticle } from "@/types/article";
 import { projects } from "@/app/data";
@@ -13,6 +14,11 @@ import {
   ArticleSection,
   Link,
 } from "@/app/components";
+
+export const metadata: Metadata = {
+  title:
+    "Genesys UI component library case study - Jose Andrés Granero - Product Designer — Specialized in UX/UI Architecture & Design Systems",
+};
 
 export default function GenesysDesignSystem() {
   const project: IArticle | undefined = projects.find(
