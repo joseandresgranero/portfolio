@@ -16,14 +16,10 @@ import {
 } from "@/app/components";
 import {
   IoBarChart,
-  IoBarChartOutline,
-  IoBookOutline,
   IoBrushOutline,
   IoCheckmarkCircle,
   IoCodeOutline,
-  IoColorPaletteOutline,
   IoLayersOutline,
-  IoRocketOutline,
   IoSearchOutline,
 } from "react-icons/io5";
 
@@ -96,19 +92,22 @@ export default function GenesysDesignSystem() {
           The original platform had evolved through years of incremental
           development, resulting in a fragmented experience. Data tables,
           dashboards, and charts were built inconsistently by different teams,
-          using separate codebases and styling approaches. This led to visual
-          clutter, reduced usability, and high maintenance costs.
+          using separate codebases and styling approaches. This led to{" "}
+          <strong>
+            visual clutter, reduced usability, and high maintenance costs
+          </strong>
+          .
         </ArticleParagraph>
         <ArticleParagraph>
           The main challenge was to unify this ecosystem under a single,
-          scalable design system that would preserve analytical power while
-          improving clarity and performance.
+          <strong>scalable design system</strong> that would preserve analytical
+          power while improving clarity and performance.
         </ArticleParagraph>
         <ArticleParagraph>
-          The redesign also needed to support new use cases, such as more
-          customizable dashboards, new data tables based in components library,
-          new navigation architecture and main menu, advanced data filtering...
-          etc. without adding cognitive overload.
+          The redesign also needed to support <strong>new use cases</strong>,
+          such as more customizable dashboards, new data tables based in
+          components library, new navigation architecture and main menu,
+          advanced data filtering... etc. without adding cognitive overload.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
@@ -162,41 +161,43 @@ export default function GenesysDesignSystem() {
       {/* RESEARCH ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Research">
         <ArticleParagraph>
-          We started with a full product audit, mapping all pages, widgets, and
-          interactive elements used across different modules of the platform. I
-          ran interviews with data analysts, business users, and internal
-          developers to identify pain points in the workflow. The biggest issues
-          were related to discoverability (hidden features), visual overload,
-          and lack of standardization in visualizations.
+          We started with a <strong>full product audit</strong>, mapping all
+          pages, widgets, and interactive elements used across different modules
+          of the platform. We ran interviews with data analysts, business users,
+          and internal developers to identify pain points in the workflow. The
+          biggest issues were related to discoverability (hidden features),
+          visual overload, and lack of standardization in visualizations.
         </ArticleParagraph>
         <ArticleParagraph>
-          In parallel, we benchmarked leading analytics tools to understand best
-          practices in handling dense data interfaces. The key insight was that
-          consistency and clarity were far more valuable than visual novelty.
-          These findings guided our decision to build a flexible system around
-          composable, data-first components.
+          In parallel, we <strong>benchmarked leading analytics tools</strong>{" "}
+          to understand best practices in handling dense data interfaces. The
+          key insight was that consistency and clarity were far more valuable
+          than visual novelty. These findings guided our decision to build a
+          flexible system around composable, data-first components.
         </ArticleParagraph>
         <ArticleParagraph>
-          In addition, we used a previous comprehensive research from my own
-          design department, about pain points, inconsistencies, navigation
-          problems, and unclear user flows or actions.
+          In addition, we used a{" "}
+          <strong>previous comprehensive research</strong> from my own design
+          department, about pain points, inconsistencies, navigation problems,
+          and unclear user flows or actions.
         </ArticleParagraph>
       </ArticleSection>
       {/* DESIGN SYSTEM CREATION ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Design System">
         <ArticleParagraph>
-          The new design system, internally named "Genesys", was conceived as a
-          modular ecosystem covering UI components, data visualizations, and
-          interaction patterns. We defined design tokens for color, typography,
-          spacing, and data states, ensuring visual harmony across tables,
-          charts, and dashboards.
+          The <strong>new design system</strong>, internally named "Genesys",
+          was conceived as a modular ecosystem covering UI components, data
+          visualizations, and interaction patterns. We defined design tokens for
+          color, typography, spacing, and data states, ensuring visual harmony
+          across tables, charts, and dashboards.
         </ArticleParagraph>
         <ArticleParagraph>
           To ensure adoption, we created Figma libraries linked to a Storybook
-          instance used by developers. Each component was documented with
-          accessibility notes, responsive behavior rules, and usage examples.
-          This dramatically reduced design-developer handoff time and
-          standardized visual consistency across teams.
+          instance used by developers.{" "}
+          <strong>Each component was documented</strong> with accessibility
+          notes, responsive behavior rules, and usage examples. This
+          dramatically reduced design-developer handoff time and standardized
+          visual consistency across teams.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
@@ -240,18 +241,21 @@ export default function GenesysDesignSystem() {
       {/* VISUAL & INTERACTION REDESIGN ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Visual & Interaction Redesign">
         <ArticleParagraph>
-          We simplified the interface by introducing a clean, data-first visual
-          language that prioritized readability and focus. The new color palette
-          was built around neutral backgrounds and high-contrast accent colors
-          for data visualization, improving interpretability for complex
-          processes and interfaces.
+          We <strong>simplified the interface</strong> by introducing a clean,
+          data-first visual language that prioritized readability and focus. The
+          new color palette was built around neutral backgrounds and
+          high-contrast accent colors for data visualization, improving
+          interpretability for complex processes and interfaces.
         </ArticleParagraph>
         <ArticleParagraph>
           Interaction patterns were redesigned to make complex analytical
           actions (filtering, grouping, and exporting) feel effortless.
           Persistent filters, contextual tooltips, and keyboard shortcuts were
           added to streamline repetitive workflows. The overall goal was to make
-          powerful analytics feel approachable without sacrificing depth.
+          <strong>
+            powerful analytics feel approachable without sacrificing depth
+          </strong>
+          .
         </ArticleParagraph>
         <ArticleParagraph>Key UI improvements include:</ArticleParagraph>
         <ArticleList>
@@ -361,16 +365,18 @@ export default function GenesysDesignSystem() {
       <ArticleSection heading="Implementation & Collaboration">
         <ArticleParagraph>
           Close collaboration between design and development was crucial. We
-          established a shared naming convention and design token pipeline that
-          connected Figma styles to code variables. Weekly cross-team sessions
-          ensured every component was validated against technical feasibility
-          and real user needs.
+          established a{" "}
+          <strong>shared naming convention and design token pipeline</strong>{" "}
+          that connected Figma styles to code variables. Weekly cross-team
+          sessions ensured every component was validated against technical
+          feasibility and real user needs.
         </ArticleParagraph>
         <ArticleParagraph>
-          Through the new Storybook-based workflow, designers could preview
-          coded components live, accelerating iteration cycles and reducing
-          ambiguity. This continuous collaboration also helped maintain a single
-          source of truth between the design library and the production UI.
+          Through the new <strong>Storybook-based workflow</strong>, designers
+          could preview coded components live, accelerating iteration cycles and
+          reducing ambiguity. This continuous collaboration also helped maintain
+          a single source of truth between the design library and the production
+          UI.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection
@@ -383,24 +389,27 @@ export default function GenesysDesignSystem() {
         <ArticleGrid columns={3}>
           <ArticleFeaturedWrapperItem heading="Clarity and consistency">
             The redesigned interface brought a substantial improvement in
-            clarity and efficiency across all user workflows. By rethinking
-            visual hierarchy and interaction patterns, users could now interpret
-            and act on complex datasets with significantly less cognitive
-            effort, reducing unnecessary friction and helping analysts focus on
-            insights.
+            clarity and efficiency across all user workflows. By{" "}
+            <strong>
+              rethinking visual hierarchy and interaction patterns
+            </strong>
+            , users could now interpret and act on complex datasets with
+            significantly less cognitive effort, reducing unnecessary friction
+            and helping analysts focus on insights.
           </ArticleFeaturedWrapperItem>
           <ArticleFeaturedWrapperItem heading="Analytical context">
             Beyond usability, the visual refresh strengthened the product's
             sense of purpose and trustworthiness. The refined color system,
-            typography, and spacing created a calmer, more analytical
-            atmosphere, aligning the interface with the mental model of
-            professional data users.
+            typography, and spacing created a{" "}
+            <strong>calmer, more analytical atmosphere</strong>, aligning the
+            interface with the mental model of professional data users.
           </ArticleFeaturedWrapperItem>
           <ArticleFeaturedWrapperItem heading="Reliability">
             Consistent motion cues and microinteractions improved perceived
-            responsiveness, making the platform feel more polished and reliable.
-            In the same way, the improvements for feedback messages and
-            contextual help, have improved the user experience.
+            responsiveness, making the platform{" "}
+            <strong>feel more polished and reliable</strong>. In the same way,
+            the improvements for feedback messages and contextual help, have
+            improved the user experience.
           </ArticleFeaturedWrapperItem>
         </ArticleGrid>
         <ArticleGrid>
@@ -429,80 +438,26 @@ export default function GenesysDesignSystem() {
             spacing, improved space efficiency by reducing the visual footprint of secondary navigation elements, 
             a unified icon set, color palettes that reflects the brand... etc."
           />
-          <ArticleImageBlock
-            inverted
-            src="/projects/ui-refactor/img/home-old.png"
-            alt="Home before design system"
-            className="order-3"
-            title="Before"
-            description="This is the Home page before the design system was applied."
-          />
-          <ArticleImageBlock
-            inverted
-            src="/projects/ui-refactor/img/home.png"
-            height={459}
-            alt="Home after design system"
-            className="order-4"
-            title="After"
-            description="This is the Home page after the design system was applied: better
-            space rithym, better color contrast, usage of brand, more
-            comfortable palettes... etc."
-          />
-          <ArticleImageBlock
-            inverted
-            src="/projects/ui-refactor/img/loxcope-old.png"
-            height={519}
-            alt="Data search before the design system"
-            className="order-5"
-            title="Before"
-            description="This is the 'Data search' page before the design system was applied."
-          />
-          <ArticleImageBlock
-            inverted
-            src="/projects/ui-refactor/img/loxcope.png"
-            height={569}
-            alt="Data search after the design system"
-            className="order-6"
-            title="After"
-            description="This is the 'Data search' page after the design system was applied:
-            better use of typography, cleaner renderization of the table data,
-            improved hierarchy... etc."
-          />
-          <ArticleImageBlock
-            inverted
-            src="/projects/ui-refactor/img/dark-theme-loxcope.png"
-            height={569}
-            alt="Dark theme after the design system"
-            className="order-8 lg:order-7"
-            title="Dark theme"
-            description="One of the most impactful changes enabled by the design system and
-            design tokens was the introduction of a dark theme. It enhances
-            usability in low-light environments and reduces eye strain for users
-            who prefer darker interfaces."
-          />
-          <ArticleImageBlock
-            inverted
-            src="/projects/ui-refactor/img/dark-theme-delivery.png"
-            height={569}
-            alt="Dark theme after the design system"
-            className="order-7 lg:order-8"
-          />
         </ArticleGrid>
       </ArticleFeaturedWrapper>
       <ArticleSection heading="Learnings and Next Steps">
         <ArticleParagraph>
-          One major learning was the importance of designing for flexibility
-          within constraints. In data-heavy environments, small inconsistencies
-          can lead to confusion or misinterpretation, so maintaining strict
-          system governance became essential. Another takeaway was that early
-          developer involvement accelerates adoption and ensures scalability.
+          One major learning was the importance of{" "}
+          <strong>designing for flexibility within constraints</strong>. In
+          data-heavy environments, small inconsistencies can lead to confusion
+          or misinterpretation, so maintaining strict system governance became
+          essential. Another takeaway was that early developer involvement
+          accelerates adoption and ensures scalability.
         </ArticleParagraph>
         <ArticleParagraph>
-          Moving forward, we plan to extend Atlas to support dark mode, advanced
-          data visualizations (e.g., network graphs, maps), and responsive
-          layouts for secondary devices. The system will also evolve into a
-          shared design infrastructure for all internal analytics tools,
-          unifying visual language company-wide.
+          Moving forward, we plan to extend Genesys to support{" "}
+          <strong>
+            dark mode, advanced data visualizations (e.g., network graphs,
+            maps), and responsive layouts
+          </strong>{" "}
+          for secondary devices. The system will also evolve into a shared
+          design infrastructure for all internal analytics tools, unifying
+          visual language company-wide.
         </ArticleParagraph>
       </ArticleSection>
     </Article>
