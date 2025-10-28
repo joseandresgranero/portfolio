@@ -2,7 +2,7 @@
 import * as React from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { Fullscreen } from "yet-another-react-lightbox/plugins";
+import { Fullscreen, Zoom } from "yet-another-react-lightbox/plugins";
 
 const Lightbox = dynamic(() => import("yet-another-react-lightbox"), {
   ssr: false,
@@ -61,11 +61,17 @@ export const LightBoxClient: React.FC<LightBoxClientProps> = ({
             buttons: ["close"],
           }}
           render={{ buttonPrev: () => null, buttonNext: () => null }}
-          styles={{ container: { backgroundColor: "rgba(0,0,0,0.8)" } }}
+          styles={{
+            container: { backgroundColor: "rgba(0,0,0,0.8)" },
+          }}
           open={open}
           close={() => setOpen(false)}
-          plugins={[Fullscreen]}
-          slides={[{ src }]}
+          plugins={[Fullscreen, Zoom]}
+          zoom={{
+            maxZoomPixelRatio: 3,
+            scrollToZoom: true,
+          }}
+          slides={[{ src, width, height }]}
         />
       )}
     </>

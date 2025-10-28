@@ -12,14 +12,64 @@ import {
   ArticleList,
   ArticleParagraph,
   ArticleSection,
-  ArticleVideoBlock,
   ProcessTimeline,
 } from "@/app/components";
+import {
+  IoBarChart,
+  IoBarChartOutline,
+  IoBookOutline,
+  IoBrushOutline,
+  IoCheckmarkCircle,
+  IoCodeOutline,
+  IoColorPaletteOutline,
+  IoLayersOutline,
+  IoRocketOutline,
+  IoSearchOutline,
+} from "react-icons/io5";
 
 export const metadata: Metadata = {
   title:
     "Devo UI refactor case study - Jose Andrés Granero - Product Designer — Specialized in UX/UI Architecture & Design Systems",
 };
+
+const processSteps = [
+  {
+    icon: <IoSearchOutline />,
+    title: "Audit & Discovery",
+    description:
+      "Understanding the legacy system and identifying pain points. Full interface inventory, usability insights, and feature map.",
+  },
+  {
+    icon: <IoBarChart />,
+    title: "Research & Benchmarking",
+    description:
+      "Analyzing user workflows and comparing with market standards. Benchmark grid and summarized design principles.",
+  },
+  {
+    icon: <IoLayersOutline />,
+    title: "Design System Definition",
+    description:
+      "Building the foundation — tokens, components, and structure. Color & typography tokens, UI kit, and documentation skeleton.",
+  },
+  {
+    icon: <IoBrushOutline />,
+    title: "Visual Redesign & Prototyping",
+    description:
+      "Creating new interface visuals and testing interactive flows. High-fidelity prototypes validated through usability tests.",
+  },
+  {
+    icon: <IoCodeOutline />,
+    title: "Implementation & Collaboration",
+    description:
+      "Syncing with development via shared libraries and design tokens. Figma-Storybook pipeline and dev alignment.",
+  },
+  {
+    icon: <IoCheckmarkCircle />,
+    title: "Validation & Rollout",
+    description:
+      "Gradual deployment and measurement of impact. A/B test results, NPS increase, and component reuse metrics.",
+  },
+];
 
 export default function GenesysDesignSystem() {
   const project: IArticle | undefined = projects.find(
@@ -62,576 +112,306 @@ export default function GenesysDesignSystem() {
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
-        <div className="grid md:grid-cols-2 grid-cols-1 grid-container gap-8 md:gap-16">
+        <ArticleGrid>
           <ArticleImageBlock
-            src="/projects/design-system/img/alerts-creation-old.png"
-            width={800}
-            height={411}
-            alt="Before design system UI example"
-            title="Before"
-            description="An example of an alerts creation section before the design system."
+            src="/projects/ui-refactor/img/old-home.png"
+            width={1280}
+            height={753}
+            className="order-1"
+            alt="Before UI refactor example"
           />
           <ArticleImageBlock
-            src="/projects/design-system/img/alert-rules.png"
-            width={1200}
+            src="/projects/ui-refactor/img/old-alert-rules.png"
+            width={1280}
+            height={778}
+            className="order-2"
+            alt="Before UI refactor example"
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/old-finder.png"
+            width={1280}
             height={625}
-            alt="After design system UI example"
-            title="After"
-            description="...and this is the same section after the design system."
+            className="order-3"
+            alt="Before UI refactor example"
           />
-        </div>
-      </ArticleSection>
-      {/* GOAL AND METRICS ----------------------------------------------------------------------------- */}
-      <ArticleSection heading="Goals & Success Metrics">
-        <ArticleList noBullets>
-          <li>
-            <strong>Radically improve consistency</strong>
-            <p>
-              Establish a unified visual and interaction language to ensure
-              coherence across all Devo products and touchpoints.
-            </p>
-          </li>
-          <li>
-            <strong>Accelerate design and development workflows</strong>
-            <p>
-              Reduce repetitive work by providing reusable, ready-to-implement
-              components and design tokens.
-            </p>
-          </li>
-          <li>
-            <strong>Enable scalability</strong>
-            <p>
-              Build a flexible foundation that supports product growth and new
-              feature development without visual or technical fragmentation.
-            </p>
-          </li>
-          <li>
-            <strong>
-              Enhance collaboration between design and engineering
-            </strong>
-            <p>
-              Create a shared source of truth where both teams can align quickly
-              on decisions and implementation.
-            </p>
-          </li>
-          <li>
-            <strong>Ensure accessibility and usability standards</strong>
-            <p>
-              Integrate WCAG AA accessibility principles directly into
-              components and documentation.
-            </p>
-          </li>
-          <li>
-            <strong>Strengthen Devo's brand identity</strong>
-            <p>
-              Translate the brand's visual language and values into a
-              consistent, systematized digital experience.
-            </p>
-          </li>
-        </ArticleList>
-        <ArticleParagraph>
-          We defined some metrics, but due to the limited size of our design
-          team, we weren't able to conduct extensive testing or research to
-          audit them. These were our success metrics:
-        </ArticleParagraph>
-        <ArticleList>
-          <li>
-            40% reduction in design & implementation <strong>time</strong>.
-          </li>
-          <li>
-            90% of <strong>engineering teams</strong> actively using the design
-            system.
-          </li>
-          <li>
-            80% reduction in one-off or <strong>inconsistent</strong> UI
-            components (excluding vertical applications).
-          </li>
-          <li>
-            100% compliance with <strong>WCAG AA</strong> (excluding vertical
-            applications).
-          </li>
-          <li>
-            Designer-developer alignment <strong>satisfaction</strong>: {">"}
-            8/10 (survey).
-          </li>
-          <li>
-            90% component <strong>documentation</strong> completeness.
-          </li>
-        </ArticleList>
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/old-user-management.png"
+            width={1280}
+            height={753}
+            className="order-4"
+            alt="Before UI refactor example"
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/old-finder-free-text-query.png"
+            width={1280}
+            height={753}
+            className="order-6 lg:order-5"
+            alt="Before UI refactor example"
+            title="Before"
+            description="A lot of examples of the old interface previous to the UI refactor: brand color saturation, inconsistencies, inefficient use of space, secondary navigation tabs drawing too much attention, unbalanced colors, an overall overuse of icons, confusing hierarchy of actions... etc."
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/old-activeboards.png"
+            width={1280}
+            height={753}
+            className="order-5 lg:order-6"
+            alt="Before UI refactor example"
+          />
+        </ArticleGrid>
       </ArticleSection>
       {/* RESEARCH ----------------------------------------------------------------------------- */}
-      <ArticleSection heading="Research & Audit">
+      <ArticleSection heading="Research">
         <ArticleParagraph>
-          Once we started the creation process, we reviewed what other companies
-          and established design systems were doing—Carbon, Material, Spectrum,
-          etc.
+          We started with a full product audit, mapping all pages, widgets, and
+          interactive elements used across different modules of the platform. I
+          ran interviews with data analysts, business users, and internal
+          developers to identify pain points in the workflow. The biggest issues
+          were related to discoverability (hidden features), visual overload,
+          and lack of standardization in visualizations.
         </ArticleParagraph>
         <ArticleParagraph>
-          This <strong>benchmarking</strong> helped us refine the structure of
-          our Storybook documentation and Figma system, prioritize components,
-          organize them efficiently, and set best practices for accessibility
-          and scalability.
+          In parallel, we benchmarked leading analytics tools to understand best
+          practices in handling dense data interfaces. The key insight was that
+          consistency and clarity were far more valuable than visual novelty.
+          These findings guided our decision to build a flexible system around
+          composable, data-first components.
         </ArticleParagraph>
         <ArticleParagraph>
-          We also kept <strong>close communication with developers</strong> to
-          understand their needs and technical constraints, and within the
-          design team to align on workflows and daily challenges. This ensured
-          the system truly served both teams, with a special focus on developers
-          as the primary users.
-        </ArticleParagraph>
-        <ArticleParagraph>
-          Finally,{" "}
-          <strong>I conducted a thorough audit of the existing UI</strong> to
-          identify visual and interaction inconsistencies. We inventoried
-          existing components, removed duplicates, and spotted gaps, which
-          helped us prioritize and establish a clear baseline for the design
-          system.
+          In addition, we used a previous comprehensive research from my own
+          design department, about pain points, inconsistencies, navigation
+          problems, and unclear user flows or actions.
         </ArticleParagraph>
       </ArticleSection>
-      <ArticleSection
-        unlimitedWidth
-        className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
-      >
-        <ArticleImageBlock
-          src="/projects/design-system/img/secondary-tabs-old.png"
-          height={621}
-          alt="Before design system vertical tabs UI example"
-          title="Before"
-          description="We inventoried the secondary vertical tabs, but found that their
-              layout took up too much space, so we maintained the component but
-              changing its structure."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/secondary-tabs.png"
-          height={522}
-          alt="After design system UI horizontal tabs example"
-          title="After"
-          description="We didn't just inventory the components — we also adapted and
-              refined them, removing those that were no longer needed. In this
-              case, changing to an horizontal layout helped us to save space and
-              improve usability."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/design-system-home.png"
-          height={522}
-          alt="Design system Storybook docs home"
-          title="Documentation"
-          description="The design system documentation was built in Storybook, following
-              a structure inspired by other established systems — including
-              principles, foundations, components, and patterns."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/marketplace-home.png"
-          height={522}
-          alt="Marketplace home"
-          title="Company oriented components"
-          description="Our design system needed to be flexible enough to meet the needs
-              of our teams, but not as open-ended as others — like Material or
-              Carbon, for instance."
-        />
-      </ArticleSection>
-      {/* FOUNDATIONS ----------------------------------------------------------------------------- */}
-      <ArticleSection heading="Foundations">
+      {/* DESIGN SYSTEM CREATION ----------------------------------------------------------------------------- */}
+      <ArticleSection heading="Design System">
         <ArticleParagraph>
-          Every design system starts with a solid foundation.{" "}
-          <strong>At its core are the design tokens</strong> — colors,
-          typography, spacing, grids, shadows, and borders. These tokens act as
-          a single source of truth, giving every component a consistent look and
-          feel. By defining them first, we make sure the system is visually
-          cohesive and easy to scale across products.
+          The new design system, internally named "Genesys", was conceived as a
+          modular ecosystem covering UI components, data visualizations, and
+          interaction patterns. We defined design tokens for color, typography,
+          spacing, and data states, ensuring visual harmony across tables,
+          charts, and dashboards.
         </ArticleParagraph>
         <ArticleParagraph>
-          Equally important are the principles and rules that guide how the
-          system is used. We focus on accessibility, scalability, and
-          maintaining the brand's visual identity. We established clear
-          guidelines about:
-        </ArticleParagraph>
-        <ArticleList>
-          <li>Color.</li>
-          <li>Typography.</li>
-          <li>Layout.</li>
-          <li>Spatial system.</li>
-          <li>Iconography.</li>
-          <li>Elevation hierarchy.</li>
-          <li>Shape and Radius.</li>
-          <li>Content, voice, and tone.</li>
-        </ArticleList>
-      </ArticleSection>
-      <ArticleSection
-        unlimitedWidth
-        className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
-      >
-        <ArticleImageBlock
-          src="/projects/design-system/img/design-tokens.png"
-          height={441}
-          alt="Example of design tokens"
-          title="Design tokens"
-          description="Integrated directly into Figma through variables, allowing designers
-            to apply them seamlessly within the design environment.
-            Additionally, the tokens are exported in multiple formats —
-            including CSS, SASS, JavaScript, and JSON — making them easily
-            accessible for developers."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/palette-detail.png"
-          height={441}
-          alt="Example of color palette"
-          title="Color palettes"
-          description="I built a comprehensive color palette that balances brand identity
-            with accessibility. Each color was tested to ensure WCAG AA
-            compliance, providing sufficient contrast for readability and
-            usability. Additionally, the darkest colors in the palette meet AA
-            standards when used on the lighter half of the palette, and vice
-            versa."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/use-of-color.png"
-          height={441}
-          alt="Color usage by context table"
-          title="Color usage by context"
-          description="I defined a table to guide the selection of color palettes based on
-            context. Thoughtful color choices help users quickly recognize
-            statuses, actions, and interactions"
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/typography-intro.png"
-          height={453}
-          alt="Design system Storybook docs home"
-          title="Typography"
-          description="It helps us to correctly establish the visual hierarchy of a page,
-            in addition to organizing information and serving as a guide for
-            users while browsing the platform. Its correct use also generates a
-            more powerful brand presence."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/variant-example.png"
-          width={800}
-          height={453}
-          alt="Typographic variants example"
-          title="Typographic variants"
-          description="We use typo design tokens and themes to manage our typography. We
-            have specific groups of typo tokens (font-size, font-weight,
-            line-height, letter-spacing... etc.) to define our different
-            typographic styles: headings, heros, caps, body... etc."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/layout.png"
-          height={542}
-          alt="Layout example"
-          title="Layout"
-          description="The layout is composed of distinct regions that define our
-            information architecture. Each region serves a specific purpose and
-            contains key interactions — such as navigation, quick access to
-            settings, datasets, or content."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/layout-variants.png"
-          height={542}
-          alt="Layout variants"
-          title="Main region layouts"
-          description="The main region hosts each section's primary content. Built with the
-            “Fluid” component and a twelve-column grid, it's the most dynamic
-            area of the layout, while other regions remain consistent throughout
-            the user journey."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/spatial-scales.png"
-          height={633}
-          alt="Spatial system scales"
-          title="Spatial system scales"
-          description="I created a unified spatial system keeps our designs consistent and
-            our communication clear. It simplifies decision-making and creates a
-            predictable visual rhythm that feels balanced and intentional."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/sizing-typo.png"
-          height={633}
-          alt="Typography sizing scale"
-          title="Typography sizing scale"
-          description="I defined a based on a 4pt baseline grid, line heights scale in 4pt
-            increments. This system aligns component and layout scales with
-            typography, creating a cohesive vertical rhythm."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/sizing-components.png"
-          height={633}
-          alt="Component sizing scale"
-          title="Component sizing scale"
-          description="Based on multiples of 4pt, our component sizing scale ensures consistent spacing rhythm and alignment across the UI."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/icons-example.png"
-          height={600}
-          alt="Icons example"
-          title="Iconography"
-          description="We built our icon set on top of Ionicons. Whenever we couldn't find
-            a suitable icon, we designed a new one derived from the library to
-            keep proportions and visual harmony consistent."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/elevation-hierarchy.png"
-          height={500}
-          alt="Elevation hierarchy"
-          title="Elevation hierarchy"
-          description="Elevation marks the distance of elements from the background and
-            arranges them along the z-axis. To do this, each elevation level is
-            defined by a specific shadow that simulates the way in which natural
-            light is projected on objects depending on the distance to them."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/elevation-levels.png"
-          height={600}
-          alt="Elevation levels example"
-          title="Elevation levels"
-          description="The different elevation levels available correspond to the different
-            levels of importance with which we want to organize the components
-            throughout the UI."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/radius.png"
-          height={500}
-          alt="Shape and radius"
-          title="Shape and radius"
-          description="Rounded corners are used throughout the platform to differentiate
-            the different families of UI components based on their anatomy,
-            level of interaction... etc."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/voice-and-tone.png"
-          height={500}
-          alt="Voice and tone"
-          title="Voice and tone"
-          description="Our voice defines how we communicate with users. While our voice
-            stays consistent across all content, its tone adapts to each context
-            and audience. Our voice is clear, informative, and relaxed. We use
-            an informal style to write content that is both simple and
-            instructive."
-        />
-      </ArticleSection>
-      {/* COMPONENTS ----------------------------------------------------------------------------- */}
-      <ArticleSection heading="Components">
-        <ArticleParagraph>
-          We started by identifying the most common patterns in our product —
-          the building blocks users interact with every day. I had to{" "}
-          <strong>
-            inventarize every way of doing things, every component
-          </strong>{" "}
-          created in the app. I also deleted or transformed not consistent or
-          ineffective components and patterns. We defined a consistent set of
-          components that could be reused and scaled across the platform.
-        </ArticleParagraph>
-        <ArticleParagraph>
-          Each component went through <strong>several design iterations</strong>{" "}
-          and feedback rounds with designers and developers. We refined
-          behaviors, variants, and states to make them more intuitive and
-          accessible. This process helped us simplify the system and make it
-          feel cohesive at every level.
-        </ArticleParagraph>
-        <ArticleParagraph>
-          To ensure consistency, we aligned Figma components with their coded
-          counterparts.{" "}
-          <strong>
-            I took charge of bringing our Figma components to life in React
-          </strong>{" "}
-          for our components library, ensuring consistency between design and
-          code across the library. Shared naming conventions and structure
-          allowed both teams to work in sync, reducing friction and guaranteeing
-          that what we designed matched exactly what users experienced.
-        </ArticleParagraph>
-      </ArticleSection>
-      <ArticleSection
-        unlimitedWidth
-        className="bg-[var(--projects-bg-color)] grid md:grid-cols-2 grid-cols-1 grid-container items-stretch gap-8 md:gap-16"
-      >
-        <ArticleImageBlock
-          src="/projects/design-system/img/components-overview.png"
-          height={500}
-          alt="UI components overview"
-          title="Figma and Storybook library"
-          description="Overview of the component library showing buttons, badges, banners,
-            progress bars... etc. Each component is implemented in React and
-            TypeScript, with detailed documentation available in Storybook and
-            Figma for designers and developers."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/anatomy.png"
-          height={500}
-          alt="Component anatomy example"
-          title="Component anatomy"
-          description="Breakdown of a single component, highlighting its structure,
-            spacing, and interactive elements. This ensures clarity and
-            consistency when components are implemented across the system."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/states-and-variants.png"
-          height={500}
-          alt="States and variants example"
-          title="States and variants"
-          description="Illustration of the different states and variants of a component,
-            showing how it should behave in different contexts. This helps
-            maintain visual consistency and predictable user interactions."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/code-alignment.png"
-          height={500}
-          alt="Code alignment example"
-          title="Figma - Code Alignment"
-          description="Highlights the connection between design and development. I
-            translated Figma components into code, making sure the final product
-            reflects the designers' intent and delivers a seamless experience to
-            users."
-        />
-        <ArticleImageBlock
-          src="/projects/design-system/img/design-tokens-component.png"
-          height={500}
-          alt="Component design tokens example"
-          title="Design tokens in action"
-          description="Example of how design tokens are applied to a button component, with
-            different types — color background, color text, shape, spacing,
-            sizing... etc."
-        />
-      </ArticleSection>
-      {/* IMPLEMENTATION ----------------------------------------------------------------------------- */}
-      <ArticleSection heading="Implementation & Collaboration">
-        <ArticleParagraph>
-          We focused on bringing design and code together seamlessly, ensuring
-          that the components created in Figma were faithfully implemented in
-          the product. Our stack included React and TypeScript for component
-          development, while{" "}
-          <strong>Storybook served as the central documentation hub</strong>. By
-          integrating Storybook into our workflow, both designers and developers
-          could visualize components, explore interaction states, and understand
-          usage guidelines in a single, shared environment.
-        </ArticleParagraph>
-        <ArticleParagraph>
-          To maintain consistency and alignment between design and development,
-          we relied on{" "}
-          <strong>
-            design tokens, standardized naming conventions, and a structured
-            review workflow
-          </strong>
-          . Every component went through pull requests, code reviews, and
-          cross-checks with Figma designs, which helped catch inconsistencies
-          early.
-        </ArticleParagraph>
-        <ArticleParagraph>
-          Collaboration was central to the success of our design system.
-          Designers and developers worked closely throughout the process,
-          sharing feedback at every stage. I facilitated collaboration between
-          design and development, making sure both teams understood each other's
-          requirements. With the support of a frontend developer,{" "}
-          <strong>I implemented the components</strong>, producing a library
-          perfectly aligned with the design system.
+          To ensure adoption, we created Figma libraries linked to a Storybook
+          instance used by developers. Each component was documented with
+          accessibility notes, responsive behavior rules, and usage examples.
+          This dramatically reduced design-developer handoff time and
+          standardized visual consistency across teams.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
         <ArticleGrid>
-          <ArticleVideoBlock
-            ariaLabel="Design system component Overview video"
-            source="/projects/design-system/video/sb-ds-button-detail.webm"
-            title="Design system component Overview"
-            description="A Storybook example of Button component page, showing some general
-            use information, different states and variants. This documentation
-            helps designers and developers quickly understand how the component
-            behaves, and how each variant fits within the design system."
-          />
           <ArticleImageBlock
-            src="/projects/design-system/img/button-props-table.png"
-            height={500}
-            alt="Component Props Table"
-            title="Props Table"
-            description="A clear and structured list of the component's properties, such as
-            size, variant, or onClick. Each prop is documented with its type,
-            default value, and description, allowing developers to implement the
-            component correctly without guesswork."
-          />
-          <ArticleImageBlock
-            src="/projects/design-system/img/button-hierarchy.png"
-            height={605}
-            alt="Button usage guidelines"
-            title="Usage guidelines"
-            description="Notes describing when and how to use the component within the
-            interface. These guidelines cover spacing, alignment, accessibility,
-            and tone of interaction, ensuring a consistent user experience
-            across the product."
-          />
-          <ArticleImageBlock
-            src="/projects/design-system/img/anatomy-2.png"
-            height={500}
-            alt="Figma docs example"
+            src="/projects/ui-refactor/img/anatomy-2.png"
+            width={1280}
+            height={983}
+            alt="Example of Figma documentation"
+            className="order-1"
             title="Figma documentation"
-            description="A visual reference from Figma that complements the coded
-            documentation. It shows the component's anatomy, tokens applied, and
-            interaction patterns, helping bridge the gap between design intent
-            and technical implementation."
+            description="The design system documentation has been incredible useful to align the design and the code in this huge UI refactor. This is an example of Figma documentation, specially useful for designers."
           />
           <ArticleImageBlock
-            src="/projects/design-system/img/button-tokens-table.png"
-            height={500}
-            alt="Component design tokens documentation example"
-            title="Design tokens in docs"
-            description="Every component documents the design tokens applied to it, making it
-            easy for both designers and developers to understand how the visual
-            style is constructed and how to maintain consistency when using or
-            modifying the component."
+            src="/projects/ui-refactor/img/button-hierarchy.png"
+            width={1280}
+            height={1100}
+            alt="Example of Storybook documentation"
+            className="order-2"
+            title="Storybook documentation"
+            description="The design system documentation in Storybook has been also incredible useful, not only for developers, but also for us, the designers, because we was implementing code too, so it was a single source of truth for everybody on the project."
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/button-tokens-table.png"
+            width={948}
+            height={593}
+            alt="Design tokens on SB"
+            className="order-3 lg:order-4"
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/design-tokens-component.png"
+            width={1280}
+            height={983}
+            alt="Design tokens example"
+            className="order-4 lg:order-3"
+            title="Design tokens"
+            description="The design tokens were fundamental during all the process, specially when we needed to refactor some parts of the app not based in React, because wether they were third party libraries or due to technical restrictions. In these cases we couldn't use the new UI components library, so the main way of maintaining consistency was integrating with the design tokens."
           />
         </ArticleGrid>
       </ArticleSection>
-      <ArticleSection heading="Adoption & Rollout">
+      {/* VISUAL & INTERACTION REDESIGN ----------------------------------------------------------------------------- */}
+      <ArticleSection heading="Visual & Interaction Redesign">
         <ArticleParagraph>
-          I led the rollout of the design system across teams through{" "}
-          <strong>
-            internal demos, documentation updates, and onboarding sessions
-          </strong>
-          . I collaborated closely with product and engineering leads to ensure
-          a smooth integration into existing workflows.
+          We simplified the interface by introducing a clean, data-first visual
+          language that prioritized readability and focus. The new color palette
+          was built around neutral backgrounds and high-contrast accent colors
+          for data visualization, improving interpretability for complex
+          processes and interfaces.
         </ArticleParagraph>
         <ArticleParagraph>
-          Continuous <strong>feedback from designers and developers</strong>{" "}
-          guided each iteration, helping us refine the system based on real
-          product needs. It was not easy, but one year after the design system
-          was launched, we successfully onboarded all the main frontend teams on
-          the company.
+          Interaction patterns were redesigned to make complex analytical
+          actions (filtering, grouping, and exporting) feel effortless.
+          Persistent filters, contextual tooltips, and keyboard shortcuts were
+          added to streamline repetitive workflows. The overall goal was to make
+          powerful analytics feel approachable without sacrificing depth.
+        </ArticleParagraph>
+        <ArticleParagraph>Key UI improvements include:</ArticleParagraph>
+        <ArticleList>
+          <li>More purposeful use of brand colors.</li>
+          <li>Rationalized color usage by context.</li>
+          <li>Improved color hierarchy.</li>
+          <li>Reduced icon overuse.</li>
+          <li>Structured use of elevation and depth.</li>
+          <li>Creation of a dedicated Table component.</li>
+          <li>Refined secondary navigation.</li>
+          <li>Simplified main menu.</li>
+          <li>Standardized messaging system.</li>
+          <li>Expanded contextual assistance.</li>
+        </ArticleList>
+      </ArticleSection>
+      <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
+        <ArticleGrid>
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/home.png"
+            height={500}
+            alt="New home"
+            title="More purposeful use of brand colors"
+            description="The new visual language applies brand colors more consistently 
+            and strategically, reinforcing brand recognition without overwhelming the interface."
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/mitre.png"
+            height={500}
+            alt="Mitre app example"
+            title="Rationalized color usage by context"
+            description="Colors are now assigned based on clear functional meaning—error, warning, 
+            active, enabled, ownership, and more—creating a more predictable and accessible experience."
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/loxcope.png"
+            height={500}
+            alt="Sata search section"
+            title="Reduced icon overuse"
+            description="We removed unnecessary icons that previously represented overly complex 
+            actions or processes, which had created visual noise. Icons are now reserved for universal, 
+            instantly recognizable concepts."
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/reports.png"
+            height={500}
+            alt="Reports section example"
+            title="Improved color hierarchy."
+            description="The refined palette enhances the distinction between data levels, 
+            actionable elements, and system states, clarifying both content and interactions."
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/alerts-overview.png"
+            height={500}
+            alt="Panels example"
+            title="Structured use of elevation and depth"
+            description="Shadows, borders, and corner radius are now applied systematically
+            to establish visual hierarchy and improve spatial understanding across interface layers."
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/table-cmp.png"
+            height={500}
+            alt="Table component"
+            title="Creation of a dedicated Table component"
+            description="A fully custom, high-performance table component was designed to enhance 
+            user workflows involving filtering, sorting, selecting, pagination, column management, 
+            and inline editing. It became one of the cornerstones of the new interface, 
+            replacing all legacy tables and standardizing multiple complex views under 
+            a unified interaction model."
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/secondary-nav-detail.png"
+            height={500}
+            alt="Component design tokens example"
+            title="Refined secondary navigation"
+            description="We introduced a lighter, more space-efficient tab navigation system, 
+            replacing bulky vertical tabs with a cleaner horizontal structure that preserves 
+            content area and improves scannability."
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/app-menu-detail.png"
+            height={500}
+            alt="AppMenu component"
+            title="Simplified main menu"
+            description="The primary navigation was streamlined to include only essential sections. 
+            Account settings, query priority levels, domain and time range selectors, and help options 
+            were relocated to the right area of the toolbar, reducing cognitive load."
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/message-system.png"
+            height={500}
+            alt="Messaging components example"
+            title="Standardized messaging system"
+            description="All user feedback components—tooltips, banners, inline messages, popups, 
+            and dialogs—were unified under a consistent style and tone, greatly improving clarity and cohesion."
+          />
+          <ArticleImageBlock
+            src="/projects/ui-refactor/img/contextual-help.png"
+            height={500}
+            alt="Contextual help example"
+            title="Expanded contextual assistance"
+            description="Help cues and guidance are now embedded directly within complex user flows, 
+            not just at the section level, providing support exactly where it's needed."
+          />
+        </ArticleGrid>
+      </ArticleSection>
+      {/* IMPLEMENTATION ----------------------------------------------------------------------------- */}
+      <ArticleSection heading="Implementation & Collaboration">
+        <ArticleParagraph>
+          Close collaboration between design and development was crucial. We
+          established a shared naming convention and design token pipeline that
+          connected Figma styles to code variables. Weekly cross-team sessions
+          ensured every component was validated against technical feasibility
+          and real user needs.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          Through the new Storybook-based workflow, designers could preview
+          coded components live, accelerating iteration cycles and reducing
+          ambiguity. This continuous collaboration also helped maintain a single
+          source of truth between the design library and the production UI.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection
         unlimitedWidth
         className="bg-[var(--projects-bg-color)] !mb-0"
       >
-        <ProcessTimeline />
+        <ProcessTimeline steps={processSteps} />
       </ArticleSection>
       <ArticleFeaturedWrapper heading="Impact & Outcomes">
         <ArticleGrid columns={3}>
-          <ArticleFeaturedWrapperItem heading="Consistency">
-            The design system delivered measurable improvements across design
-            and development workflows. By standardizing components, tokens, and
-            interaction patterns, we significantly{" "}
-            <strong>reduced inconsistencies</strong> and visual bugs across
-            products.
+          <ArticleFeaturedWrapperItem heading="Clarity and consistency">
+            The redesigned interface brought a substantial improvement in
+            clarity and efficiency across all user workflows. By rethinking
+            visual hierarchy and interaction patterns, users could now interpret
+            and act on complex datasets with significantly less cognitive
+            effort, reducing unnecessary friction and helping analysts focus on
+            insights.
           </ArticleFeaturedWrapperItem>
-          <ArticleFeaturedWrapperItem heading="Less implementation time">
-            Designers and developers spent less time aligning details during
-            handoffs, which streamlined collaboration and{" "}
-            <strong>accelerated delivery</strong>. Implementation time per
-            component decreased by nearly 40%, allowing teams to focus on
-            solving real product challenges instead of re-creating UI elements.
+          <ArticleFeaturedWrapperItem heading="Analytical context">
+            Beyond usability, the visual refresh strengthened the product's
+            sense of purpose and trustworthiness. The refined color system,
+            typography, and spacing created a calmer, more analytical
+            atmosphere, aligning the interface with the mental model of
+            professional data users.
           </ArticleFeaturedWrapperItem>
-          <ArticleFeaturedWrapperItem heading="Scalability">
-            Beyond efficiency, the system brought coherence and clarity to the
-            product experience. Over <strong>100 screens were unified</strong>{" "}
-            under a single design language, and team satisfaction increased as
-            the process became more predictable and scalable.
+          <ArticleFeaturedWrapperItem heading="Reliability">
+            Consistent motion cues and microinteractions improved perceived
+            responsiveness, making the platform feel more polished and reliable.
+            In the same way, the improvements for feedback messages and
+            contextual help, have improved the user experience.
           </ArticleFeaturedWrapperItem>
         </ArticleGrid>
         <ArticleGrid>
           <ArticleImageBlock
             inverted
-            src="/projects/design-system/img/alerts-delivery-methods-old.png"
+            src="/projects/ui-refactor/img/old-alert-rules-2.png"
             height={426}
-            alt="Delivery methods before design system"
+            alt="Alert rules before refactor"
             className="order-1"
             title="Before"
-            description="Before the design system, the Delivery Methods page suffered from
+            description="Before the refactor, theAlert Rules page suffered from
               visual inconsistency — excessive icons, uneven spacing,
               unstructured data layout, and colors that didn't align with the
               brand. Accessibility issues and weak hierarchy made the interface
@@ -639,20 +419,19 @@ export default function GenesysDesignSystem() {
           />
           <ArticleImageBlock
             inverted
-            src="/projects/design-system/img/alerts-delivery-methods.png"
+            src="/projects/ui-refactor/img/alert-rules.png"
             height={506}
             alt="Delivery methods after design system"
             className="order-2"
             title="After"
-            description="This is the same section after the implementation of the design
-            system. The layout was restructured for clarity, with consistent
-            spacing, a unified icon set, and a color palette that reflects the
-            brand. Accessibility improvements and a clear hierarchy enhance
-            readability and user navigation."
+            description="This is the same section after the implementation of the refactor.
+            The layout was restructured for clarity, with consistent
+            spacing, improved space efficiency by reducing the visual footprint of secondary navigation elements, 
+            a unified icon set, color palettes that reflects the brand... etc."
           />
           <ArticleImageBlock
             inverted
-            src="/projects/design-system/img/home-old.png"
+            src="/projects/ui-refactor/img/home-old.png"
             alt="Home before design system"
             className="order-3"
             title="Before"
@@ -660,7 +439,7 @@ export default function GenesysDesignSystem() {
           />
           <ArticleImageBlock
             inverted
-            src="/projects/design-system/img/home.png"
+            src="/projects/ui-refactor/img/home.png"
             height={459}
             alt="Home after design system"
             className="order-4"
@@ -671,7 +450,7 @@ export default function GenesysDesignSystem() {
           />
           <ArticleImageBlock
             inverted
-            src="/projects/design-system/img/loxcope-old.png"
+            src="/projects/ui-refactor/img/loxcope-old.png"
             height={519}
             alt="Data search before the design system"
             className="order-5"
@@ -680,7 +459,7 @@ export default function GenesysDesignSystem() {
           />
           <ArticleImageBlock
             inverted
-            src="/projects/design-system/img/loxcope.png"
+            src="/projects/ui-refactor/img/loxcope.png"
             height={569}
             alt="Data search after the design system"
             className="order-6"
@@ -691,7 +470,7 @@ export default function GenesysDesignSystem() {
           />
           <ArticleImageBlock
             inverted
-            src="/projects/design-system/img/dark-theme-loxcope.png"
+            src="/projects/ui-refactor/img/dark-theme-loxcope.png"
             height={569}
             alt="Dark theme after the design system"
             className="order-8 lg:order-7"
@@ -703,7 +482,7 @@ export default function GenesysDesignSystem() {
           />
           <ArticleImageBlock
             inverted
-            src="/projects/design-system/img/dark-theme-delivery.png"
+            src="/projects/ui-refactor/img/dark-theme-delivery.png"
             height={569}
             alt="Dark theme after the design system"
             className="order-7 lg:order-8"
@@ -712,20 +491,18 @@ export default function GenesysDesignSystem() {
       </ArticleFeaturedWrapper>
       <ArticleSection heading="Learnings and Next Steps">
         <ArticleParagraph>
-          Building the Genesys Design System was a transformative experience
-          that reinforced the importance of collaboration between design and
-          development. One key learning was the value of{" "}
-          <strong>early and continuous feedback</strong> from both teams, which
-          helped us refine components and ensure they met real-world needs.
+          One major learning was the importance of designing for flexibility
+          within constraints. In data-heavy environments, small inconsistencies
+          can lead to confusion or misinterpretation, so maintaining strict
+          system governance became essential. Another takeaway was that early
+          developer involvement accelerates adoption and ensures scalability.
         </ArticleParagraph>
         <ArticleParagraph>
-          This is an <strong>ongoing journey</strong>. The next steps involve
-          covering more components documentation, edge cases, and patterns — the
-          Storybook{" "}
-          <strong>documentation needs to be more complete and detailed</strong>,
-          because I estimate we only covers the 40% of the components at this
-          point. We also need a more attactive home and overview pages, to make
-          it easier for users to navigate and find the information they need.
+          Moving forward, we plan to extend Atlas to support dark mode, advanced
+          data visualizations (e.g., network graphs, maps), and responsive
+          layouts for secondary devices. The system will also evolve into a
+          shared design infrastructure for all internal analytics tools,
+          unifying visual language company-wide.
         </ArticleParagraph>
       </ArticleSection>
     </Article>
