@@ -1,12 +1,13 @@
 "use client";
 import * as React from "react";
+import * as IoIcons from "react-icons/io5";
 import { motion } from "framer-motion";
 
 export const ProcessTimeline = ({
   steps,
 }: {
   steps: {
-    icon: React.ReactElement<HTMLElement>;
+    icon: string;
     title: string;
     description: string;
   }[];
@@ -18,10 +19,7 @@ export const ProcessTimeline = ({
       </h2>
       <div className="relative flex flex-col md:flex-row justify-between gap-30 md:gap-0">
         {steps.map((step, i) => {
-          const prevIcon = step.icon;
-          const evalIcon = React.cloneElement(prevIcon, {
-            className: `${prevIcon.props.className ?? ""} w-6 h-6`,
-          });
+          const Icon = IoIcons[step.icon as keyof typeof IoIcons] || null;
           return (
             <motion.div
               key={i}
@@ -32,7 +30,7 @@ export const ProcessTimeline = ({
               className="flex flex-col items-center text-center md:w-1/5"
             >
               <div className="relative z-5 flex items-center justify-center w-12 h-12 rounded-full bg-[var(--primary-color-weaker)] mb-3 text-[var(--secondary-color)]">
-                {evalIcon}
+                <Icon className="c-6 h-6" />
               </div>
               <h3 className="text-base font-medium mb-2">{step.title}</h3>
               <p className="text-sm text-gray-600 max-w-[24ch]">

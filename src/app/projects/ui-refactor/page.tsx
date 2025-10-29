@@ -30,37 +30,37 @@ export const metadata: Metadata = {
 
 const processSteps = [
   {
-    icon: <IoSearchOutline />,
+    icon: "IoSearchOutline",
     title: "Audit & Discovery",
     description:
       "Understanding the legacy system and identifying pain points. Full interface inventory, usability insights, and feature map.",
   },
   {
-    icon: <IoBarChart />,
+    icon: "IoBarChart",
     title: "Research & Benchmarking",
     description:
       "Analyzing user workflows and comparing with market standards. Benchmark grid and summarized design principles.",
   },
   {
-    icon: <IoLayersOutline />,
+    icon: "IoLayersOutline",
     title: "Design System Definition",
     description:
       "Building the foundation — tokens, components, and structure. Color & typography tokens, UI kit, and documentation skeleton.",
   },
   {
-    icon: <IoBrushOutline />,
+    icon: "IoBrushOutline",
     title: "Visual Redesign & Prototyping",
     description:
       "Creating new interface visuals and testing interactive flows. High-fidelity prototypes validated through usability tests.",
   },
   {
-    icon: <IoCodeOutline />,
+    icon: "IoCodeOutline",
     title: "Implementation & Collaboration",
     description:
       "Syncing with development via shared libraries and design tokens. Figma-Storybook pipeline and dev alignment.",
   },
   {
-    icon: <IoCheckmarkCircle />,
+    icon: "IoCheckmarkCircle",
     title: "Validation & Rollout",
     description:
       "Gradual deployment and measurement of impact. A/B test results, NPS increase, and component reuse metrics.",

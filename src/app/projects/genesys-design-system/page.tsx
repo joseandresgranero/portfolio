@@ -30,30 +30,30 @@ export const metadata: Metadata = {
 
 const processSteps = [
   {
-    icon: <IoColorPaletteOutline />,
+    icon: "IoColorPaletteOutline",
     title: "Design",
     description:
       "Defined foundations, tokens, base components, and usability patterns.",
   },
   {
-    icon: <IoBookOutline />,
+    icon: "IoBookOutline",
     title: "Documentation",
     description:
       "Created Storybook and Figma docs for shared use of design system.",
   },
   {
-    icon: <IoCodeOutline />,
+    icon: "IoCodeOutline",
     title: "Development",
     description:
       "Built all the system libraries — components, design tokens, icons, and styles — using React, TypeScript, Sass and Style dictionary.",
   },
   {
-    icon: <IoRocketOutline />,
+    icon: "IoRocketOutline",
     title: "Rollout",
     description: "Onboarded teams through demos, feedback loops, and training.",
   },
   {
-    icon: <IoBarChartOutline />,
+    icon: "IoBarChartOutline",
     title: "Impact",
     description:
       "40% faster implementation, 100+ unified screens and 100% of usage of frontend engineering teams.",
