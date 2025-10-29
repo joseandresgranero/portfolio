@@ -22,6 +22,7 @@ export interface IArticle {
 export interface ArticleCardProps {
   title: string;
   featured?: boolean;
+  headingHtmlTag?: React.ElementType;
   description: React.ReactNode;
   image: string;
   imageAlt: string;

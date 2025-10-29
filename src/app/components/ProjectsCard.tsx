@@ -2,21 +2,14 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { useParallaxBg } from "@/hooks/useParallaxBg";
-//import { ParallaxBanner } from "react-scroll-parallax";
-import { ParallaxProvider } from "react-scroll-parallax";
-import {
-  IoLinkOutline,
-  IoLogoFigma,
-  IoLogoGithub,
-  IoLogoLinkedin,
-} from "react-icons/io5";
+import { IoLinkOutline, IoLogoFigma, IoLogoGithub } from "react-icons/io5";
 import { ArticleCardProps } from "@/types/article";
 
 export const ProjectsCard: React.FC<ArticleCardProps> = ({
   title,
   description,
   featured,
+  headingHtmlTag = "h3",
   image,
   imageHeight,
   imageWidth,
@@ -26,6 +19,7 @@ export const ProjectsCard: React.FC<ArticleCardProps> = ({
   storybookLink,
   figmaLink,
 }) => {
+  const HeadingHtmlTag = headingHtmlTag as React.ElementType;
   return (
     <div className="card card--project flex flex-col">
       <a
@@ -42,13 +36,13 @@ export const ProjectsCard: React.FC<ArticleCardProps> = ({
         />
       </a>
       <div className="px-1 py-6 max-w-[var(--max-width-text)]">
-        <h2
+        <HeadingHtmlTag
           className={`${
             featured ? "text-3xl font-extrabold" : "text-[24px] font-bold"
           } font-heading mb-5`}
         >
           {title}
-        </h2>
+        </HeadingHtmlTag>
         <p
           className={`${featured ? "text-2xl text-gray-600" : "text-gray-500"}`}
         >

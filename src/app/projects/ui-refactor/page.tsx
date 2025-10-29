@@ -42,12 +42,6 @@ const processSteps = [
       "Analyzing user workflows and comparing with market standards. Benchmark grid and summarized design principles.",
   },
   {
-    icon: "IoLayersOutline",
-    title: "Design System Definition",
-    description:
-      "Building the foundation — tokens, components, and structure. Color & typography tokens, UI kit, and documentation skeleton.",
-  },
-  {
     icon: "IoBrushOutline",
     title: "Visual Redesign & Prototyping",
     description:
@@ -99,7 +93,7 @@ export default function GenesysDesignSystem() {
           .
         </ArticleParagraph>
         <ArticleParagraph>
-          The main challenge was to unify this ecosystem under a single,
+          The main challenge was to unify this ecosystem under a single{" "}
           <strong>scalable design system</strong> that would preserve analytical
           power while improving clarity and performance.
         </ArticleParagraph>
@@ -209,7 +203,7 @@ export default function GenesysDesignSystem() {
             alt="Example of Figma documentation"
             className="order-1"
             title="Figma documentation"
-            description="The design system documentation has been incredible useful to align the design and the code in this huge UI refactor. This is an example of Figma documentation, specially useful for designers."
+            description="The design system documentation has been incredibly useful to align the design and the code in this huge UI refactor. This is an example of Figma documentation, specially useful for designers."
           />
           <ArticleImageBlock
             src="/projects/ui-refactor/img/button-hierarchy.png"
@@ -218,7 +212,7 @@ export default function GenesysDesignSystem() {
             alt="Example of Storybook documentation"
             className="order-2"
             title="Storybook documentation"
-            description="The design system documentation in Storybook has been also incredible useful, not only for developers, but also for us, the designers, because we was implementing code too, so it was a single source of truth for everybody on the project."
+            description="The design system documentation in Storybook has been also incredibly useful, not only for developers, but also for us, the designers, because we were implementing code too, so it was a single source of truth for everybody on the project."
           />
           <ArticleImageBlock
             src="/projects/ui-refactor/img/button-tokens-table.png"
@@ -234,7 +228,7 @@ export default function GenesysDesignSystem() {
             alt="Design tokens example"
             className="order-4 lg:order-3"
             title="Design tokens"
-            description="The design tokens were fundamental during all the process, specially when we needed to refactor some parts of the app not based in React, because wether they were third party libraries or due to technical restrictions. In these cases we couldn't use the new UI components library, so the main way of maintaining consistency was integrating with the design tokens."
+            description="The design tokens were fundamental during all the process, specially when we needed to refactor some parts of the app not based in React, because wether they were third-party libraries or due to technical restrictions. In these cases we couldn't use the new UI components library, so the main way of maintaining consistency was integrating with the design tokens."
           />
         </ArticleGrid>
       </ArticleSection>
@@ -292,7 +286,7 @@ export default function GenesysDesignSystem() {
           <ArticleImageBlock
             src="/projects/ui-refactor/img/loxcope.png"
             height={500}
-            alt="Sata search section"
+            alt="Data search section"
             title="Reduced icon overuse"
             description="We removed unnecessary icons that previously represented overly complex 
             actions or processes, which had created visual noise. Icons are now reserved for universal, 
@@ -420,7 +414,7 @@ export default function GenesysDesignSystem() {
             alt="Alert rules before refactor"
             className="order-1"
             title="Before"
-            description="Before the refactor, theAlert Rules page suffered from
+            description="Before the refactor, the Alert Rules page suffered from
               visual inconsistency — excessive icons, uneven spacing,
               unstructured data layout, and colors that didn't align with the
               brand. Accessibility issues and weak hierarchy made the interface
@@ -436,7 +430,25 @@ export default function GenesysDesignSystem() {
             description="This is the same section after the implementation of the refactor.
             The layout was restructured for clarity, with consistent
             spacing, improved space efficiency by reducing the visual footprint of secondary navigation elements, 
-            a unified icon set, color palettes that reflects the brand... etc."
+            a unified icon set, color palettes that reflect the brand... etc."
+          />
+          <ArticleImageBlock
+            inverted
+            src="/projects/ui-refactor/img/home.png"
+            height={506}
+            alt="Home section"
+            className="order-4 lg:order-3"
+            title="Consistency based on design tokens"
+            description="Shown here are the Home and Marketplace sections. Despite serving very different purposes, 
+            they share a cohesive look and feel. The Home section was developed using our UI components library, 
+            while the Marketplace relies on our design tokens system, so we can maintain consistency regardless of the technology used."
+          />
+          <ArticleImageBlock
+            inverted
+            src="/projects/ui-refactor/img/marketplace-home.png"
+            height={506}
+            alt="Marketplace section"
+            className="order-3 lg:order-4"
           />
         </ArticleGrid>
       </ArticleFeaturedWrapper>

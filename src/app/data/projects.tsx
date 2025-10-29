@@ -105,8 +105,6 @@ export const projects: IArticle[] = [
     imageWidth: 1024,
     imageHeight: 682,
     slug: "ui-refactor",
-    storybookLink: "https://genesys-ui.github.io/theme-devo",
-    githubLink: "https://github.com/genesys-ui/theme-devo",
     tags: ["Devo", "Refactor", "Data-analysis", "App", "Design system"],
   },
 ];

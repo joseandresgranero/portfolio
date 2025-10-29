@@ -17,7 +17,7 @@ export const ProcessTimeline = ({
       <h2 className="text-2xl font-heading text-center font-bold text-[var(--primary-color-weak)] mb-15">
         Process Snapshot
       </h2>
-      <div className="relative flex flex-col md:flex-row justify-between gap-30 md:gap-0">
+      <div className="relative flex flex-col lg:flex-row justify-between gap-6 lg:gap-10">
         {steps.map((step, i) => {
           const Icon = IoIcons[step.icon as keyof typeof IoIcons] || null;
           return (
@@ -27,7 +27,7 @@ export const ProcessTimeline = ({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center text-center md:w-1/5"
+              className="flex flex-col items-center text-center lg:w-1/5"
             >
               <div className="relative z-5 flex items-center justify-center w-12 h-12 rounded-full bg-[var(--primary-color-weaker)] mb-3 text-[var(--secondary-color)]">
                 <Icon className="c-6 h-6" />
@@ -38,7 +38,7 @@ export const ProcessTimeline = ({
               </p>
 
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-6 right-0 w-full h-[2px] bg-gray-200" />
+                <div className="hidden lg:block absolute top-6 right-0 w-full h-[2px] bg-gray-200" />
               )}
             </motion.div>
           );

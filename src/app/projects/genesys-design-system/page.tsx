@@ -458,9 +458,7 @@ export default function GenesysDesignSystem() {
         <ArticleParagraph>
           We started by identifying the most common patterns in our product —
           the building blocks users interact with every day. I had to{" "}
-          <strong>
-            inventarize every way of doing things, every component
-          </strong>{" "}
+          <strong>inventory every way of doing things, every component</strong>{" "}
           created in the app. I also deleted or transformed not consistent or
           ineffective components and patterns. We defined a consistent set of
           components that could be reused and scaled across the platform.
@@ -710,7 +708,7 @@ export default function GenesysDesignSystem() {
             className="order-4"
             title="After"
             description="This is the Home page after the design system was applied: better
-            space rithym, better color contrast, usage of brand, more
+            space rhythm, better color contrast, usage of brand, more
             comfortable palettes... etc."
           />
           <ArticleImageBlock
@@ -768,7 +766,7 @@ export default function GenesysDesignSystem() {
           Storybook{" "}
           <strong>documentation needs to be more complete and detailed</strong>,
           because I estimate we only covers the 40% of the components at this
-          point. We also need a more attactive home and overview pages, to make
+          point. We also need a more atractive home and overview pages, to make
           it easier for users to navigate and find the information they need.
         </ArticleParagraph>
       </ArticleSection>
