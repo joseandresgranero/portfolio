@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Genesys UI component library case study - Jose Andrés Granero - Product Designer — Specialized in UX/UI Architecture & Design Systems",
 };
 
-export default function GenesysDesignSystem() {
+export default function GenesysUIComponents() {
   const project: IArticle | undefined = projects.find(
     (p: IArticle) => p.slug === "genesys-ui"
   );
@@ -44,8 +44,8 @@ export default function GenesysDesignSystem() {
         <ArticleParagraph>
           The component library was conceived as a bridge between design and
           development at Devo. Built with React, TypeScript, and Styled
-          Components, it became the foundation of our design system, enabling
-          consistency and scalability across products. My role combined{" "}
+          Components, it formed the foundation of our design system, enabling
+          consistency and scalability across products.My role combined{" "}
           <strong>design leadership with front-end implementation</strong>,
           ensuring visual fidelity and usability were preserved from Figma to
           code.
@@ -62,7 +62,7 @@ export default function GenesysDesignSystem() {
       <ArticleSection heading="The Challenge">
         <ArticleParagraph>
           Before the library existed,{" "}
-          <strong>each team developed its own UI elements</strong>, leading to
+          <strong>each team developed its own UI elements</strong>, resulting in
           fragmented user experiences and inconsistent visual quality. Design
           handoffs were time-consuming, and developers often had to rebuild
           components from scratch without a clear source of truth. Maintaining
@@ -75,37 +75,34 @@ export default function GenesysDesignSystem() {
             src="/projects/genesys-ui/img/alerts-creation-old.png"
             width={1122}
             height={682}
-            alt="Before Genesys UI example of section"
+            alt="Before Genesys UI example showing inconsistent components"
             className="order-2 lg:order-1"
             title="Before"
-            description="Two examples of sections before the creation of Genesys UI,
-          so there are different ways of define the same components — different 
-          font sizes for the tabs and page title, different help block at the right 
-          of the title, not the same filters above the table... etc."
+            description="Two examples of sections before Genesys UI. 
+            Components were defined inconsistently — varying font sizes, help blocks, filters, etc."
           />
           <ArticleImageBlock
             src="/projects/genesys-ui/img/user-manage.png"
             width={1238}
             height={700}
-            alt="Before Genesys UI example of section"
+            alt="Before Genesys UI example showing inconsistent components"
             className="order-1 lg:order-2"
           />
           <ArticleImageBlock
             src="/projects/genesys-ui/img/retention-time-manager.png"
             width={1280}
             height={808}
-            alt="After Genesys UI example of section"
+            alt="After Genesys UI example showing consistent components"
             className="order-4 lg:order-3"
             title="After"
-            description="Two examples of sections after the creation of Genesys UI,
-          so we're usng the same components across the product — the consistency
-          is radically improved."
+            description="Two examples of sections after Genesys UI. 
+            We now use the same components across the product, greatly improving consistency."
           />
           <ArticleImageBlock
             src="/projects/genesys-ui/img/alerts-sending-policies.png"
             width={1280}
             height={810}
-            alt="After Genesys UI example of section"
+            alt="After Genesys UI example showing consistent components"
             className="order-3 lg:order-4"
           />
         </ArticleGrid>
@@ -113,41 +110,37 @@ export default function GenesysDesignSystem() {
       {/* PROCESS ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Process & Collaboration">
         <ArticleParagraph>
-          <strong>I worked directly on the codebase</strong> with the
-          collaboration of frontend engineers, creating components, writing
-          documentation, and setting up Storybook as the central hub for our
-          design system. This hands-on approach allowed me to bridge gaps,
-          address challenges in real-time, and ensure that the library met both
-          design and technical standards.
+          <strong>I worked directly on the codebase</strong> with frontend
+          engineers, creating components, writing documentation, and setting up
+          Storybook as the central hub for the design system. This hands-on
+          approach bridged gaps, addressed challenges in real-time, and ensured
+          the library met both design and technical standards.
         </ArticleParagraph>
         <ArticleParagraph>
-          In addition, there have been{" "}
+          In addition, there was{" "}
           <strong>close collaboration between designers and engineers</strong>.
-          We defined shared goals, mapped existing inconsistencies, and
+          We mapped existing inconsistencies, defined shared goals, and
           translated the visual language into reusable patterns. Regular
-          design-dev syncs, version reviews, and feedback loops ensured that
-          every decision was validated from both perspectives.
+          design-dev syncs, version reviews, and feedback loops validated every
+          decision.
         </ArticleParagraph>
       </ArticleSection>
       {/* DESIGN ALIGNMENT ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Design & Code Alignment">
         <ArticleParagraph>
-          The library was deeply connected to the design system's foundations.
-          Colors, typography, spacing, sizing, transitions, shape and elevation
+          Colors, typography, spacing, sizing, transitions, shape, and elevation
           were{" "}
           <strong>
             defined as tokens to ensure consistency and flexibility
           </strong>
-          . These tokens were integrated both in Figma and in code, enabling
-          designers and developers to work with the same visual language.
+          . Tokens were integrated in both Figma and code, allowing designers
+          and developers to work with the same visual language.
         </ArticleParagraph>
         <ArticleParagraph>
-          We also integrated the design tokens library output with our Figma
-          library using its variable system. This way, the{" "}
-          <strong>
-            theme is the same in the React components library as in Figma
-          </strong>
-          , ensuring 100% design-to-code consistency.
+          The design tokens library output was integrated with Figma using
+          variables. This ensures the{" "}
+          <strong>same theme in React components and Figma</strong>, maintaining
+          100% design-to-code fidelity.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
@@ -189,18 +182,16 @@ export default function GenesysDesignSystem() {
       {/* DEVELOPMENT APPROACH ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Development Approach">
         <ArticleParagraph>
-          The library was coded in <strong>React with TypeScript</strong>, using
-          Styled Components for modular and themeable styling. Each component
-          lived in its own folder — with logic, styles, and stories unified —
-          making the codebase predictable and easy to maintain.
+          The library was built in <strong>React with TypeScript</strong> using
+          Styled Components for modular, themeable styling. Each component
+          resides in its own folder — logic, styles, and stories combined —
+          making the codebase predictable and maintainable.
         </ArticleParagraph>
         <ArticleParagraph>
-          Working on the Genesys UI library,{" "}
           <strong>I helped shape a monorepo architecture</strong> designed for
-          scalability and collaboration. Each package had a clear purpose — from
-          the core component library to specialized modules like color
-          utilities, tables, or uploaders — all connected under a single design
-          language.
+          scalability and collaboration. Each package has a clear purpose — core
+          components, utilities, tables, uploaders — all aligned under a single
+          design language.
         </ArticleParagraph>
         <ArticleParagraph>
           This is the main structure of the project:
@@ -316,30 +307,23 @@ export default function GenesysDesignSystem() {
       <ArticleFeaturedWrapper heading="Impact & Outcomes">
         <ArticleGrid columns={3}>
           <ArticleFeaturedWrapperItem heading="Consistency and accessibility">
-            The new system had a measurable impact. It reduced
-            design-development handoff time and{" "}
-            <strong>unified more than 100 screens</strong> under a single visual
-            language base on the same UI components. In addition, we get{" "}
-            <strong>AA level in accessibility</strong> for all the components in
-            the library.
+            The new system reduced handoff time and{" "}
+            <strong>unified over 100 screens</strong> under a single visual
+            language using the same UI components. In addition, all components
+            meet <strong>AA accessibility standards</strong>.
           </ArticleFeaturedWrapperItem>
           <ArticleFeaturedWrapperItem heading="Ready-to-use">
             Beyond metrics, the system strengthened collaboration. Engineers
-            appreciated the{" "}
-            <strong>reliability and flexibility of ready-to-use</strong>{" "}
-            components, while designers gained confidence that their work would
-            be implemented faithfully. Specially, because I was implementing and
-            creating the documentation of the library. It also improved
-            onboarding for new team members, who could now build with clarity
-            and consistency from day one.
+            benefit from <strong>reliable, flexible components</strong> ;while
+            designers are confident in implementation. Specially, due to I was
+            implementing and creating the documentation of the library. It also
+            improved onboarding for new team members, who could now build with
+            clarity and consistency from day one.
           </ArticleFeaturedWrapperItem>
           <ArticleFeaturedWrapperItem heading="Consistency and accessibility">
-            The new system had a measurable impact. It reduced
-            design-development handoff time and{" "}
-            <strong>unified more than 100 screens</strong> under a single visual
-            language base on the same UI components. In addition, we get{" "}
-            <strong>AA level in accessibility</strong> for all the components in
-            the library.
+            Components and documentation facilitate{" "}
+            <strong>long-term maintenance</strong> and easy scaling across
+            applications.
           </ArticleFeaturedWrapperItem>
         </ArticleGrid>
         <ArticleGrid>
@@ -393,19 +377,17 @@ export default function GenesysDesignSystem() {
       {/* LEARNINGS & NEXT STEPS  ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Learnings & Next Steps">
         <ArticleParagraph>
-          Building a component library taught me that the real challenge lies
-          not only in the code, but in maintaining alignment and communication
-          across teams. The key to long-term success was{" "}
-          <strong>documenting everything</strong> — from use cases to naming
-          conventions — and keeping an open feedback.
+          Building the component library showed that the challenge extends
+          beyond the code. <strong>Documenting everything</strong> use cases,
+          naming conventions, feedback loops — ensures alignment and long-term
+          success.
         </ArticleParagraph>
         <ArticleParagraph>
-          Looking ahead, the next steps focus on improving consistency across
+          Next steps focus on <strong>improving consistency</strong> across
           components — including prop naming, interfaces, hook usage, and
-          internal structure. Another key goal is to{" "}
-          <strong>phase out Styled Components</strong>
-          in favor of a class-based styling approach powered by a custom PostCSS
-          library.
+          internal structure. We also plan to phase out Styled Components in
+          favor of a class-based approach powered by a{" "}
+          <strong>custom PostCSS library</strong>.
         </ArticleParagraph>
       </ArticleSection>
     </Article>

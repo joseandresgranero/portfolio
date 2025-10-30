@@ -9,7 +9,6 @@ import {
   ArticleFeaturedWrapper,
   ArticleFeaturedWrapperItem,
   ArticleGrid,
-  ArticleHeading,
   ArticleImageBlock,
   ArticleParagraph,
   ArticleSection,
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
     "Genesys icons case study - Jose Andrés Granero - Product Designer — Specialized in UX/UI Architecture & Design Systems",
 };
 
-export default function GenesysDesignSystem() {
+export default function GenesysIcons() {
   const project: IArticle | undefined = projects.find(
     (p: IArticle) => p.slug === "genesys-icons"
   );
@@ -46,15 +45,15 @@ export default function GenesysDesignSystem() {
           The library was created to{" "}
           <strong>streamline and standardize iconography</strong>
           across product and engineering teams, providing a unified, reusable
-          set of SVG and font-based icons as well as React components built in
+          set of SVG and font-based icons, as well as React components built in
           TypeScript.
         </ArticleParagraph>
         <ArticleParagraph>
           This initiative was part of a broader effort to strengthen the design
           system's foundations — ensuring that visual language, accessibility,
-          and implementation were coherent across all platforms. The result was
-          a <strong>versatile icon library</strong> that could easily evolve
-          alongside the company's design language and development needs.
+          and implementation were coherent across platforms. The result was a
+          <strong>versatile icon library</strong> capable of evolving alongside
+          the company's design language and development needs.
         </ArticleParagraph>
       </ArticleSection>
       {/* CHALLENGE ----------------------------------------------------------------------------- */}
@@ -62,17 +61,16 @@ export default function GenesysDesignSystem() {
         <ArticleParagraph>
           Before this project,{" "}
           <strong>icon usage was fragmented and inconsistent</strong>. Multiple
-          teams used different icon sets, naming conventions, and file formats,
-          leading to confusion, visual noise, and unnecessary duplication. This
-          inconsistency also slowed down development, as engineers often had to
-          import or recreate assets manually.
+          teams used different icon sets, naming conventions, and formats,
+          causing visual clutter, confusion, and duplication. This also slowed
+          development, as engineers often had to import or recreate assets
+          manually.
         </ArticleParagraph>
         <ArticleParagraph>
           The main challenge was to design a system that would{" "}
           <strong>centralize all icons while maintaining flexibility</strong>.
-          We needed a solution that worked seamlessly across any technology,
-          supported accessibility and scalability, and could be easily
-          maintained and extended by both designers and developers.
+          It needed to work across technologies, support accessibility, and
+          scale easily while remaining maintainable by designers and developers.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
@@ -80,8 +78,8 @@ export default function GenesysDesignSystem() {
           <ArticleImageBlock
             src="/projects/genesys-icons/img/icons-abuse-1.png"
             height={508}
-            alt="Before Genesys Icons example of section"
-            title="Before: Overuse of icons"
+            alt="Example of icon overuse before Genesys Icons"
+            title="Before: Excessive icons"
             className="order-2 lg:order-1"
             description="Two examples of sections before the creation of Genesys Icons,
           so there is a excessive use of icons, As a result, the usefulness of the icons
@@ -91,23 +89,22 @@ export default function GenesysDesignSystem() {
           <ArticleImageBlock
             src="/projects/genesys-icons/img/icons-abuse-2.png"
             height={457}
-            alt="Before Genesys Icons example of section"
+            alt="Example of icon overuse before Genesys Icons"
             className="order-1 lg:order-2"
           />
           <ArticleImageBlock
             src="/projects/genesys-icons/img/icons-better-use-1.png"
             height={500}
-            alt="After Genesys Icons example of section"
-            title="After: use becomes more balanced"
+            alt="Example of improved icon usage after Genesys Icons"
+            title="After: Balanced icon usage"
             className="order-4 lg:order-3"
-            description="Two examples of sections created after Genesys Icons,
-          where we can see a more intentional use of icons — only when they
-          truly reinforce the action."
+            description="Two examples of sections after Genesys Icons, 
+            showing intentional icon use only when it reinforces the action."
           />
           <ArticleImageBlock
             src="/projects/genesys-icons/img/icons-better-use-2.png"
             height={667}
-            alt="After Genesys Icons example of section"
+            alt="Example of improved icon usage after Genesys Icons"
             className="order-3 lg:order-4"
           />
         </ArticleGrid>
@@ -116,30 +113,29 @@ export default function GenesysDesignSystem() {
       <ArticleSection heading="Process & Collaboration">
         <ArticleParagraph>
           Designers can easily add new icons by{" "}
-          <strong>uploading an SVG</strong>, while an automated script handled
-          the conversion into React components.
+          <strong>uploading SVG files</strong>, while an automated script
+          handles conversion into React components.
         </ArticleParagraph>
         <ArticleParagraph>
           We built a living <strong>documentation site in Storybook</strong>,
-          where every icon was neatly organized, previewed, and explained. There
-          is a gallery with advanced search, based on the structure of the SVG
-          code: attribute title and description.
+          where each icon is organized, previewed, and explained. It includes a
+          gallery with advanced search based on SVG attributes like title and
+          description.
         </ArticleParagraph>
         <ArticleParagraph>
-          This process not only reduced handoff friction but also kept designers
-          and developers perfectly aligned, ensuring everyone{" "}
-          <strong>worked with the same, up-to-date assets</strong> across the
-          product ecosystem.
+          This process reduced handoff friction and ensured designers and
+          developers remained aligned, always working with{" "}
+          <strong>the same up-to-date assets</strong>.
         </ArticleParagraph>
       </ArticleSection>
       {/* DEVELOPMENT APPROACH ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Development Approach">
         <ArticleParagraph>
-          The library was built entirely in React and TypeScript to ensure type
-          safety and scalability. Each icon component was lightweight, reusable,
-          and optimized for performance, allowing developers to import only what
-          they needed. This modular approach kept{" "}
-          <strong>bundle sizes low</strong> while maintaining flexibility.
+          The library was built entirely in React and TypeScript for type safety
+          and scalability. Each icon component is lightweight, reusable, and
+          performance-optimized, letting developers import only what is needed.
+          This keeps <strong>bundle sizes low</strong> while maintaining
+          flexibility.
         </ArticleParagraph>
         <ArticleParagraph>
           This is the main structure of the project:
@@ -182,7 +178,7 @@ export default function GenesysDesignSystem() {
           an idea of how it's organized. This is the link to{" "}
           <Link
             href="https://github.com/genesys-ui/icons"
-            title="Go to the Github repository (new tab)"
+            title="Go to the GitHub repository (new tab)"
           >
             Github repository
           </Link>{" "}
@@ -190,9 +186,8 @@ export default function GenesysDesignSystem() {
         </ArticleParagraph>
         <ArticleParagraph>
           We also implemented automated testing and version control through
-          GitHub Actions, which allowed safe deployment and updates through npm.
-          This ensured that every release maintained visual and technical
-          integrity, even as the system grew.
+          GitHub Actions, ensuring safe deployments via npm. This maintained
+          visual and technical integrity as the system scaled.
         </ArticleParagraph>
       </ArticleSection>
       {/* IMPACT & OUTCOMES ----------------------------------------------------------------------------- */}
@@ -201,17 +196,16 @@ export default function GenesysDesignSystem() {
           <ArticleFeaturedWrapperItem heading="Consistency and collaboration">
             The new icon library immediately improved{" "}
             <strong>cross-team collaboration</strong>, and the centralized
-            system also made onboarding new contributors faster and more
-            intuitive.
+            system accelerated onboarding for new contributors.
           </ArticleFeaturedWrapperItem>
           <ArticleFeaturedWrapperItem heading="Reduced developing time">
-            Quantitatively, development time for adding or updating icons
-            <strong>dropped by more than 50%</strong>, and visual
-            inconsistencies across products were nearly eliminated.
+            Development time for adding or updating icons{" "}
+            <strong>dropped over 50%</strong>, while visual inconsistencies
+            across products were nearly eliminated.
           </ArticleFeaturedWrapperItem>
           <ArticleFeaturedWrapperItem heading="Improved the design system">
-            <strong>The design system became stronger</strong> and more
-            reliable, contributing to a more cohesive user experience and brand
+            <strong>The design system became more robust</strong> and reliable,
+            contributing to a cohesive user experience and consistent brand
             perception.
           </ArticleFeaturedWrapperItem>
         </ArticleGrid>
@@ -249,17 +243,19 @@ export default function GenesysDesignSystem() {
         <ArticleParagraph>
           This project highlighted the importance of creating a{" "}
           <strong>
-            shared language that empower both designers and developers
+            shared language that empowers designers and developers
           </strong>
-          . Automating the most repetitive tasks — such as component generation
-          and documentation — freed up time for creative problem-solving and
-          higher-level system thinking, creating and improving the icons.
+          . Automating repetitive tasks, such as component generation and
+          documentation, freed time for creative problem-solving and
+          higher-level system thinking.
         </ArticleParagraph>
         <ArticleParagraph>
-          Looking forward, the next steps include expanding the library with new
-          icon sets, and above all,{" "}
-          <strong>improving the SB gallery search</strong>, through semantic
-          naming, and adding accurate and descriptive tags.
+          Looking forward, next steps include expanding the library with new
+          icon sets, and especially{" "}
+          <strong>
+            enhancing the Storybook gallery search through semantic naming
+          </strong>{" "}
+          and accurate, descriptive tags.
         </ArticleParagraph>
       </ArticleSection>
     </Article>

@@ -61,7 +61,7 @@ const processSteps = [
   },
 ];
 
-export default function GenesysDesignSystem() {
+export default function appRefactor() {
   const project: IArticle | undefined = projects.find(
     (p: IArticle) => p.slug === "ui-refactor"
   );

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "Genesys design tokens case study - Jose Andrés Granero - Product Designer — Specialized in UX/UI Architecture & Design Systems",
 };
 
-export default function GenesysDesignSystem() {
+export default function GenesysDesignTokens() {
   const project: IArticle | undefined = projects.find(
     (p: IArticle) => p.slug === "genesys-design-tokens"
   );
@@ -46,35 +46,35 @@ export default function GenesysDesignSystem() {
           Once the design system was launched, one thing became immediately
           clear: our designs looked great in Figma, but translating them into
           code was messy. Colors, typography, and spacing were implemented
-          differently across platforms, which slowed down development and caused
-          constant mismatches.
+          differently across platforms, which slowed development and caused
+          frequent mismatches.
         </ArticleParagraph>
         <ArticleParagraph>
-          I decided to tackle this by{" "}
-          <strong>building a design token library</strong> with the huge help of
-          a highly enthusiastic frontend developer. Using a structured JSON as
-          the foundation, the idea was simple: define all the visual styles once
+          To solve this, I decided to{" "}
+          <strong>build a design token library</strong> with the invaluable help
+          of a highly enthusiastic frontend developer. Using a structured JSON
+          as the foundation, the idea was simple: define all visual styles once
           and let automation handle the rest. With Style Dictionary, we
           generated CSS, SASS, JS, and even Figma variables directly from a
-          single source, making sure our brand looked consistent everywhere.
+          single source — ensuring our brand looked consistent everywhere.
         </ArticleParagraph>
       </ArticleSection>
       {/* CHALLENGE ----------------------------------------------------------------------------- */}
       <ArticleSection heading="The Challenge">
         <ArticleParagraph>
-          Before the tokens library, every design outside the UI components
-          library (already integrated with design tokens) forced developers to
-          pick directly the values and manually translate it into code — often
-          introducing small discrepancies along the way. It was{" "}
+          Before the tokens library, any design outside the UI components
+          library — which was already integrated with tokens — required
+          developers to manually copy values and translate them into code.
+          Naturally, this introduced small inconsistencies along the way. It was{" "}
           <strong>time-consuming, error-prone, and frustrating</strong> for
           everyone involved.
         </ArticleParagraph>
         <ArticleParagraph>
-          I realized we needed a <strong>single source of truth</strong>. Not
-          just a document, but a system where any change would ripple across
-          every platform automatically. The challenge was balancing flexibility
-          for designers with reliability for developers — a system that worked
-          seamlessly across app, code, and design tools.
+          I realized we needed a <strong>single source of truth</strong> — not
+          just a document, but a living system where any change would ripple
+          across every platform automatically. The challenge was balancing
+          flexibility for designers with reliability for developers, creating a
+          system that worked seamlessly across design tools and codebases.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection unlimitedWidth className="bg-[var(--projects-bg-color)]">
@@ -82,9 +82,9 @@ export default function GenesysDesignSystem() {
           <ArticleImageBlock
             src="/projects/genesys-design-tokens/img/loxcope.png"
             height={500}
-            alt="A whole app based on design tokens"
-            title="A whole app based on design tokens"
-            description="In the 'Data Search' section, every color, font, and spacing detail is driven by the design token system — no manual styling involved."
+            alt="A complete app powered by design tokens"
+            title="A complete app powered by design tokens"
+            description="In the 'Data Search' section, every color, font, and spacing value is driven by the design token system — no manual styling required."
           />
         </ArticleGrid>
       </ArticleSection>
@@ -93,9 +93,9 @@ export default function GenesysDesignSystem() {
         <ArticleParagraph>
           We built a living <strong>documentation site in Storybook</strong>,
           where every design token was neatly organized, previewed, and
-          explained. There is a table with advanced search, where developers can
-          filter by format, tier, category, scheme... etc. and every result in
-          the table has a preview whenever it's possible.
+          explained. It included an advanced searchable table allowing
+          developers to filter by format, tier, category, or scheme — and
+          whenever possible, each token previewed its actual appearance.
         </ArticleParagraph>
       </ArticleSection>
       {/* DEVELOPMENT APPROACH ----------------------------------------------------------------------------- */}
@@ -103,32 +103,32 @@ export default function GenesysDesignSystem() {
         <ArticleParagraph>
           The first step was{" "}
           <strong>defining the structure of our tokens</strong> in JSON. I
-          grouped them into categories like colors, typography, spacing,
-          elevation... thinking about global-alias values and component-level
-          details. The goal was clarity: anyone on the team should be able to
-          understand and use the tokens without confusion.
+          grouped them into categories like color, typography, spacing, and
+          elevation — thinking about both global and component-level scopes. The
+          goal was clarity: anyone on the team should understand and use the
+          tokens without confusion.
         </ArticleParagraph>
         <ArticleParagraph>
-          The semantics and naming are decissive if we want the library to be
-          easy to use. We defined three levels of tokens — global, alias and
-          component:
+          Semantics and naming conventions were crucial for usability. We
+          defined three token tiers — <strong>global</strong>,{" "}
+          <strong>alias</strong>, and <strong>component</strong>:
         </ArticleParagraph>
         <ArticleList>
           <li>
-            <strong>Global</strong>: the basic value without any semantic:{" "}
+            <strong>Global</strong>: the raw value without semantic meaning:{" "}
             <code className="text-lg">global-color-palette-ui-error-03</code>.
           </li>
           <li>
-            <strong>Alias</strong>: the global values reused and renamed with
-            semantic, but not connecting with the component:{" "}
+            <strong>Alias</strong>: global values reused with semantic naming,
+            not tied to a specific component:{" "}
             <code className="text-lg">
               alias-color-background-feedback-error-strong
             </code>
             .
           </li>
           <li>
-            <strong>Component</strong>: the alias values reused and renamed with
-            semantic, and connecting with the component:{" "}
+            <strong>Component</strong>: alias values reused and renamed for a
+            specific component context:{" "}
             <code className="text-lg">
               cmp-button-color-background-error-disabled
             </code>
@@ -136,35 +136,34 @@ export default function GenesysDesignSystem() {
           </li>
         </ArticleList>
         <ArticleParagraph>
-          Next came <strong>automation. Using Style Dictionary</strong>, we
-          could take that single JSON file and generate multiple outputs: CSS
-          custom properties, SASS variables, JS constants, and Figma variables.
-          Suddenly, updates became effortless. Changing a single color or font
-          size would automatically propagate everywhere — a huge relief for both
-          designers and developers.
+          Then came <strong>automation</strong>. Using Style Dictionary, we
+          transformed the JSON source into multiple formats: CSS custom
+          properties, SASS variables, JS constants, and Figma variables. Updates
+          became effortless — changing a single value automatically propagated
+          across platforms, saving time for both designers and developers.
         </ArticleParagraph>
         <ArticleParagraph>
-          The project is based in two different libraries:
+          The project was split into two separate libraries:
         </ArticleParagraph>
         <ArticleList>
           <li>
             <Link
               href="https://github.com/genesys-ui/theme-generator"
-              title="Go to the Github repository (new tab)"
+              title="Go to the GitHub repository (new tab)"
             >
               theme-generator
             </Link>
-            : The base in JSON with the scripts to crate a cli which is used in
-            the other library with the generated theme.
+            : the core JSON definitions and scripts for creating a CLI used to
+            generate themes.
           </li>
           <li>
             <Link
               href="https://github.com/genesys-ui/theme-devo"
-              title="Go to the Github repository (new tab)"
+              title="Go to the GitHub repository (new tab)"
             >
               theme-devo
             </Link>
-            : the generated theme used for Devo.
+            : the generated theme implementation for Devo.
           </li>
         </ArticleList>
       </ArticleSection>
@@ -238,20 +237,20 @@ export default function GenesysDesignSystem() {
       <ArticleFeaturedWrapper heading="Impact & Outcomes">
         <ArticleGrid columns={3}>
           <ArticleFeaturedWrapperItem heading="Single source of truth">
-            The impact was immediate. Design and development finally spoke the
-            same language. A single change in the token file would update{" "}
+            The impact was immediate: design and development finally spoke the
+            same language. A single change in the token file updated{" "}
             <strong>
-              web styles, React components, and Figma variables all at once
+              web styles, React components, and Figma variables simultaneously
             </strong>
             .
           </ArticleFeaturedWrapperItem>
           <ArticleFeaturedWrapperItem heading="Cohesion">
             Beyond efficiency, the library created a stronger sense of cohesion
-            across our products. <strong>Our interface feels unified</strong>.
+            across products. <strong>The interface now feels unified</strong>.
           </ArticleFeaturedWrapperItem>
           <ArticleFeaturedWrapperItem heading="Scalability">
-            It is easier than ever to <strong>scale the design system</strong>{" "}
-            as new features and platforms were added.
+            <strong>Scaling the design system</strong>
+            became easier than ever as new features and platforms were added.
           </ArticleFeaturedWrapperItem>
         </ArticleGrid>
         <ArticleGrid>
@@ -280,22 +279,19 @@ export default function GenesysDesignSystem() {
       {/* LEARNINGS & NEXT STEPS  ----------------------------------------------------------------------------- */}
       <ArticleSection heading="Learnings & Next Steps">
         <ArticleParagraph>
-          Working on this project taught me how powerful it is to think of
-          design as data. By structuring our styles as tokens, we could{" "}
-          <strong>
-            bridge the gap between creative decisions and technical
-            implementation
-          </strong>
-          , saving time and reducing errors. I also learned that clear naming
-          and documentation are critical — a system is only as good as how easy
-          it is for others to understand and use.
+          Working on this project showed me how powerful it is to{" "}
+          <strong>treat design as data</strong>. By structuring our styles as
+          tokens, we bridged the gap between creative decisions and technical
+          implementation, saving time and reducing errors. I also learned that
+          clear naming and documentation are essential — a system is only as
+          good as it is understandable.
         </ArticleParagraph>
         <ArticleParagraph>
-          Next, we're working on an interface where designers can simply input a
-          few values — like brand colors, typography, spacing scales, and fonts
-          — and the <strong>system automatically generates a new theme</strong>,
-          making style updates fast, consistent, and scalable. Specially
-          interesting for client customizations.
+          Next, we're developing an interface where designers can simply input a
+          few values — like brand colors, typography, and spacing scales — and{" "}
+          <strong>automatically generate a new theme</strong>. This will make
+          customization faster, more consistent, and scalable, especially for
+          client-specific adaptations.
         </ArticleParagraph>
       </ArticleSection>
     </Article>

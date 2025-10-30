@@ -15,13 +15,6 @@ import {
   ArticleVideoBlock,
   ProcessTimeline,
 } from "@/app/components";
-import {
-  IoBarChartOutline,
-  IoBookOutline,
-  IoCodeOutline,
-  IoColorPaletteOutline,
-  IoRocketOutline,
-} from "react-icons/io5";
 
 export const metadata: Metadata = {
   title:
@@ -84,9 +77,9 @@ export default function GenesysDesignSystem() {
         <ArticleParagraph>
           Before the design system existed, the product ecosystem faced{" "}
           <strong>major inconsistencies</strong> — not only visual, but also in
-          how users interacted with the platform. The same actions could be
-          performed in multiple ways, using different components depending on
-          where the user was in the product.
+          how users interacted with the platform. Users could perform the same
+          action in different ways depending on the section, leading to
+          confusion and usability issues.
         </ArticleParagraph>
         <ArticleParagraph>
           Meanwhile, developers were building their own components and layouts
@@ -94,17 +87,17 @@ export default function GenesysDesignSystem() {
           both development time and <strong>maintenance costs</strong>.
         </ArticleParagraph>
         <ArticleParagraph>
-          To make things even more complex, the Professional Services team was
-          continuously creating new, tailor-made vertical applications for
-          specific clients.
+          Additionally, the Professional Services team was constantly building
+          custom vertical apps for clients, further fragmenting the visual and
+          technical ecosystem.
         </ArticleParagraph>
         <ArticleParagraph>
           As a result, maintaining visual consistency, accessibility standards,
           and scalability across products had become almost impossible.
         </ArticleParagraph>
         <ArticleParagraph>
-          That's when we decided to create a unified design system — not just as
-          a visual framework, but as a <strong>strategic foundation</strong> to
+          This challenge led us to create a unified Design System — not just as
+          a visual framework but as a <strong>strategic foundation</strong> to
           transform how Devo designed and built its products.
         </ArticleParagraph>
       </ArticleSection>
@@ -114,17 +107,17 @@ export default function GenesysDesignSystem() {
             src="/projects/design-system/img/alerts-creation-old.png"
             width={800}
             height={411}
-            alt="Before design system UI example"
+            alt="Alerts creation section before the Design System"
             title="Before"
-            description="An example of an alerts creation section before the design system."
+            description="Example of the alerts creation section before the Design System — inconsistent components and layout."
           />
           <ArticleImageBlock
             src="/projects/design-system/img/alert-rules.png"
             width={1200}
             height={625}
-            alt="After design system UI example"
+            alt="Alerts creation section after the Design System"
             title="After"
-            description="...and this is the same section after the design system."
+            description="The same section after the Design System implementation — unified layout, consistent hierarchy, and improved readability."
           />
         </ArticleGrid>
       </ArticleSection>
