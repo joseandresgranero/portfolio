@@ -14,14 +14,6 @@ import {
   ArticleSection,
   ProcessTimeline,
 } from "@/app/components";
-import {
-  IoBarChart,
-  IoBrushOutline,
-  IoCheckmarkCircle,
-  IoCodeOutline,
-  IoLayersOutline,
-  IoSearchOutline,
-} from "react-icons/io5";
 
 export const metadata: Metadata = {
   title:
@@ -411,7 +403,7 @@ export default function appRefactor() {
             inverted
             src="/projects/ui-refactor/img/old-alert-rules-2.png"
             height={426}
-            alt="Alert rules before refactor"
+            alt="Alert rules before UI refactor"
             className="order-1"
             title="Before"
             description="Before the refactor, the Alert Rules page suffered from
@@ -424,7 +416,7 @@ export default function appRefactor() {
             inverted
             src="/projects/ui-refactor/img/alert-rules.png"
             height={506}
-            alt="Delivery methods after design system"
+            alt="Delivery methods after UI refactor"
             className="order-2"
             title="After"
             description="This is the same section after the implementation of the refactor.
@@ -449,6 +441,54 @@ export default function appRefactor() {
             height={506}
             alt="Marketplace section"
             className="order-3 lg:order-4"
+          />
+          <ArticleImageBlock
+            inverted
+            src="/projects/ui-refactor/img/app-menu-before-and-after.png"
+            height={506}
+            alt="AppMenu component before and after UI refactor"
+            className="order-5"
+            title="Simplified main menu"
+            description="This comparison shows the evolution of the main menu 
+            before and after the UI refactor. Actions unrelated to navigation 
+            were relocated to the top app bar, decluttering the interface..."
+          />
+          <ArticleImageBlock
+            inverted
+            src="/projects/ui-refactor/img/toolbar-user-more-options.png"
+            height={506}
+            alt="Main toolbar after UI refactor"
+            className="order-6"
+            description="...the result is a cleaner layout where elements like the account settings, 
+            time zone, domain selector and other options are positioned more intuitively, 
+            improving both clarity and usability."
+          />
+          <ArticleImageBlock
+            inverted
+            src="/projects/ui-refactor/img/old-activeboards.png"
+            height={426}
+            alt="Dashboards section before UI refactor"
+            className="order-7"
+            title="Activeboards before the refactor"
+            description="Before the refactor, the users reported several problems with the 
+            Dashboards section: Overlapping panels significantly reduce the available space 
+            for the main content. The top dropdown panels lack intuitiveness, access to the 
+            query panel isn't immediately clear, and the distinction between 'View' and 'Edit'
+             modes is not visually evident, resulting in a confusing user experience, among others."
+          />
+          <ArticleImageBlock
+            inverted
+            src="/projects/ui-refactor/img/activeboards.png"
+            height={506}
+            alt="Dashboards section after UI refactor"
+            className="order-8"
+            title="Activeboards redesign"
+            description="This is the same section after the UI refactor. The layout was restructured
+             for greater clarity and consistency, with improved spacing and better-defined areas. 
+             It's now more intuitive for users to locate the actions they need. The widgets panel
+              has been moved to the left side, pushing the content instead of overlapping it. 
+              Additionally, a tab system was introduced, along with dedicated toolbars for each context
+               — global, active boards management, and workspace."
           />
         </ArticleGrid>
       </ArticleFeaturedWrapper>
