@@ -237,7 +237,7 @@ export default function appRefactor() {
           Interaction patterns were redesigned to make complex analytical
           actions (filtering, grouping, and exporting) feel effortless.
           Persistent filters, contextual tooltips, and keyboard shortcuts were
-          added to streamline repetitive workflows. The overall goal was to make
+          added to streamline repetitive workflows. The overall goal was to make{" "}
           <strong>
             powerful analytics feel approachable without sacrificing depth
           </strong>
@@ -363,6 +363,20 @@ export default function appRefactor() {
           reducing ambiguity. This continuous collaboration also helped maintain
           a single source of truth between the design library and the production
           UI.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          One of the most important tasks I had to accomplish during the
+          refactor was supporting the development teams, as they needed to
+          migrate numerous screens — each originally built with different
+          technologies and languages — to React, while adopting the new
+          libraries for components, design tokens, and icons, among others.
+        </ArticleParagraph>
+        <ArticleParagraph>
+          Anyway, in many cases, the design team — including myself — also had
+          to take part in the code refactor, migrating legacy screens to React
+          and implementing the new design system libraries. Once this process
+          was completed, the developers integrated the frontend with the
+          backend.
         </ArticleParagraph>
       </ArticleSection>
       <ArticleSection
@@ -503,13 +517,11 @@ export default function appRefactor() {
         </ArticleParagraph>
         <ArticleParagraph>
           Moving forward, we plan to extend Genesys to support{" "}
-          <strong>
-            dark mode, advanced data visualizations (e.g., network graphs,
-            maps), and responsive layouts
-          </strong>{" "}
-          for secondary devices. The system will also evolve into a shared
-          design infrastructure for all internal analytics tools, unifying
-          visual language company-wide.
+          <strong>dark mode, and responsive layouts</strong> for secondary
+          devices and scpecific sections which are able to manage in a mobile
+          device. The system will also evolve into a shared design
+          infrastructure for all internal analytics tools, unifying visual
+          language company-wide.
         </ArticleParagraph>
       </ArticleSection>
     </Article>

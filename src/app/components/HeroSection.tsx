@@ -18,8 +18,9 @@ export default function HeroSection() {
         transition={{ duration: 0.6, delay: 0.1 }}
       >
         I'm a<strong> Product designer </strong>
-        with 15+ years of experience crafting scalable design systems,
-        accessible interfaces, and reusable UI components.
+        with 10+ years of experience delivering enterprise-grade UI solutions
+        and scalable design systems that enhance usability, consistency, and
+        development efficiency.
       </motion.h1>
     </section>
   );
