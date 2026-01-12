@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import type { IArticle } from "@/types/article";
-import { projects } from "@/app/data";
 import {
   Article,
   ArticleFeaturedWrapper,
@@ -14,6 +13,7 @@ import {
   ArticleSection,
   ProcessTimeline,
 } from "@/app/components";
+import { projects } from "@/app/data";
 
 export const metadata: Metadata = {
   title:

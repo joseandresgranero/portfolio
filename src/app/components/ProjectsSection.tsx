@@ -1,8 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { ProjectsCard } from "./ProjectsCard";
 import { projects } from "../data/projects";
-import Link from "next/link";
 
 export const ProjectsSection = () => {
   const renderProjectCards = ({
