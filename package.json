@@ -13,7 +13,7 @@
   "dependencies": {
     "framer-motion": "^12.23.22",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react-dom": "19.2.3",
     "react-icons": "^5.5.0",
     "react-scroll-parallax": "^3.4.5",
     "simple-parallax-js": "^6.3.3",
